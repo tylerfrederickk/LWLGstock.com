@@ -1,0 +1,548 @@
+{
+ "updated": "2026-11-09",
+ "note": "Community claims are unverified. What-ifs are ours. Nothing here is confirmed unless marked Confirmed.",
+ "nodes": [
+  {
+   "id": "lwlg",
+   "label": "Lightwave Logic",
+   "group": "core"
+  },
+  {
+   "id": "s3",
+   "label": "Stage 3 customers",
+   "group": "core"
+  },
+  {
+   "id": "s4",
+   "label": "Stage 4 / volume deal",
+   "group": "core"
+  },
+  {
+   "id": "amf",
+   "label": "AMF",
+   "group": "foundry"
+  },
+  {
+   "id": "tower",
+   "label": "Tower Semi",
+   "group": "foundry"
+  },
+  {
+   "id": "gf",
+   "label": "GlobalFoundries",
+   "group": "foundry"
+  },
+  {
+   "id": "silterra",
+   "label": "SilTerra",
+   "group": "foundry"
+  },
+  {
+   "id": "gds",
+   "label": "GDSFactory",
+   "group": "foundry"
+  },
+  {
+   "id": "tsmc",
+   "label": "TSMC",
+   "group": "foundry"
+  },
+  {
+   "id": "samsung",
+   "label": "Samsung",
+   "group": "foundry"
+  },
+  {
+   "id": "polariton",
+   "label": "Polariton",
+   "group": "chip"
+  },
+  {
+   "id": "marvell",
+   "label": "Marvell",
+   "group": "chip"
+  },
+  {
+   "id": "nvidia",
+   "label": "Nvidia",
+   "group": "chip"
+  },
+  {
+   "id": "cisco",
+   "label": "Cisco",
+   "group": "chip"
+  },
+  {
+   "id": "innolight",
+   "label": "InnoLight",
+   "group": "chip"
+  },
+  {
+   "id": "intel",
+   "label": "Intel / Qualcomm",
+   "group": "chip"
+  },
+  {
+   "id": "google",
+   "label": "Google",
+   "group": "cloud"
+  },
+  {
+   "id": "microsoft",
+   "label": "Microsoft",
+   "group": "cloud"
+  },
+  {
+   "id": "meta",
+   "label": "Meta",
+   "group": "cloud"
+  },
+  {
+   "id": "hyper",
+   "label": "Hyperscalers",
+   "group": "cloud"
+  },
+  {
+   "id": "cpo",
+   "label": "Co-packaged optics",
+   "group": "market"
+  },
+  {
+   "id": "acq",
+   "label": "An acquirer",
+   "group": "dream"
+  },
+  {
+   "id": "arm",
+   "label": "\u201cThe next ARM\u201d",
+   "group": "dream"
+  },
+  {
+   "id": "squeeze",
+   "label": "Short squeeze",
+   "group": "dream"
+  },
+  {
+   "id": "fv",
+   "label": "$74 fair value",
+   "group": "dream"
+  }
+ ],
+ "links": [
+  {
+   "a": "lwlg",
+   "b": "tower",
+   "kind": "confirmed",
+   "title": "Tower PH18 partnership",
+   "who": "Lightwave Logic & Tower",
+   "where": "Press coverage (Stocktwits News)",
+   "date": "Mar 12, 2026",
+   "url": "https://stocktwits.com/news-articles/markets/equity/why-lightwave-logic-stock-is-surging-premarket-today/cZdMCjORI92",
+   "claim": "Polymer modulator designs to be integrated into Tower's PH18 silicon photonics platform, with tapeouts in 2026.",
+   "reality": "Confirmed by both companies."
+  },
+  {
+   "a": "tower",
+   "b": "nvidia",
+   "kind": "confirmed",
+   "title": "Tower \u00d7 Nvidia 1.6T modules",
+   "who": "Tower Semiconductor",
+   "where": "Press coverage (Stocktwits News)",
+   "date": "Feb 2026",
+   "url": "https://stocktwits.com/news-articles/markets/equity/why-lightwave-logic-stock-is-surging-premarket-today/cZdMCjORI92",
+   "claim": "Tower announced a deal with Nvidia to develop 1.6T optical modules on its silicon photonics platform.",
+   "reality": "Confirmed, but it is a Tower\u2013Nvidia deal. Lightwave Logic is not named in it."
+  },
+  {
+   "a": "lwlg",
+   "b": "amf",
+   "kind": "confirmed",
+   "title": "AMF collaboration",
+   "who": "Lightwave Logic",
+   "where": "Company press release",
+   "date": "Nov 4, 2025",
+   "url": "https://www.nasdaq.com/press-release/lightwave-logic-inc-provides-update-commercial-pipeline-2025-11-04",
+   "claim": "Existing foundry collaboration with Advanced Micro Foundry, plus a new unnamed silicon photonics foundry.",
+   "reality": "Confirmed. The second foundry was not named."
+  },
+  {
+   "a": "lwlg",
+   "b": "silterra",
+   "kind": "confirmed",
+   "title": "SilTerra modulator platform",
+   "who": "SilTerra & Luceda",
+   "where": "Q4 2025 call coverage (MarketBeat)",
+   "date": "Mar 5, 2026",
+   "url": "https://www.marketbeat.com/instant-alerts/lightwave-logic-q4-earnings-call-highlights-2026-03-05/",
+   "claim": "SilTerra announced a high-speed EO-polymer modulator platform through Luceda's design kit.",
+   "reality": "Confirmed."
+  },
+  {
+   "a": "lwlg",
+   "b": "gf",
+   "kind": "confirmed",
+   "title": "GlobalFoundries design kit",
+   "who": "Lightwave Logic",
+   "where": "Coverage (PhotonCap)",
+   "date": "Mar 2026",
+   "url": "https://photoncap.net/p/the-day-a-29k-revenue-company-raised",
+   "claim": "Design-kit integrations with Tower and GlobalFoundries announced back to back in March 2026.",
+   "reality": "Confirmed."
+  },
+  {
+   "a": "lwlg",
+   "b": "gds",
+   "kind": "confirmed",
+   "title": "GDSFactory design kit",
+   "who": "Lightwave Logic",
+   "where": "Coverage (Yahoo Finance / Simply Wall St)",
+   "date": "2026",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/lightwave-logic-lwlg-valuation-check-110800823.html",
+   "claim": "Polymer modulator technology embedded in GDSFactory's silicon photonics design kit.",
+   "reality": "Confirmed."
+  },
+  {
+   "a": "lwlg",
+   "b": "polariton",
+   "kind": "confirmed",
+   "title": "Polariton partnership",
+   "who": "Lightwave Logic & Polariton",
+   "where": "Silicon Semiconductor",
+   "date": "2025",
+   "url": "https://siliconsemiconductor.net/article/121388/Lightwave_Logic_and_Polariton_Technologies_expand_technical_partnership",
+   "claim": "LWLG supplies EO polymer to Polariton; the two co-develop plasmonic-polymer modulators.",
+   "reality": "Confirmed."
+  },
+  {
+   "a": "polariton",
+   "b": "marvell",
+   "kind": "confirmed",
+   "title": "Marvell buys Polariton",
+   "who": "Marvell",
+   "where": "Marvell press release",
+   "date": "Apr 22, 2026",
+   "url": "https://www.marvell.com/company/newsroom/marvell-acquires-polariton-advancing-future-of-optical-connectivity.html",
+   "claim": "Marvell acquired Polariton for its plasmonics modulation technology, targeting 3.2T and beyond.",
+   "reality": "Confirmed. Marvell's release does not mention Lightwave Logic."
+  },
+  {
+   "a": "lwlg",
+   "b": "s3",
+   "kind": "confirmed",
+   "title": "Fourth Fortune Global 500 in Stage 3",
+   "who": "Lightwave Logic",
+   "where": "Company press release",
+   "date": "Feb 24, 2026",
+   "url": "https://www.newswire.com/news/lightwave-logic-inc-provides-update-on-commercial-pipeline-and-announces-timing",
+   "claim": "A fourth Fortune Global 500 company entered Stage 3, aiming to augment its internal silicon photonics platform.",
+   "reality": "Confirmed. Customer names are not disclosed."
+  },
+  {
+   "a": "lwlg",
+   "b": "cpo",
+   "kind": "confirmed",
+   "title": "CPO program with a second FG500",
+   "who": "Lightwave Logic",
+   "where": "Company press release",
+   "date": "Nov 25, 2025",
+   "url": "https://www.newswire.com/news/lightwave-logic-inc-provides-update-on-commercial-8165341",
+   "claim": "Custom Perkinamine variant for 400G co-packaged optics with a second Fortune Global 500 company.",
+   "reality": "Confirmed. Partner not named."
+  },
+  {
+   "a": "lwlg",
+   "b": "nvidia",
+   "kind": "rumor",
+   "title": "\u201cNvidia + Tower could 10x it\u201d",
+   "who": "Stocktwits user",
+   "where": "Stocktwits",
+   "date": "Mar 2026",
+   "url": "https://stocktwits.com/news-articles/markets/equity/why-lightwave-logic-stock-is-surging-premarket-today/cZdMCjORI92",
+   "claim": "A user argued the Nvidia\u2013Tower collaboration could 10x LWLG in a short time, since Tower now hosts LWLG's modulator option.",
+   "reality": "Unverified. No public link between Nvidia and Lightwave Logic.",
+   "status": "open",
+   "resolved": null,
+   "resolved_source": null
+  },
+  {
+   "a": "lwlg",
+   "b": "tsmc",
+   "kind": "rumor",
+   "title": "TSMC as the unnamed foundry",
+   "who": "InvestorsHub poster (prototype_101)",
+   "where": "InvestorsHub, via an independent research wiki",
+   "date": "2026",
+   "url": "https://lwlg-research.pages.dev/07_thesis/open_questions",
+   "claim": "Speculation that TSMC (and Samsung) are in the pool of unnamed foundries management has referenced.",
+   "reality": "Unverified. Speculation only.",
+   "status": "open",
+   "resolved": null,
+   "resolved_source": null
+  },
+  {
+   "a": "lwlg",
+   "b": "samsung",
+   "kind": "rumor",
+   "title": "Samsung as the unnamed foundry",
+   "who": "InvestorsHub poster (prototype_101)",
+   "where": "InvestorsHub, via an independent research wiki",
+   "date": "2026",
+   "url": "https://lwlg-research.pages.dev/07_thesis/open_questions",
+   "claim": "Same theory: Samsung could be one of the unnamed silicon photonics foundries.",
+   "reality": "Unverified. Speculation only.",
+   "status": "open",
+   "resolved": null,
+   "resolved_source": null
+  },
+  {
+   "a": "lwlg",
+   "b": "marvell",
+   "kind": "rumor",
+   "title": "Marvell as a direct customer",
+   "who": "Independent research wiki",
+   "where": "lwlg-research (open questions)",
+   "date": "Apr 2026",
+   "url": "https://lwlg-research.pages.dev/07_thesis/open_questions",
+   "claim": "Open question raised after the Polariton deal: could Marvell become a direct LWLG customer beyond the Polariton stack?",
+   "reality": "Unverified. No direct agreement disclosed.",
+   "status": "open",
+   "resolved": null,
+   "resolved_source": null
+  },
+  {
+   "a": "s3",
+   "b": "hyper",
+   "kind": "rumor",
+   "title": "The anonymous partners are AI giants",
+   "who": "PredictStreet analysis",
+   "where": "Wedbush / FinancialContent",
+   "date": "Dec 23, 2025",
+   "url": "https://investor.wedbush.com/wedbush/article/predictstreet-2025-12-23-from-science-project-to-commercial-contender-a-deep-dive-into-lightwave-logic-lwlg",
+   "claim": "Speculation surrounds major AI chipmakers and cloud providers as the unnamed Fortune Global 500 partners.",
+   "reality": "Unverified. LWLG has never named them.",
+   "status": "open",
+   "resolved": null,
+   "resolved_source": null
+  },
+  {
+   "a": "lwlg",
+   "b": "cisco",
+   "kind": "rumor",
+   "title": "Tower's customers get polymer \u201cturnkey\u201d",
+   "who": "Seeking Alpha commenter",
+   "where": "Seeking Alpha comments",
+   "date": "2026",
+   "url": "https://seekingalpha.com/symbol/LWLG/comments",
+   "claim": "Argument that the PH18 design kit puts polymer modulators in front of Tower customers such as Nvidia, Cisco and InnoLight.",
+   "reality": "Unverified. No customer has said it uses the option.",
+   "status": "open",
+   "resolved": null,
+   "resolved_source": null
+  },
+  {
+   "a": "lwlg",
+   "b": "innolight",
+   "kind": "rumor",
+   "title": "InnoLight via Tower",
+   "who": "Seeking Alpha commenter",
+   "where": "Seeking Alpha comments",
+   "date": "2026",
+   "url": "https://seekingalpha.com/symbol/LWLG/comments",
+   "claim": "Same thread: transceiver giant InnoLight could reach LWLG's modulators through Tower.",
+   "reality": "Unverified.",
+   "status": "open",
+   "resolved": null,
+   "resolved_source": null
+  },
+  {
+   "a": "s3",
+   "b": "s4",
+   "kind": "rumor",
+   "title": "\u201cTier 1 deals are already signed\u201d",
+   "who": "r/LWLG member",
+   "where": "Reddit r/LWLG",
+   "date": "2024",
+   "url": "https://www.reddit.com/r/LWLG/comments/1gboboi/daily_trading_action_and_general_discussion",
+   "claim": "Theory that multiple Tier 1 deals exist but stay private until each customer is ready to announce its product.",
+   "reality": "Unverified. The company has disclosed no signed volume deal.",
+   "status": "open",
+   "resolved": null,
+   "resolved_source": null
+  },
+  {
+   "a": "lwlg",
+   "b": "arm",
+   "kind": "rumor",
+   "title": "\u201cThe next ARM Holdings\u201d",
+   "who": "Retail investors",
+   "where": "Reddit r/LWLG & Stocktwits (per PredictStreet)",
+   "date": "Dec 2025",
+   "url": "https://business.mammothtimes.com/mammothtimes/article/predictstreet-2025-12-23-lightwave-logic-lwlg-bridging-the-ai-bottleneck-with-polymer-photonics",
+   "claim": "A dedicated retail following believes LWLG could become the ARM of photonics: license the IP, collect royalties on every chip.",
+   "reality": "Opinion. Institutional sentiment is more cautious.",
+   "status": "open",
+   "resolved": null,
+   "resolved_source": null
+  },
+  {
+   "a": "lwlg",
+   "b": "acq",
+   "kind": "rumor",
+   "title": "\u201cIt gets bought out\u201d",
+   "who": "TradingView author",
+   "where": "TradingView idea",
+   "date": "2024",
+   "url": "https://in.tradingview.com/chart/LWLG/bxXTQ1tm-This-little-tech-company-could-soar-1000-when-it-get-s-acquired",
+   "claim": "Prediction that a big corporation buys LWLG within 1\u20132 years, sending shares up as much as 1,000%.",
+   "reality": "Unverified. No offer has ever been disclosed.",
+   "status": "open",
+   "resolved": null,
+   "resolved_source": null
+  },
+  {
+   "a": "lwlg",
+   "b": "squeeze",
+   "kind": "rumor",
+   "title": "\u201cThe squeeze would be legendary\u201d",
+   "who": "r/pennystocks poster",
+   "where": "Reddit r/pennystocks",
+   "date": "2024",
+   "url": "https://www.reddit.com/r/pennystocks/comments/1hd15vk/lwlg_short_squeeze_would_be_legendary/m1v03tk/?context=3",
+   "claim": "High short interest plus a big partner reveal could trigger a historic short squeeze.",
+   "reality": "Speculation. Short interest data is on the Trends page.",
+   "status": "open",
+   "resolved": null,
+   "resolved_source": null
+  },
+  {
+   "a": "lwlg",
+   "b": "intel",
+   "kind": "rumor",
+   "title": "\u201cMergers explain the silence\u201d",
+   "who": "r/LWLG member (u/quadkk)",
+   "where": "Reddit r/LWLG",
+   "date": "Sep 22, 2024",
+   "url": "https://www.reddit.com/r/LWLG/comments/1fll3p2/weekend_hangout_friday_september_20_2024/lo8iuqa/?context=3",
+   "claim": "After the Qualcomm\u2013Intel takeover reports, a member wondered whether big-chip merger plans explained LWLG's quiet period.",
+   "reality": "Unverified. Pure speculation.",
+   "status": "open",
+   "resolved": null,
+   "resolved_source": null
+  },
+  {
+   "a": "lwlg",
+   "b": "fv",
+   "kind": "rumor",
+   "title": "\u201cWorth $74 a share\u201d",
+   "who": "Simply Wall St community (BrandonM84)",
+   "where": "Simply Wall St narrative",
+   "date": "Apr 2026",
+   "url": "https://simplywall.st/community/narratives/us/tech/nasdaq-lwlg/lightwave-logic/wkialu5a-pre-commercialization-optimism/updates/4-investment-overview-lightwave-logic-has-entered-a-more-advan",
+   "claim": "A community narrative set a fair value of US$74.10, calling the stock 87% undervalued.",
+   "reality": "Opinion. One user's model, not an analyst target.",
+   "status": "open",
+   "resolved": null,
+   "resolved_source": null
+  },
+  {
+   "a": "s4",
+   "b": "s3",
+   "kind": "rumor",
+   "title": "\u201cVolume ships way before 2\u20133 years\u201d",
+   "who": "r/LWLG commenter",
+   "where": "Reddit r/LWLG",
+   "date": "2024",
+   "url": "https://www.reddit.com/r/LWLG/comments/1gboboi/daily_trading_action_and_general_discussion",
+   "claim": "Belief that one press release will tip the first domino and volume shipments start much sooner than mainstream estimates.",
+   "reality": "Unverified. Company target is volume production in 2027.",
+   "status": "open",
+   "resolved": null,
+   "resolved_source": null
+  },
+  {
+   "a": "lwlg",
+   "b": "google",
+   "kind": "whatif",
+   "title": "What if Stage 3 #4 is a hyperscaler?",
+   "who": "LWLG Investor Index",
+   "where": "Our what-if",
+   "date": "",
+   "url": "https://www.newswire.com/news/lightwave-logic-inc-provides-update-on-commercial-pipeline-and-announces-timing",
+   "claim": "The Feb 2026 Stage 3 customer is \u201caugmenting its internal silicon photonics platform.\u201d Companies with their own SiPh platforms include hyperscalers and chip giants. What if it's one of them?",
+   "reality": "Hypothetical. Based on public wording only, no names implied."
+  },
+  {
+   "a": "lwlg",
+   "b": "microsoft",
+   "kind": "whatif",
+   "title": "What if a cloud giant names LWLG?",
+   "who": "LWLG Investor Index",
+   "where": "Our what-if",
+   "date": "",
+   "url": "https://lwlg-research.pages.dev/07_thesis/bear_case",
+   "claim": "Even the bear case lists a public end-customer naming by a hyperscaler as an event that would upend skeptics. Picture that press release.",
+   "reality": "Hypothetical."
+  },
+  {
+   "a": "lwlg",
+   "b": "meta",
+   "kind": "whatif",
+   "title": "What if AI racks go optical first?",
+   "who": "LWLG Investor Index",
+   "where": "Our what-if",
+   "date": "",
+   "url": "https://simplywall.st/community/narratives/us/tech/nasdaq-lwlg/lightwave-logic/wkialu5a-pre-commercialization-optimism/updates/3-httpswwwtheregistercom20260405nvidiaopticalscale",
+   "claim": "GPU clusters are hitting the limits of copper and moving to optics. What if low-voltage polymer modulators become the default for scale-up links?",
+   "reality": "Hypothetical."
+  },
+  {
+   "a": "marvell",
+   "b": "lwlg",
+   "kind": "whatif",
+   "title": "What if Polariton pulls Perkinamine into Marvell?",
+   "who": "LWLG Investor Index",
+   "where": "Our what-if",
+   "date": "",
+   "url": "https://photoncap.net/p/what-marvell-bought-was-the-slot",
+   "claim": "A record 1 THz plasmonic device credited Perkinamine series 3 as its material, and Marvell now owns Polariton. What if Marvell's 3.2T roadmap runs on LWLG chemistry?",
+   "reality": "Hypothetical. Marvell has not said this."
+  },
+  {
+   "a": "tower",
+   "b": "nvidia",
+   "kind": "whatif",
+   "title": "What if Nvidia's 1.6T program picks the polymer option?",
+   "who": "LWLG Investor Index",
+   "where": "Our what-if",
+   "date": "",
+   "url": "https://stocktwits.com/news-articles/markets/equity/why-lightwave-logic-stock-is-surging-premarket-today/cZdMCjORI92",
+   "claim": "Tower builds 1.6T modules with Nvidia and now offers LWLG's modulator in the same PH18 platform. What if the two programs meet?",
+   "reality": "Hypothetical."
+  },
+  {
+   "a": "cpo",
+   "b": "tsmc",
+   "kind": "whatif",
+   "title": "What if CPO goes mainstream at TSMC?",
+   "who": "LWLG Investor Index",
+   "where": "Our what-if",
+   "date": "",
+   "url": "https://www.pulse.bot/hardware/news/chip-industry-week-in-review-ab75ccd5-1d66-4bf2-a05c-7652b9a6c920/",
+   "claim": "TSMC's 2028 A14 node is reported to feature co-packaged optics. What if the CPO-grade Perkinamine is ready just in time?",
+   "reality": "Hypothetical."
+  },
+  {
+   "a": "s4",
+   "b": "lwlg",
+   "kind": "whatif",
+   "title": "What if the supply deal gets signed?",
+   "who": "LWLG Investor Index",
+   "where": "Our what-if",
+   "date": "",
+   "url": "https://www.roic.ai/quote/LWLG/transcripts",
+   "claim": "On the Q1 2026 call, management said a material supply and licensing agreement is being negotiated with a lead customer for 2027 volume. What if it's announced next?",
+   "reality": "Hypothetical. Negotiation confirmed; outcome is not."
+  }
+ ],
+ "scoreboard_note": "Set a rumour's status to 'called' (came true) or 'debunked' and add resolved (date) + resolved_source (link). The page updates itself."
+}

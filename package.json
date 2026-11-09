@@ -1,0 +1,9 @@
+{
+  "name": "lwlg-investor-index",
+  "private": true,
+  "description": "Independent investor site about Lightwave Logic (LWLG). Not affiliated with Lightwave Logic, Inc.",
+  "type": "module",
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}

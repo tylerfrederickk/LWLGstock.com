@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interactive timeline — LWLG Investor Index (independent)</title>
+<meta name="description" content="Every major Lightwave Logic milestone from 1991 to today, interactive and sourced, with the press release archive linked to each event.">
+<link rel="canonical" href="https://lwlgstock.com/timeline.html">
+<meta property="og:title" content="Interactive timeline — LWLG Investor Index">
+<meta property="og:description" content="Every major Lightwave Logic milestone from 1991 to today, interactive and sourced, with the press release archive linked to each event.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23111'/%3E%3Crect x='4' y='14' width='24' height='4' fill='%23E10600'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+
+</head>
+<body>
+<a class="sr" href="#main">Skip to content</a>
+<div class="indep">Independent investor site. Not affiliated with, endorsed by, or sponsored by Lightwave Logic, Inc. Not financial advice. <a href="about.html">About this site</a></div>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">LWLG<span>Investor Index</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main"><a class="nav-top" href="start.html">Start here</a><a class="nav-top" href="index.html#perkinamine">Perkinamine</a><div class="nav-group active"><button type="button" class="nav-top" aria-expanded="false">Company<i aria-hidden="true"></i></button><div class="nav-menu"><a href="business.html"><b>How LWLG makes money</b><span>Materials, licensing, royalties</span></a><a href="learn.html"><b>How a modulator works</b><span>3-minute visual explainer</span></a><a href="timeline.html" aria-current="page"><b>Timeline</b><span>39 milestones since 1991</span></a><a href="patents.html"><b>Patents</b><span>The IP portfolio, explained</span></a><a href="ecosystem.html"><b>Partners & leadership</b><span>Foundries, customers, the team</span></a></div></div><div class="nav-group"><button type="button" class="nav-top" aria-expanded="false">The stock<i aria-hidden="true"></i></button><div class="nav-menu"><a href="earnings.html"><b>Earnings hub</b><span>Q3 2026 results: Nov 10</span></a><a href="trends.html"><b>Key numbers over time</b><span>Cash, shares, burn, Stage 3</span></a><a href="catalysts.html"><b>Catalysts & stage tracker</b><span>Countdowns + customer stages</span></a><a href="filings.html"><b>Filings & ownership</b><span>SEC, insiders, 13F, shorts</span></a><a href="calls.html"><b>Earnings calls</b><span>Every call, summarized</span></a></div></div><div class="nav-group"><button type="button" class="nav-top" aria-expanded="false">Research<i aria-hidden="true"></i></button><div class="nav-menu"><a href="thesis.html"><b>Bull vs. bear</b><span>The case, stress-tested</span></a><a href="promises.html"><b>Promise tracker</b><span>What management said vs. did</span></a><a href="connections.html"><b>The unverified connections</b><span>Rumours, theories & what-ifs</span></a><a href="market.html"><b>Market & competitors</b><span>TAM calculator, tech comparison</span></a><a href="faq.html"><b>FAQ</b><span>Plain answers to common questions</span></a><a href="glossary.html"><b>Glossary</b><span>PAM4, PDK, chromophore…</span></a></div></div><div class="nav-group"><button type="button" class="nav-top" aria-expanded="false">Tools<i aria-hidden="true"></i></button><div class="nav-menu"><a href="news.html"><b>What's new</b><span>Every release, filing and call</span></a><a href="portfolio.html"><b>My position</b><span>Track your shares</span></a><a href="community.html"><b>Community Q&A</b><span>Ask a question</span></a><a href="#alerts"><b>Get alerts</b><span>Email & text</span></a></div></div></nav>
+    <a class="quote" href="filings.html#chart" title="Live chart">NASDAQ: LWLG <b>●</b></a>
+  </div>
+</header>
+<div id="glance" class="glance" aria-label="LWLG at a glance"></div>
+<main id="main">
+<style>
+.tl{position:relative;padding-left:120px}
+.tl:before{content:"";position:absolute;left:52px;top:0;bottom:0;width:8px;border-radius:4px;background:#1D2742}
+.tl-fill{position:absolute;left:52px;top:0;width:8px;border-radius:4px;background:linear-gradient(180deg,#3EE0FF,#8B6CFF,#FF3D9A);box-shadow:0 0 22px rgba(139,108,255,.8);height:0}
+.tl-pulse{position:absolute;left:44px;width:24px;height:24px;border-radius:50%;background:radial-gradient(circle,#fff 0 25%,var(--red) 26% 60%,rgba(225,6,0,0) 61%);top:0;transform:translateY(-50%)}
+.ms{position:relative;padding:28px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px}
+.ms:before{content:"";position:absolute;left:-76px;top:40px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid #56628A}
+.ms.lit:before{background:#3EE0FF;border-color:#3EE0FF;box-shadow:0 0 14px #3EE0FF}
+.ms .yr{font-size:34px;font-weight:900;letter-spacing:-.04em;line-height:1}
+.ms h3{font-size:24px}
+.ms .why{border-left:3px solid #8B6CFF;padding-left:12px;margin-top:10px;font-size:15px}
+.ms .prs{margin-top:10px;font-size:14px}
+.ms[hidden]{display:none}
+@media (max-width:700px){.tl{padding-left:44px}.tl:before,.tl-fill{left:10px;width:6px}.tl-pulse{left:1px}.ms{grid-template-columns:1fr;gap:6px}.ms:before{left:-41px}}
+</style>
+<section class="page-hero"><div class="wrap">
+  <div class="kicker">02 — Timeline</div>
+  <h1>Follow the <span class="red">light.</span></h1>
+  <p class="lede">From a Colorado chemistry startup in 1991 to a Foxconn transceiver demo in 2026. Scroll and the pulse travels with you. Filter by type, or jump to a year.</p>
+  <div class="pills" style="margin-top:24px" role="group" aria-label="Filter milestones" id="cats"></div>
+  <div class="pills" style="margin-top:10px" id="years" aria-label="Jump to year"></div>
+</div></section>
+<section style="border-top:1px solid var(--line2);padding:40px 0 80px"><div class="wrap">
+  <div class="tl" id="tl"><div class="tl-fill" id="fill"></div><div class="tl-pulse" id="pulse"></div></div>
+</div></section>
+<section class="section" id="press"><div class="wrap">
+  <div class="kicker">Press release archive</div>
+  <h2>Every headline.</h2>
+  <label class="field" style="max-width:420px;margin-top:20px">Search headlines<input id="pq" type="search" placeholder="e.g. Stage 3, Foxconn, PDK"></label>
+  <div class="tablebox" style="margin-top:20px"><table><thead><tr><th scope="col">Date</th><th scope="col">Headline</th><th scope="col">On timeline</th></tr></thead><tbody id="pr"></tbody></table></div>
+  <p class="note" style="margin-top:12px">Headlines link to the original release on the wire service. The most recent ~30 releases are listed.</p>
+</div></section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="brand" style="font-size:44px">LWLG<span>Investor Index</span></div>
+        <p class="muted" style="max-width:420px">Everything about Lightwave Logic stock in one place: the thesis, the timeline, the patents, the filings and the catalysts. Built by an independent investor.</p>
+      </div>
+      <div>
+        <div class="kicker">Research</div>
+        <a href="start.html">Start here: LWLG in 5 minutes</a><a href="index.html#perkinamine">Perkinamine</a><a href="business.html">How LWLG makes money</a><a href="thesis.html">Bull vs. bear</a><a href="promises.html">Promise tracker</a><a href="faq.html">FAQ</a><a href="glossary.html">Glossary</a>
+      </div>
+      <div>
+        <div class="kicker">Track</div>
+        <a href="news.html">What's new</a><a href="earnings.html">Earnings hub</a><a href="trends.html">Key numbers over time</a><a href="catalysts.html">Catalyst calendar</a><a href="filings.html">SEC filings &amp; insiders</a><a href="portfolio.html">My position</a><a href="onepager.pdf">One-page summary (PDF)</a>
+      </div>
+      <div>
+        <div class="kicker" id="alerts">Get alerts</div>
+        <p class="note">New SEC filings and press releases, the day they drop.</p>
+        <form name="alerts" method="POST" data-netlify="true" netlify-honeypot="company" data-alerts>
+          <input type="hidden" name="form-name" value="alerts">
+          <p class="sr"><label>Leave blank <input name="company"></label></p>
+          <label class="field">Email<input type="email" name="email" required autocomplete="email"></label>
+          <label class="field" style="margin-top:8px">Mobile for text alerts (optional)<input type="tel" name="phone" autocomplete="tel"></label>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;margin:10px 0;font-size:14px">
+            <label style="display:flex;gap:6px;align-items:center;min-height:44px"><input type="checkbox" name="filings" checked style="width:auto;min-height:0"> SEC filings</label>
+            <label style="display:flex;gap:6px;align-items:center;min-height:44px"><input type="checkbox" name="press" checked style="width:auto;min-height:0"> Press releases</label>
+            <label style="display:flex;gap:6px;align-items:center;min-height:44px"><input type="checkbox" name="insiders" style="width:auto;min-height:0"> Insider trades</label>
+          </div>
+          <button class="btn red" type="submit">Get alerts</button>
+          <p class="note" data-out aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <b>Independent and unofficial.</b> LWLGstock.com is an independent investor website. It is not affiliated with, endorsed by, sponsored by or connected to Lightwave Logic, Inc. "Lightwave Logic" and "Perkinamine" are trademarks of their owner and are used here only to identify the company being discussed.
+      <b>Not financial advice.</b> Everything here is for information and education only. It reflects an openly bullish point of view, may contain errors and may be out of date. Do your own research, read the company's SEC filings, and talk to a licensed advisor before investing. Stock prices are provided by TradingView and may be delayed. Diagrams are illustrative and not to scale. Last built 2026-11-09.
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+<script src="assets/ask.js" defer></script>
+<script src="assets/share.js" defer></script>
+<script src="assets/earningsday.js" defer></script>
+<script>
+(async function(){
+  const d=await LW.getJSON('data/timeline.json'), E=LW.esc, $=id=>document.getElementById(id);
+  const ms=d.milestones.slice().sort((a,b)=>String(a.date).localeCompare(String(b.date)));
+  const pr=d.press_releases;
+  const near=(a,b)=>{if(String(a).length<10||String(b).length<10)return false;return Math.abs(new Date(a)-new Date(b))<=3*864e5};
+  const catNames={all:'All',tech:'Technology',commercial:'Commercial',corporate:'Corporate',financial:'Financial',ip:'IP'};
+  let cat='all';
+  $('tl').insertAdjacentHTML('beforeend',ms.map((m,i)=>{
+    const rel=pr.filter(p=>near(p.date,m.date));
+    return `<article class="ms" data-cat="${E(m.category)}" data-year="${String(m.date).slice(0,4)}" id="m${i}">
+      <div><div class="yr">${E(String(m.date).slice(0,4))}</div><div class="mono note">${E(LW.fmtDate(m.date))}</div><div style="margin-top:8px"><span class="tag ${m.category==='commercial'?'red':''}">${E(catNames[m.category]||m.category)}</span></div></div>
+      <div><h3>${E(m.title)}</h3><p class="muted" style="margin:8px 0 0">${E(m.detail)}</p>${m.why_bullish?`<div class="why"><b class="red">Why it matters:</b> ${E(m.why_bullish)}</div>`:''}
+      ${rel.length?`<div class="prs">${rel.map(p=>`<span class="mono note">PRESS RELEASE →</span> <a href="${E(p.url)}" target="_blank" rel="noopener">${E(p.title)}</a>`).join('<br>')}</div>`:''}
+      <div style="margin-top:8px">${LW.srcLink(m.source)}</div></div></article>`}).join(''));
+  $('cats').innerHTML=Object.entries(catNames).map(([k,v])=>`<button class="pill" type="button" data-c="${k}" aria-pressed="${k==='all'}">${v}</button>`).join('');
+  $('cats').onclick=e=>{const b=e.target.closest('[data-c]');if(!b)return;cat=b.dataset.c;[...$('cats').children].forEach(x=>x.setAttribute('aria-pressed',x===b));document.querySelectorAll('.ms').forEach(m=>m.hidden=!(cat==='all'||m.dataset.cat===cat));onScroll()};
+  const years=[...new Set(ms.map(m=>String(m.date).slice(0,4)))];
+  $('years').innerHTML=years.map(y=>`<a class="pill" style="display:inline-flex;align-items:center;text-decoration:none;font-family:var(--mono)" href="#${document.querySelector('.ms[data-year="'+y+'"]').id}">${y}</a>`).join('');
+  // press archive
+  const drawPR=q=>{q=(q||'').toLowerCase();$('pr').innerHTML=pr.filter(p=>!q||p.title.toLowerCase().includes(q)).map(p=>{const i=ms.findIndex(m=>near(p.date,m.date));return `<tr><td class="mono" style="white-space:nowrap">${E(p.date)}</td><td><a href="${E(p.url)}" target="_blank" rel="noopener">${E(p.title)}</a></td><td>${i>=0?`<a href="#m${i}">View →</a>`:''}</td></tr>`}).join('')||'<tr><td colspan="3" class="empty">No matches.</td></tr>'};
+  $('pq').addEventListener('input',e=>drawPR(e.target.value)); drawPR();
+  // scroll-driven fill + pulse
+  const tl=$('tl'), fill=$('fill'), pulse=$('pulse');
+  function onScroll(){
+    const r=tl.getBoundingClientRect(), y=Math.max(0,Math.min(r.height,innerHeight*0.55-r.top));
+    fill.style.height=y+'px'; pulse.style.top=y+'px';
+    document.querySelectorAll('.ms').forEach(m=>m.classList.toggle('lit',m.getBoundingClientRect().top<innerHeight*0.55));
+  }
+  addEventListener('scroll',()=>requestAnimationFrame(onScroll),{passive:true}); onScroll();
+})();
+</script>
+</body>
+</html>

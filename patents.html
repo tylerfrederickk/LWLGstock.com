@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Patent portfolio — LWLG Investor Index (independent)</title>
+<meta name="description" content="Lightwave Logic's patent portfolio, searchable: chemistry, device design, fabrication and packaging patents explained in plain English.">
+<link rel="canonical" href="https://lwlgstock.com/patents.html">
+<meta property="og:title" content="Patent portfolio — LWLG Investor Index">
+<meta property="og:description" content="Lightwave Logic's patent portfolio, searchable: chemistry, device design, fabrication and packaging patents explained in plain English.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23111'/%3E%3Crect x='4' y='14' width='24' height='4' fill='%23E10600'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+<script type="importmap">{"imports":{"three":"./assets/vendor/three.module.min.js","three/addons/":"./assets/vendor/"}}</script>
+</head>
+<body>
+<a class="sr" href="#main">Skip to content</a>
+<div class="indep">Independent investor site. Not affiliated with, endorsed by, or sponsored by Lightwave Logic, Inc. Not financial advice. <a href="about.html">About this site</a></div>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">LWLG<span>Investor Index</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main"><a class="nav-top" href="start.html">Start here</a><a class="nav-top" href="index.html#perkinamine">Perkinamine</a><div class="nav-group active"><button type="button" class="nav-top" aria-expanded="false">Company<i aria-hidden="true"></i></button><div class="nav-menu"><a href="business.html"><b>How LWLG makes money</b><span>Materials, licensing, royalties</span></a><a href="learn.html"><b>How a modulator works</b><span>3-minute visual explainer</span></a><a href="timeline.html"><b>Timeline</b><span>39 milestones since 1991</span></a><a href="patents.html" aria-current="page"><b>Patents</b><span>The IP portfolio, explained</span></a><a href="ecosystem.html"><b>Partners & leadership</b><span>Foundries, customers, the team</span></a></div></div><div class="nav-group"><button type="button" class="nav-top" aria-expanded="false">The stock<i aria-hidden="true"></i></button><div class="nav-menu"><a href="earnings.html"><b>Earnings hub</b><span>Q3 2026 results: Nov 10</span></a><a href="trends.html"><b>Key numbers over time</b><span>Cash, shares, burn, Stage 3</span></a><a href="catalysts.html"><b>Catalysts & stage tracker</b><span>Countdowns + customer stages</span></a><a href="filings.html"><b>Filings & ownership</b><span>SEC, insiders, 13F, shorts</span></a><a href="calls.html"><b>Earnings calls</b><span>Every call, summarized</span></a></div></div><div class="nav-group"><button type="button" class="nav-top" aria-expanded="false">Research<i aria-hidden="true"></i></button><div class="nav-menu"><a href="thesis.html"><b>Bull vs. bear</b><span>The case, stress-tested</span></a><a href="promises.html"><b>Promise tracker</b><span>What management said vs. did</span></a><a href="connections.html"><b>The unverified connections</b><span>Rumours, theories & what-ifs</span></a><a href="market.html"><b>Market & competitors</b><span>TAM calculator, tech comparison</span></a><a href="faq.html"><b>FAQ</b><span>Plain answers to common questions</span></a><a href="glossary.html"><b>Glossary</b><span>PAM4, PDK, chromophore…</span></a></div></div><div class="nav-group"><button type="button" class="nav-top" aria-expanded="false">Tools<i aria-hidden="true"></i></button><div class="nav-menu"><a href="news.html"><b>What's new</b><span>Every release, filing and call</span></a><a href="portfolio.html"><b>My position</b><span>Track your shares</span></a><a href="community.html"><b>Community Q&A</b><span>Ask a question</span></a><a href="#alerts"><b>Get alerts</b><span>Email & text</span></a></div></div></nav>
+    <a class="quote" href="filings.html#chart" title="Live chart">NASDAQ: LWLG <b>●</b></a>
+  </div>
+</header>
+<div id="glance" class="glance" aria-label="LWLG at a glance"></div>
+<main id="main">
+<style>
+.dies{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;background:#05070E;padding:8px;border-radius:18px}
+.die-t{background:linear-gradient(160deg,#18213A,#111829);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:12px;min-height:150px;display:flex;flex-direction:column;justify-content:space-between;text-align:left;font:12px var(--sans);color:var(--fg);cursor:pointer;position:relative}
+.die-t:hover,.die-t[aria-pressed="true"]{background:linear-gradient(160deg,#8B6CFF,#FF3D9A);color:#fff}
+.die-t .num{font-family:var(--mono);font-size:11px}
+.die-t .ttl{font-weight:700;font-size:13px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.die-t .cat{font-family:var(--mono);font-size:10px;text-transform:uppercase;opacity:.75}
+.die-t.pending{background:transparent;outline:1px dashed #56628A;outline-offset:-6px}
+@keyframes scanp{from{transform:translateX(-10px)}to{transform:translateX(100vw)}}
+.scanline{position:absolute;top:0;bottom:0;left:0;width:3px;background:var(--red);box-shadow:0 0 18px var(--red);animation:scanp 6s linear infinite;pointer-events:none}
+.detail{position:sticky;top:120px}
+</style>
+<section class="page-hero"><div class="wrap">
+  <div class="kicker">03 — IP portfolio</div>
+  <h1>Every die, a <span class="red">patent.</span></h1>
+  <p class="lede" id="count"></p>
+  <div class="grid g4" id="pstats" style="margin-top:28px"></div>
+</div></section>
+<section class="psky-sec">
+  <div class="wrap">
+    <div class="sec-head"><div class="kicker">The constellation</div><h2 class="h-sm">Every patent, as a star.</h2><p class="lede" style="margin-left:0">Each star is one granted patent, grouped by topic and linked to its nearest neighbours. Newer patents shine bigger. Drag to orbit, hover to read, click to open its card.</p></div>
+    <div class="psky" id="psky"><canvas aria-label="3D star map of Lightwave Logic's granted patents, grouped by topic. The full searchable list follows below." role="img"></canvas><div class="psky-labels" aria-hidden="true"></div><div class="psky-tip" hidden></div><div class="psky-hint mono" aria-hidden="true">Drag to orbit · scroll to zoom</div></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:36px"><div class="wrap">
+  <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:end">
+    <label class="field" style="flex:1;min-width:240px">Search patents<input id="q" type="search" placeholder="e.g. cladding, poling, diamondoid, hermetic"></label>
+    <div class="pills" role="group" aria-label="Category" id="cats"></div>
+    <label style="display:flex;gap:8px;align-items:center;min-height:44px;font-size:14px"><input type="checkbox" id="pend" style="width:auto;min-height:0"> Include pending applications</label>
+  </div>
+  <div class="grid" style="grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:32px;margin-top:24px" id="pv">
+    <div style="position:relative;overflow:hidden"><div class="scanline" aria-hidden="true"></div><div class="dies" id="dies"></div></div>
+    <aside class="detail box" id="detail" aria-live="polite"><p class="muted">Select a patent to read what it covers and why it matters.</p></aside>
+  </div>
+  <p class="note" style="margin-top:20px" id="pnotes"></p>
+</div></section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="brand" style="font-size:44px">LWLG<span>Investor Index</span></div>
+        <p class="muted" style="max-width:420px">Everything about Lightwave Logic stock in one place: the thesis, the timeline, the patents, the filings and the catalysts. Built by an independent investor.</p>
+      </div>
+      <div>
+        <div class="kicker">Research</div>
+        <a href="start.html">Start here: LWLG in 5 minutes</a><a href="index.html#perkinamine">Perkinamine</a><a href="business.html">How LWLG makes money</a><a href="thesis.html">Bull vs. bear</a><a href="promises.html">Promise tracker</a><a href="faq.html">FAQ</a><a href="glossary.html">Glossary</a>
+      </div>
+      <div>
+        <div class="kicker">Track</div>
+        <a href="news.html">What's new</a><a href="earnings.html">Earnings hub</a><a href="trends.html">Key numbers over time</a><a href="catalysts.html">Catalyst calendar</a><a href="filings.html">SEC filings &amp; insiders</a><a href="portfolio.html">My position</a><a href="onepager.pdf">One-page summary (PDF)</a>
+      </div>
+      <div>
+        <div class="kicker" id="alerts">Get alerts</div>
+        <p class="note">New SEC filings and press releases, the day they drop.</p>
+        <form name="alerts" method="POST" data-netlify="true" netlify-honeypot="company" data-alerts>
+          <input type="hidden" name="form-name" value="alerts">
+          <p class="sr"><label>Leave blank <input name="company"></label></p>
+          <label class="field">Email<input type="email" name="email" required autocomplete="email"></label>
+          <label class="field" style="margin-top:8px">Mobile for text alerts (optional)<input type="tel" name="phone" autocomplete="tel"></label>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;margin:10px 0;font-size:14px">
+            <label style="display:flex;gap:6px;align-items:center;min-height:44px"><input type="checkbox" name="filings" checked style="width:auto;min-height:0"> SEC filings</label>
+            <label style="display:flex;gap:6px;align-items:center;min-height:44px"><input type="checkbox" name="press" checked style="width:auto;min-height:0"> Press releases</label>
+            <label style="display:flex;gap:6px;align-items:center;min-height:44px"><input type="checkbox" name="insiders" style="width:auto;min-height:0"> Insider trades</label>
+          </div>
+          <button class="btn red" type="submit">Get alerts</button>
+          <p class="note" data-out aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <b>Independent and unofficial.</b> LWLGstock.com is an independent investor website. It is not affiliated with, endorsed by, sponsored by or connected to Lightwave Logic, Inc. "Lightwave Logic" and "Perkinamine" are trademarks of their owner and are used here only to identify the company being discussed.
+      <b>Not financial advice.</b> Everything here is for information and education only. It reflects an openly bullish point of view, may contain errors and may be out of date. Do your own research, read the company's SEC filings, and talk to a licensed advisor before investing. Stock prices are provided by TradingView and may be delayed. Diagrams are illustrative and not to scale. Last built 2026-11-09.
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+<script src="assets/ask.js" defer></script>
+<script src="assets/share.js" defer></script>
+<script src="assets/earningsday.js" defer></script>
+<script type="module" src="assets/patentsky.js"></script>
+<script>
+(async function(){
+  const d=await LW.getJSON('data/patents.json'), E=LW.esc, $=id=>document.getElementById(id);
+  $('count').innerHTML=E(d.count_statement.text)+' '+LW.srcLink(d.count_statement.source,'Investor presentation ↗')+' '+LW.srcLink(d.count_statement.secondary_source,'10-K ↗');
+  const P=d.patents.map(p=>({...p,pending:false})), A=(d.pending_applications||[]).map(p=>({...p,pending:true}));
+  const cnt=c=>P.filter(p=>p.category===c).length;
+  const stat=(n,l)=>`<div class="stat card"><div class="n">${n}</div><div class="l">${l}</div></div>`;
+  $('pstats').innerHTML=stat('67','Granted worldwide (company, Dec 2025)')+stat('80+','Pending applications (company)')+stat(P.length,'US patents listed here')+stat(A.length,'Published US applications listed');
+  const cats=['all','chemistry','device design','fabrication','packaging','other'];
+  let cat='all',q='',pend=false;
+  $('cats').innerHTML=cats.map(c=>`<button class="pill" type="button" data-c="${c}" aria-pressed="${c==='all'}">${c==='all'?'All':c[0].toUpperCase()+c.slice(1)}${c!=='all'?' ('+cnt(c)+')':''}</button>`).join('');
+  const gp=n=>'https://patents.google.com/patent/'+String(n).replace(/[\s,\/]/g,'');
+  function list(){return (pend?P.concat(A):P).filter(p=>(cat==='all'||p.category===cat)&&(!q||(p.number+' '+p.title+' '+(p.plain_english||'')).toLowerCase().includes(q))).sort((a,b)=>String(b.granted||b.published||'').localeCompare(String(a.granted||a.published||'')))}
+  function draw(){
+    const L=list();
+    $('dies').innerHTML=L.map((p,i)=>`<button type="button" class="die-t${p.pending?' pending':''}" data-i="${i}" aria-pressed="false"><span class="num">${E(p.number)}</span><span class="ttl">${E(p.title)}</span><span class="cat">${E(p.category)} · ${E(String(p.granted||p.published||'').slice(0,4)||'—')}${p.pending?' · pending':''}</span></button>`).join('')||'<p class="empty" style="background:var(--card);margin:0">No patents match.</p>';
+    $('dies').onclick=e=>{const b=e.target.closest('[data-i]');if(!b)return;[...$('dies').children].forEach(x=>x.setAttribute('aria-pressed',x===b));show(L[+b.dataset.i])};
+  }
+  function show(p){
+    $('detail').innerHTML=`<div class="kicker">${E(p.pending?'Published application':'Granted patent')} · ${E(p.category)}</div>
+      <h3 style="font-size:26px;margin-top:8px">${E(p.title)}</h3>
+      <p class="mono" style="font-size:13px">${E(p.number)}${p.granted?' · granted '+E(LW.fmtDate(p.granted)):''}${p.published?' · published '+E(LW.fmtDate(p.published)):''}${p.filed?' · filed '+E(LW.fmtDate(p.filed)):''}</p>
+      <p><b>In plain English:</b> ${E(p.plain_english||'')}</p>
+      <p style="border-left:3px solid var(--red);padding-left:12px"><b class="red">Why it matters:</b> ${E(p.why_it_matters||'')}</p>
+      ${p.note?`<p class="note">${E(p.note)}</p>`:''}
+      <p style="display:flex;gap:16px;flex-wrap:wrap">${p.pending?'':`<a href="${gp(p.number)}" target="_blank" rel="noopener">Google Patents ↗</a>`}${LW.srcLink(p.url,'Source ↗')}</p>`;
+  }
+  $('cats').onclick=e=>{const b=e.target.closest('[data-c]');if(!b)return;cat=b.dataset.c;[...$('cats').children].forEach(x=>x.setAttribute('aria-pressed',x===b));draw()};
+  $('q').addEventListener('input',e=>{q=e.target.value.toLowerCase();draw()});
+  $('pend').addEventListener('change',e=>{pend=e.target.checked;draw()});
+  $('pnotes').textContent='Why 52 here vs. 45 US in the company count: this list also includes older patents acquired from BrPhotonics (2018) and Chromosol (2022), some now expired, plus four granted in 2026 after the company’s count date. Compiled from Justia, USPTO, Google Patents and other patent databases; a few grants may be missing.';
+  draw(); const first=list()[0]; if(first){show(first);$('dies').firstElementChild.setAttribute('aria-pressed','true')}
+})();
+</script>
+</body>
+</html>

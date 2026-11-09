@@ -1,0 +1,717 @@
+{
+ "milestones": [
+  {
+   "date": "1991",
+   "title": "PSI-TEC founded (technology predecessor)",
+   "detail": "Dr. Frederick J. Goetz founded PSI-TEC Corp. in 1991; it was incorporated in Delaware in 1995 and became the source of the company's polymer chemistry.",
+   "why_bullish": "The core electro-optic polymer IP has roots going back more than three decades.",
+   "category": "corporate",
+   "source": "https://capedge.com/filing/1325964/0001553350-17-000281/LWLG-10K-2016FY"
+  },
+  {
+   "date": "1997-06-24",
+   "title": "Public shell incorporated in Nevada",
+   "detail": "The entity that became Lightwave Logic was incorporated under Nevada law on June 24, 1997.",
+   "why_bullish": "Long-lived public vehicle that later housed the polymer business.",
+   "category": "corporate",
+   "source": "https://capedge.com/filing/1325964/0001553350-17-000281/LWLG-10K-2016FY"
+  },
+  {
+   "date": "2004",
+   "title": "Acquires PSI-TEC (merged 2006)",
+   "detail": "The company acquired PSI-TEC Corp. in 2004 and fully merged with it in 2006, bringing the chromophore technology in-house.",
+   "why_bullish": "Consolidated ownership of the foundational polymer IP.",
+   "category": "ip",
+   "source": "https://capedge.com/filing/1325964/0001553350-17-000281/LWLG-10K-2016FY"
+  },
+  {
+   "date": "2008",
+   "title": "Renamed Lightwave Logic, Inc.",
+   "detail": "The company adopted the Lightwave Logic, Inc. name in 2008.",
+   "why_bullish": "Marked the start of the company's identity as a photonics/polymer platform.",
+   "category": "corporate",
+   "source": "https://capedge.com/filing/1325964/0001553350-17-000281/LWLG-10K-2016FY"
+  },
+  {
+   "date": "2014-02",
+   "title": "Longmont, CO device facility and cleanroom build-out",
+   "detail": "Opened a ~5,000 sq ft HQ and photonic device facility in Longmont, Colorado and began building a class 100 cleanroom for waveguide prototype runs (OTC era, CEO Tom Zelibor).",
+   "why_bullish": "First step toward vertically integrated in-house device fabrication.",
+   "category": "tech",
+   "source": "https://www.tradeandindustrydev.com/industry/technology-r-d/news/co-lightwave-logic-opens-new-hq-constructing-advan-8870"
+  },
+  {
+   "date": "2017-03-30",
+   "title": "Dr. Michael Lebby named CEO (effective May 1, 2017)",
+   "detail": "Board member and photonics industry veteran Michael Lebby was named CEO, succeeding Tom Zelibor, who stayed on as chairman; former JDSU CTO Fred Leonberger joined the board.",
+   "why_bullish": "Brought a commercially oriented photonics executive in to lead the shift from research to products.",
+   "category": "corporate",
+   "source": "https://www.lightwaveonline.com/optical-tech/electronics/article/16673345/lightwave-logic-names-michael-lebby-ceo-fred-leonberger-to-board"
+  },
+  {
+   "date": "2017-11-06",
+   "title": "Move to Englewood, CO HQ with cleanrooms",
+   "detail": "Announced consolidation of all R&D and corporate operations into a 13,420 sq ft Englewood, Colorado site with ISO class 1,000 and 10,000 cleanrooms; phased move expected to finish by late March 2018.",
+   "why_bullish": "Gave the company its own fab/cleanroom capacity for device prototyping.",
+   "category": "tech",
+   "source": "https://www.globenewswire.com/de/news-release/2017/11/06/1175258/0/en/Lightwave-Logic-Announces-Move-to-New-Corporate-Headquarters.html"
+  },
+  {
+   "date": "2021-08-27",
+   "title": "Uplisting to Nasdaq Capital Market",
+   "detail": "Announced uplisting from the OTC market to the Nasdaq Capital Market under ticker LWLG, with trading starting September 1, 2021.",
+   "why_bullish": "Nasdaq listing broadened institutional access and visibility.",
+   "category": "corporate",
+   "source": "https://prnewswire.com/news-releases/lightwave-logic-announces-uplisting-to-the-nasdaq-capital-market-301364148.html"
+  },
+  {
+   "date": "2021-09-16",
+   "title": "World-record modulator results with Polariton/ETH Zurich",
+   "detail": "Polariton's plasmonic racetrack modulator using Perkinamine chromophores carried 220 Gbit/s OOK and 408 Gbit/s PAM8 with >110 GHz bandwidth at 0.6 V drive, presented as an ECOC post-deadline paper.",
+   "why_bullish": "Independent, peer-reviewed proof that the material supports extreme speeds at very low voltage.",
+   "category": "tech",
+   "source": "https://prnewswire.com/news-releases/lightwave-logic-and-polariton-technologies-achieve-world-record-performance-for-ultra-high-speed-modulators-301378500.html"
+  },
+  {
+   "date": "2023-05-25",
+   "title": "First material supply & license agreement - commercialization begins",
+   "detail": "Signed its first commercial supply and license agreement for Perkinamine materials (counterparty undisclosed), with a license fee, per-unit royalties, rising annual minimum royalties and minimum volumes.",
+   "why_bullish": "First revenue-generating commercial contract and a template for the licensing model.",
+   "category": "commercial",
+   "source": "https://prnewswire.com/news-releases/lightwave-logic-begins-commercialization-of-its-electro-optic-polymer-materials-301834385.html"
+  },
+  {
+   "date": "2024-03-25",
+   "title": "200 Gbps polymer/silicon modulator results at OFC 2024",
+   "detail": "Showed 100 GBaud PAM4 (200G) heterogeneous polymer/silicon photonic modulators made on a 200mm production silicon process with drive voltages below 2 V and as low as 1 V.",
+   "why_bullish": "Points to 800G (4x200G) pluggable transceivers using standard silicon photonics.",
+   "category": "tech",
+   "source": "https://www.marketscreener.com/quote/stock/LIGHTWAVE-LOGIC-INC-120791540/news/Lightwave-Logic-Demonstrates-World-Class-200Gbps-Heterogeneous-Polymer-Silicon-Photonic-Modulator-Re-46296577/"
+  },
+  {
+   "date": "2024-03-28",
+   "title": "400 Gbps+ link with plasmonic Mach-Zehnder modulator",
+   "detail": "ETH Zurich researchers ran Perkinamine in a plasmonic MZM link at 437.1 Gbps (PAM8, 178 GBaud) with intensity modulation/direct detection.",
+   "why_bullish": "Demonstrates headroom for 400G-per-lane generations.",
+   "category": "tech",
+   "source": "https://finance.yahoo.com/news/lightwave-logic-eo-polymer-achieves-123100818.html?.tsrc=rss"
+  },
+  {
+   "date": "2024-05-21",
+   "title": "Advanced Micro Foundry (AMF) collaboration",
+   "detail": "Partnered with Singapore's AMF to develop polymer slot modulators in AMF's standard 200mm silicon photonics process, reporting sub-1V drive and 200G PAM4.",
+   "why_bullish": "Shows the polymer can be dropped into an existing commercial foundry flow.",
+   "category": "commercial",
+   "source": "https://au.finance.yahoo.com/news/lightwave-logic-advanced-micro-foundry-123100818.html"
+  },
+  {
+   "date": "2024-07-26",
+   "title": "$100M S-3 shelf registration filed",
+   "detail": "Filed a Form S-3 shelf registration (No. 333-281059) for up to $100 million of common stock; base prospectus dated August 5, 2024. (Note: this shelf was filed in 2024, not December 2025; the Dec 2025 offering was drawn from it.)",
+   "why_bullish": "Provided flexible financing capacity for commercialization.",
+   "category": "financial",
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000107997324001114/lwlg_s3.htm"
+  },
+  {
+   "date": "2024-09-24",
+   "title": "Packaged modulator showcase with Polariton at ECOC 2024",
+   "detail": "Jointly showed a packaged device pairing Polariton's plasmonic modulators with Perkinamine; the company also won an ECOC Industry Innovation Award for its hybrid PIC platform and reported sub-0.5V drive.",
+   "why_bullish": "Moved from chip-level results to packaged hardware with industry recognition.",
+   "category": "tech",
+   "source": "https://www.sdxcentral.com/press-releases/lightwave-logic-updates-on-third-quarter-2024-progress-and-growth/"
+  },
+  {
+   "date": "2024-12-11",
+   "title": "CEO transition: Yves LeMaitre succeeds Michael Lebby",
+   "detail": "Lebby retired as Chairman/CEO effective Dec 10, 2024; board member Yves LeMaitre (ex-Oclaro/Lumentum) became CEO, Tom Zelibor returned as President, and Ronald Bucchi became non-executive Chairman.",
+   "why_bullish": "Put a commercially seasoned optical-networking executive in charge of the go-to-market phase.",
+   "category": "corporate",
+   "source": "https://www.nasdaq.com/press-release/lightwave-logic-focus-execution-its-strategic-plan-under-refreshed-leadership-team"
+  },
+  {
+   "date": "2025-03-28",
+   "title": "Silicon photonics PDK enters controlled availability",
+   "detail": "Released a process design kit (in controlled availability) to integrate its polymers into silicon PICs via a back-end-of-line process, implemented with two unnamed foundries.",
+   "why_bullish": "Lets chip designers use the polymer modulator like a standard foundry building block.",
+   "category": "tech",
+   "source": "https://www.fiberopticsonline.com/doc/lightwave-logic-announces-controlled-photonics-design-advanced-electro-polymer-integration-0001"
+  },
+  {
+   "date": "2025-05-14",
+   "title": "Robert Blum hired as SVP Sales & Marketing",
+   "detail": "Hired Dr. Robert Blum, previously at Applied Materials photonics and head of silicon photonics strategy at Intel.",
+   "why_bullish": "Added a senior commercial leader from the silicon photonics mainstream.",
+   "category": "corporate",
+   "source": "https://www.newswire.com/news/lightwave-logic-appoints-robert-blum-as-senior-vice-president-of-sales-1655273"
+  },
+  {
+   "date": "2025-07-15",
+   "title": "Passes Telcordia GR-468 85/85 damp-heat test",
+   "detail": "Perkinamine samples passed 1,000 hours at 85C/85% RH (Telcordia GR-468) with ~1.6% average absorbance change; separately reported a fourth-generation encapsulation with very low oxygen transmission.",
+   "why_bullish": "Addresses the historic reliability objection to EO polymers.",
+   "category": "tech",
+   "source": "https://www.newswire.com/news/lightwave-logic-inc-announces-perkinamine-polymer-reliability-breakthrough"
+  },
+  {
+   "date": "2025-09-05",
+   "title": "Asia sales partnership with Photonteck",
+   "detail": "Expanded sales and technical support in Asia (notably China) through distributor Photonteck.",
+   "why_bullish": "Extends reach into the transceiver supply chain concentrated in Asia.",
+   "category": "commercial",
+   "source": "https://www.newswire.com/news/lightwave-logic-inc-expands-sales-presence-in-asia-via-partnership-with"
+  },
+  {
+   "date": "2025-09-16",
+   "title": "CEO contract extended through 2028",
+   "detail": "Board extended LeMaitre's employment agreement by three years to Dec 31, 2028; CFO/COO Jim Marcelli announced retirement at end of 2025.",
+   "why_bullish": "Leadership continuity through the expected production ramp.",
+   "category": "corporate",
+   "source": "https://business.mammothtimes.com/mammothtimes/article/accwirecq-2025-9-16-lightwave-logic-inc-provides-update-on-its-executive-leadership-team"
+  },
+  {
+   "date": "2025-10-15",
+   "title": "Rare-earth-free, U.S.-made Perkinamine",
+   "detail": "Stated that Perkinamine is fully rare-earth-free and produced entirely at its Denver-area Colorado facility.",
+   "why_bullish": "Supply-chain resilience versus materials tied to geopolitically sensitive inputs.",
+   "category": "commercial",
+   "source": "https://business.mammothtimes.com/mammothtimes/article/accwirecq-2025-10-15-lightwave-logic-inc-affirms-fully-rare-earth-free-supply-chain-and-entirely-us-based-production-of-perkinamine"
+  },
+  {
+   "date": "2025-11-04",
+   "title": "Fortune Global 500 company enters Stage 3",
+   "detail": "An unnamed Fortune Global 500 company moved to Stage 3 (Prototype to Final Product) and the company said it was adding a second silicon photonics foundry alongside AMF.",
+   "why_bullish": "Large-customer engineering programs are the step before production design wins.",
+   "category": "commercial",
+   "source": "https://www.newswire.com/news/lightwave-logic-inc-provides-update-on-commercial-pipeline"
+  },
+  {
+   "date": "2025-12-15",
+   "title": "$35M underwritten public offering",
+   "detail": "Priced 11,666,667 shares at $3.00 (gross ~$35M; Titan Partners sole bookrunner) off the existing $100M shelf; over-allotment later added ~$4.9M.",
+   "why_bullish": "Strengthened the balance sheet ahead of customer prototype work.",
+   "category": "financial",
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000107997325001863/lwlg_424b5-281059.htm"
+  },
+  {
+   "date": "2026-01-01",
+   "title": "Dr. Aref Chowdhury joins as CTO & Head of Strategy",
+   "detail": "Former Nokia Network Infrastructure CTO/VP Strategy and Bell Labs researcher became CTO & Head of Strategy (announced Jan 12, 2026).",
+   "why_bullish": "Adds a top-tier telecom technologist with roadmap and M&A experience.",
+   "category": "corporate",
+   "source": "https://www.newswire.com/news/lightwave-logic-inc-announces-appointment-of-dr-aref-chowdhury-as-chief"
+  },
+  {
+   "date": "2026-01-15",
+   "title": "QPICs MOU for quantum photonics",
+   "detail": "Signed an MOU with QPICs, a new Colorado quantum PIC foundry, which plans to build PDKs using Lightwave's polymer and encapsulation processes.",
+   "why_bullish": "Opens an adjacent market (quantum computing) for the same material platform.",
+   "category": "commercial",
+   "source": "https://www.newswire.com/news/lightwave-logic-inc-and-qpics-announce-partnership-to-advance-the-use-of"
+  },
+  {
+   "date": "2026-02-24",
+   "title": "Fourth company reaches Stage 3",
+   "detail": "Another Fortune Global 500 company entered Stage 3, making four Stage 3 programs; 2026 goals include building and testing polymer-augmented silicon PICs for 200G/400G.",
+   "why_bullish": "Pipeline breadth reduces single-customer risk.",
+   "category": "commercial",
+   "source": "https://www.newswire.com/news/lightwave-logic-inc-provides-update-on-commercial-pipeline-and-announces-timing"
+  },
+  {
+   "date": "2026-03-03",
+   "title": "SilTerra / Luceda Photonics PDK integration",
+   "detail": "SilTerra announced the polymer modulator platform is available in the Luceda PDK for its silicon photonics process; an initial tapeout was completed in early 2026 targeting 200G/400G per lane.",
+   "why_bullish": "Customers can design and tape out polymer modulators on a commercial foundry.",
+   "category": "commercial",
+   "source": "https://www.lightwavelogic.com/press-releases/silterra-silicon-photonics-platform-enables-integration-of-lightwave-logic-high-speed-polymer-modulators-through-luceda-photonics-pdk"
+  },
+  {
+   "date": "2026-03-11",
+   "title": "Development agreement with Tower Semiconductor (PH18)",
+   "detail": "Agreed to put 110 GHz+ polymer modulator reference designs into Tower's PH18 silicon photonics PDK, with multiple engineering tapeouts planned in 2026.",
+   "why_bullish": "Adds a major high-volume foundry to the ecosystem.",
+   "category": "commercial",
+   "source": "https://www.newswire.com/news/lightwave-logic-and-tower-semiconductor-announce-development-agreement-to"
+  },
+  {
+   "date": "2026-03-16",
+   "title": "Modulator platform in GDSFactory PDK for GlobalFoundries",
+   "detail": "Its modulator platform became available in the GDSFactory PDK for GlobalFoundries' silicon photonics platform; a validation tapeout began and GF is optimizing slot-waveguide processing.",
+   "why_bullish": "Access to GlobalFoundries customers is a significant distribution channel.",
+   "category": "commercial",
+   "source": "https://www.newswire.com/news/lightwave-logic-high-speed-modulator-platform-now-available-in-gds-3127492"
+  },
+  {
+   "date": "2026-04-29",
+   "title": "Michael Best engaged as strategic IP advisor",
+   "detail": "Hired law firm Michael Best & Friedrich for invention harvesting, patent prosecution, portfolio management and standardized licensing frameworks; no IP litigation pending.",
+   "why_bullish": "Strengthens the IP base that underpins the licensing/royalty model.",
+   "category": "ip",
+   "source": "https://www.newswire.com/news/lightwave-logic-engages-michael-best-as-strategic-intellectual-property-advisor"
+  },
+  {
+   "date": "2026-05-07",
+   "title": "Polymer Photonics PDK v1.1",
+   "detail": "Version 1.1 adds BEOL refinements, wafer-level poling and testing, and fourth-gen encapsulation; transfer to an unnamed high-volume foundry has begun, with most work expected in H2 2026.",
+   "why_bullish": "Moves the process toward foundry-scale manufacturing.",
+   "category": "tech",
+   "source": "https://www.newswire.com/news/lightwave-logic-announces-availability-of-version-1-1-of-its-polymer-photonics"
+  },
+  {
+   "date": "2026-05-13",
+   "title": "Q1 2026 results: ~$100M cash; four Stage 3 customers",
+   "detail": "Q1 net loss of $6.3M; management cited about $100M on hand as of May 11, four Fortune (Global) 500 customers in Stage 3, and negotiations on a supply/license deal with a lead customer targeting 2027 volume.",
+   "why_bullish": "Well funded while approaching first production design wins.",
+   "category": "financial",
+   "source": "https://www.fool.com/earnings/call-transcripts/2026/05/13/lightwave-logic-lwlg-q1-2026-earnings-transcript/"
+  },
+  {
+   "date": "2026-07-20",
+   "title": "Fred Graffam appointed CFO",
+   "detail": "Named Fred Graffam CFO (ex-CFO of Fidium/Consolidated Communications and Ascent Capital); Ana Quan stays as VP Finance & Controller.",
+   "why_bullish": "Experienced public-company CFO ahead of revenue ramp.",
+   "category": "corporate",
+   "source": "https://www.sec.gov/Archives/edgar/data/0001325964/000107997326000955/ex99x1.htm"
+  },
+  {
+   "date": "2026-08-11",
+   "title": "Q2 2026 results: fifth Stage 3 customer, $95.9M cash",
+   "detail": "Q2 net loss $6.6M; cash plus securities $95.9M at June 30; five Fortune Global 500 programs in Stage 3 and a ~20-company pipeline; volume production targeted for H2 2027.",
+   "why_bullish": "Growing advanced-stage pipeline with funding to reach production.",
+   "category": "financial",
+   "source": "https://quartr.com/events/lightwave-logic-inc-lwlg-q2-2026_Feg75ktm"
+  },
+  {
+   "date": "2026-09-16",
+   "title": "ECOC 2026 live demo and GPEF panel",
+   "detail": "At ECOC in Malaga it showed SOH modulators after 2,000+ hours of 85/85 damp heat with no measurable change; Blum presented on foundry PDKs for 400G and LeMaitre joined an AI-interconnect panel.",
+   "why_bullish": "Extended reliability data well beyond the 1,000-hour Telcordia threshold.",
+   "category": "tech",
+   "source": "https://www.newswire.com/news/lightwave-logic-inc-to-attend-the-2026-european-conference-on-optical"
+  },
+  {
+   "date": "2026-09-29",
+   "title": "Edward H. Kennedy joins the board",
+   "detail": "Telecom executive Ed Kennedy (ex-CEO of CENX, Tollgrade; Extreme Networks director) joined the board effective Sept 23, expanding it to 7 members.",
+   "why_bullish": "Adds networking-industry operating and M&A experience to governance.",
+   "category": "corporate",
+   "source": "https://www.newswire.com/news/lightwave-logic-inc-appoints-edward-h-kennedy-to-its-board-of-directors"
+  },
+  {
+   "date": "2026-10-29",
+   "title": "Polymer tech in Hon Hai (Foxconn) transceiver demo",
+   "detail": "Hon Hai showed a joint transceiver with a silicon-organic hybrid optical engine based on Lightwave's polymers at Hon Hai Tech Day (Oct 30-31, Taipei), targeting 200G/400G per lane; development and qualification continue.",
+   "why_bullish": "A top-tier manufacturer integrating the technology at system level is a strong validation.",
+   "category": "commercial",
+   "source": "https://www.newswire.com/news/lightwave-logic-inc-electro-optic-polymer-technology-integrated-into-hon-hai"
+  },
+  {
+   "date": "2026-11-10",
+   "title": "Q3 2026 results call scheduled (upcoming)",
+   "detail": "Q3 2026 results and business update call set for Nov 10, 2026 at 4:30 p.m. ET.",
+   "why_bullish": "Next catalyst for pipeline and foundry-transfer updates.",
+   "category": "financial",
+   "source": "https://www.newswire.com/news/lightwave-logic-inc-announces-timing-of-third-quarter-2026-financial-results"
+  }
+ ],
+ "press_releases": [
+  {
+   "date": "2026-10-29",
+   "title": "Lightwave Logic, Inc. Electro-Optic Polymer Technology Integrated into Hon Hai Technology Group (Foxconn) Optical Transceiver Demonstrated at Hon Hai Tech Day",
+   "url": "https://www.newswire.com/news/lightwave-logic-inc-electro-optic-polymer-technology-integrated-into-hon-hai"
+  },
+  {
+   "date": "2026-10-26",
+   "title": "Lightwave Logic, Inc. Announces Timing of Third Quarter 2026 Financial Results and Business Update Call",
+   "url": "https://www.newswire.com/news/lightwave-logic-inc-announces-timing-of-third-quarter-2026-financial-results"
+  },
+  {
+   "date": "2026-09-29",
+   "title": "Lightwave Logic, Inc. Appoints Edward H. Kennedy to its Board of Directors",
+   "url": "https://www.newswire.com/news/lightwave-logic-inc-appoints-edward-h-kennedy-to-its-board-of-directors"
+  },
+  {
+   "date": "2026-09-16",
+   "title": "Lightwave Logic, Inc. to Attend the 2026 European Conference on Optical Communication (ECOC) & Global Photonics Economic Forum (GPEF)",
+   "url": "https://www.newswire.com/news/lightwave-logic-inc-to-attend-the-2026-european-conference-on-optical"
+  },
+  {
+   "date": "2026-08-03",
+   "title": "Lightwave Logic, Inc. Announces Timing of Second Quarter 2026 Financial Results and Business Update Call",
+   "url": "https://www.newswire.com/news/lightwave-logic-inc-announces-timing-of-second-quarter-2026-financial-results"
+  },
+  {
+   "date": "2026-07-20",
+   "title": "Lightwave Logic, Inc. Announces Appointment of Fred Graffam as Chief Financial Officer",
+   "url": "https://company-998002.suite.accessnewswire.com/news/lightwave-logic-inc-announces-appointment-of-fred-graffam-as-chief-financial"
+  },
+  {
+   "date": "2026-05-07",
+   "title": "Lightwave Logic Announces Availability of Version 1.1 of Its Polymer Photonics PDK, Advancing Process Integration and Foundry Transfer",
+   "url": "https://www.newswire.com/news/lightwave-logic-announces-availability-of-version-1-1-of-its-polymer-photonics"
+  },
+  {
+   "date": "2026-05-05",
+   "title": "Lightwave Logic, Inc. Announces Timing of First Quarter 2026 Financial Results and Business Update Call",
+   "url": "https://www.newswire.com/news/lightwave-logic-inc-announces-timing-of-first-quarter-2026-financial-results"
+  },
+  {
+   "date": "2026-04-29",
+   "title": "Lightwave Logic Engages Michael Best as Strategic Intellectual Property Advisor",
+   "url": "https://www.newswire.com/news/lightwave-logic-engages-michael-best-as-strategic-intellectual-property-advisor"
+  },
+  {
+   "date": "2026-04-14",
+   "title": "Lightwave Logic Announces Scheduling of Annual Shareholder Meeting",
+   "url": "https://company-998002.suite.accessnewswire.com/news/lightwave-logic-announces-scheduling-of-annual-shareholder-meeting"
+  },
+  {
+   "date": "2026-03-16",
+   "title": "Lightwave Logic High-Speed Modulator Platform Now Available in GDS Factory PDK for GlobalFoundries Silicon Photonics Platform",
+   "url": "https://www.newswire.com/news/lightwave-logic-high-speed-modulator-platform-now-available-in-gds-3127492"
+  },
+  {
+   "date": "2026-03-11",
+   "title": "Lightwave Logic and Tower Semiconductor Announce Development Agreement to Enable High-Speed, Low-Power Modulators on Tower's PH18 Silicon Photonics Platform",
+   "url": "https://www.newswire.com/news/lightwave-logic-and-tower-semiconductor-announce-development-agreement-to"
+  },
+  {
+   "date": "2026-03-03",
+   "title": "SilTerra Silicon Photonics Platform Enables Integration of Lightwave Logic High-Speed Polymer Modulators Through Luceda Photonics PDK",
+   "url": "https://www.lightwavelogic.com/press-releases/silterra-silicon-photonics-platform-enables-integration-of-lightwave-logic-high-speed-polymer-modulators-through-luceda-photonics-pdk"
+  },
+  {
+   "date": "2026-02-24",
+   "title": "Lightwave Logic, Inc. Provides Update on Commercial Pipeline and Announces Timing of Fourth Quarter and Full Year 2025 Earnings Call",
+   "url": "https://www.newswire.com/news/lightwave-logic-inc-provides-update-on-commercial-pipeline-and-announces-timing"
+  },
+  {
+   "date": "2026-01-15",
+   "title": "Lightwave Logic, Inc. and QPICs Announce Partnership to Advance the Use of Electro-Optic Polymers in Quantum Processors",
+   "url": "https://www.newswire.com/news/lightwave-logic-inc-and-qpics-announce-partnership-to-advance-the-use-of"
+  },
+  {
+   "date": "2026-01-12",
+   "title": "Lightwave Logic, Inc. Announces Appointment of Dr. Aref Chowdhury as Chief Technology Officer & Head of Strategy",
+   "url": "https://www.newswire.com/news/lightwave-logic-inc-announces-appointment-of-dr-aref-chowdhury-as-chief"
+  },
+  {
+   "date": "2026-01-08",
+   "title": "Lightwave Logic, Inc. to Attend 28th Annual Needham Growth Conference",
+   "url": "https://company-998002.suite.accessnewswire.com/news/lightwave-logic-inc-to-attend-28th-annual-needham-growth-conference"
+  },
+  {
+   "date": "2025-12-15",
+   "title": "Lightwave Logic, Inc. Announces Pricing of $35 Million Public Offering of Common Stock",
+   "url": "https://company-998002.suite.accessnewswire.com/news/lightwave-logic-inc-announces-pricing-of-35-million-public-offering-of-common"
+  },
+  {
+   "date": "2025-12-15",
+   "title": "Lightwave Logic, Inc. Announces Proposed Public Offering of Common Stock",
+   "url": "https://company-998002.suite.accessnewswire.com/news/lightwave-logic-inc-announces-proposed-public-offering-of-common-stock"
+  },
+  {
+   "date": "2025-12-08",
+   "title": "Lightwave Logic, Inc. Announces Retirement of President Thomas E. Zelibor",
+   "url": "https://www.sec.gov/Archives/edgar/data/1325964/000107997325001824/ex99x1.htm"
+  },
+  {
+   "date": "2025-11-25",
+   "title": "Lightwave Logic, Inc. Provides Update on Commercial Pipeline",
+   "url": "https://company-998002.suite.accessnewswire.com/news/lightwave-logic-inc-provides-update-on-commercial-8165341"
+  },
+  {
+   "date": "2025-11-13",
+   "title": "Lightwave Logic to Attend 14th Annual Roth Technology Conference",
+   "url": "https://company-998002.suite.accessnewswire.com/news/lightwave-logic-to-attend-14th-annual-roth-technology-conference"
+  },
+  {
+   "date": "2025-11-11",
+   "title": "Lightwave Logic to Host Update Call on November 25, 2025",
+   "url": "https://company-998002.suite.accessnewswire.com/news/lightwave-logic-to-host-update-call-on-november-25-2025"
+  },
+  {
+   "date": "2025-11-04",
+   "title": "Lightwave Logic, Inc. Provides Update on Commercial Pipeline",
+   "url": "https://www.newswire.com/news/lightwave-logic-inc-provides-update-on-commercial-pipeline"
+  },
+  {
+   "date": "2025-10-15",
+   "title": "Lightwave Logic, Inc. Affirms Fully Rare-Earth-Free Supply Chain and Entirely U.S.-Based Production of Perkinamine",
+   "url": "https://company-998002.suite.accessnewswire.com/news/lightwave-logic-inc-affirms-fully-rare-earth-free-supply-chain-and-entirely-u-s"
+  },
+  {
+   "date": "2025-09-23",
+   "title": "Lightwave Logic, Inc. to Attend the 2025 European Conference on Optical Communication (ECOC)",
+   "url": "https://company-998002.suite.accessnewswire.com/news/lightwave-logic-inc-to-attend-the-2025-european-conference-on-optical"
+  },
+  {
+   "date": "2025-09-16",
+   "title": "Lightwave Logic, Inc. Provides Update on its Executive Leadership Team",
+   "url": "https://company-998002.suite.accessnewswire.com/news/lightwave-logic-inc-provides-update-on-its-executive-leadership-team"
+  },
+  {
+   "date": "2025-09-09",
+   "title": "Lightwave Logic, Inc. Appoints Dr. Lance Thompson as Vice President of Engineering",
+   "url": "https://www.newswire.com/news/lightwave-logic-inc-appoints-dr-lance-thompson-as-vice-president-of-engineering"
+  },
+  {
+   "date": "2025-09-05",
+   "title": "Lightwave Logic, Inc. Expands Sales Presence in Asia via Partnership with Photonteck",
+   "url": "https://www.newswire.com/news/lightwave-logic-inc-expands-sales-presence-in-asia-via-partnership-with"
+  },
+  {
+   "date": "2025-08-20",
+   "title": "Lightwave Logic, Inc. Announces Appointment of Dr. Sundar Ramamurthy to Technical Advisory Board",
+   "url": "https://www.newswire.com/news/lightwave-logic-inc-announces-appointment-of-dr-sundar-ramamurthy-to-technical"
+  },
+  {
+   "date": "2025-07-22",
+   "title": "Lightwave Logic to Host Update Call on July 31, 2025",
+   "url": "https://company-998002.suite.accessnewswire.com/news/lightwave-logic-to-host-update-call-on-july-31-2025"
+  },
+  {
+   "date": "2025-07-15",
+   "title": "Lightwave Logic, Inc. Announces Perkinamine(TM) Polymer Reliability Breakthrough - Passes Telcordia 85/85 Test & Develops Enhanced Moisture & Oxygen Resistance via Fourth-Generation Encapsulation Technology",
+   "url": "https://www.newswire.com/news/lightwave-logic-inc-announces-perkinamine-polymer-reliability-breakthrough"
+  }
+ ],
+ "partners": [
+  {
+   "name": "Hon Hai Technology Group (Foxconn)",
+   "type": "device partner",
+   "what": "Built and demonstrated a 200G/400G-per-lane transceiver using a silicon-organic hybrid optical engine based on Lightwave's polymers at Hon Hai Tech Day 2026; joint development and qualification continue.",
+   "since": "2026",
+   "source": "https://www.newswire.com/news/lightwave-logic-inc-electro-optic-polymer-technology-integrated-into-hon-hai"
+  },
+  {
+   "name": "GlobalFoundries (via GDSFactory PDK)",
+   "type": "foundry",
+   "what": "Lightwave's modulator platform is available in the GDSFactory PDK for GF's silicon photonics process; validation tapeout underway and GF optimizing slot-waveguide processing.",
+   "since": "2026",
+   "source": "https://www.newswire.com/news/lightwave-logic-high-speed-modulator-platform-now-available-in-gds-3127492"
+  },
+  {
+   "name": "GDSFactory",
+   "type": "other",
+   "what": "PDK/design-tool provider that packaged Lightwave's modulators into a GlobalFoundries PDK and launched a validation tapeout.",
+   "since": "2026",
+   "source": "https://www.newswire.com/news/lightwave-logic-high-speed-modulator-platform-now-available-in-gds-3127492"
+  },
+  {
+   "name": "Tower Semiconductor",
+   "type": "foundry",
+   "what": "Development agreement to add 110 GHz+ polymer modulator reference designs to Tower's PH18 silicon photonics PDK, with multiple 2026 tapeouts.",
+   "since": "2026",
+   "source": "https://www.newswire.com/news/lightwave-logic-and-tower-semiconductor-announce-development-agreement-to"
+  },
+  {
+   "name": "SilTerra Malaysia",
+   "type": "foundry",
+   "what": "Offers Lightwave's polymer modulator platform in its silicon photonics process via a Luceda PDK; initial tapeout completed early 2026.",
+   "since": "2026",
+   "source": "https://www.lightwavelogic.com/press-releases/silterra-silicon-photonics-platform-enables-integration-of-lightwave-logic-high-speed-polymer-modulators-through-luceda-photonics-pdk"
+  },
+  {
+   "name": "Luceda Photonics",
+   "type": "other",
+   "what": "PDK/design-software partner whose PDK for SilTerra includes Lightwave's modulator cells and models.",
+   "since": "2026",
+   "source": "https://www.lightwavelogic.com/press-releases/silterra-silicon-photonics-platform-enables-integration-of-lightwave-logic-high-speed-polymer-modulators-through-luceda-photonics-pdk"
+  },
+  {
+   "name": "Advanced Micro Foundry (AMF)",
+   "type": "foundry",
+   "what": "Singapore silicon photonics foundry that integrated polymer slot modulators into its standard 200mm process.",
+   "since": "2024",
+   "source": "https://au.finance.yahoo.com/news/lightwave-logic-advanced-micro-foundry-123100818.html"
+  },
+  {
+   "name": "Polariton Technologies",
+   "type": "device partner",
+   "what": "Plasmonic modulator developer that used Perkinamine for record-speed and packaged-modulator demos; acquired by Marvell in April 2026, and management declined to say whether joint projects continue.",
+   "since": "2021",
+   "source": "https://prnewswire.com/news-releases/lightwave-logic-and-polariton-technologies-achieve-world-record-performance-for-ultra-high-speed-modulators-301378500.html"
+  },
+  {
+   "name": "ETH Zurich",
+   "type": "research",
+   "what": "University group that ran the 2021 record transmission and the 2024 437 Gbps plasmonic MZM link using Perkinamine.",
+   "since": "2021",
+   "source": "https://finance.yahoo.com/news/lightwave-logic-eo-polymer-achieves-123100818.html?.tsrc=rss"
+  },
+  {
+   "name": "QPICs",
+   "type": "research",
+   "what": "New Colorado quantum PIC foundry that signed an MOU to build PDKs using Lightwave's polymers for quantum processors.",
+   "since": "2026",
+   "source": "https://www.newswire.com/news/lightwave-logic-inc-and-qpics-announce-partnership-to-advance-the-use-of"
+  },
+  {
+   "name": "Unnamed Fortune Global 500 customers (5 in Stage 3)",
+   "type": "customer",
+   "what": "Five large companies running prototype-to-product (Stage 3) programs as of the Q2 2026 call; names undisclosed.",
+   "since": "2025",
+   "source": "https://quartr.com/events/lightwave-logic-inc-lwlg-q2-2026_Feg75ktm"
+  },
+  {
+   "name": "Unnamed first licensee (May 2023)",
+   "type": "customer",
+   "what": "Counterparty to the first material supply and license agreement for Perkinamine; identity undisclosed.",
+   "since": "2023",
+   "source": "https://prnewswire.com/news-releases/lightwave-logic-begins-commercialization-of-its-electro-optic-polymer-materials-301834385.html"
+  },
+  {
+   "name": "Photonteck",
+   "type": "other",
+   "what": "Sales and distribution partner expanding Lightwave's presence in Asia, particularly China.",
+   "since": "2025",
+   "source": "https://www.newswire.com/news/lightwave-logic-inc-expands-sales-presence-in-asia-via-partnership-with"
+  },
+  {
+   "name": "Michael Best & Friedrich LLP",
+   "type": "advisor",
+   "what": "Outside IP counsel handling patent strategy, prosecution, portfolio management and licensing frameworks.",
+   "since": "2026",
+   "source": "https://www.newswire.com/news/lightwave-logic-engages-michael-best-as-strategic-intellectual-property-advisor"
+  },
+  {
+   "name": "Alpha IR Group",
+   "type": "advisor",
+   "what": "Investor relations advisor engaged during the December 2024 leadership refresh.",
+   "since": "2024",
+   "source": "https://www.nasdaq.com/press-release/lightwave-logic-focus-execution-its-strategic-plan-under-refreshed-leadership-team"
+  },
+  {
+   "name": "Dr. Sundar Ramamurthy",
+   "type": "advisor",
+   "what": "Technical Advisory Board member; former Applied Materials business leader in transistor/interconnect and advanced packaging.",
+   "since": "2025",
+   "source": "https://www.newswire.com/news/lightwave-logic-inc-announces-appointment-of-dr-sundar-ramamurthy-to-technical"
+  }
+ ],
+ "leadership": [
+  {
+   "name": "Yves LeMaitre",
+   "role": "Chief Executive Officer, President and Director",
+   "since": "2024",
+   "bio": "30+ year optical networking veteran with senior roles at Oclaro and Lumentum; joined the board Aug 2024, CEO since Dec 2024, also President from Jan 2026; contract runs through 2028.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000155335026000061/lwlg_def14a.htm"
+  },
+  {
+   "name": "Fred Graffam",
+   "role": "Chief Financial Officer",
+   "since": "2026",
+   "bio": "Former CFO of Fidium (Consolidated Communications) and Ascent Capital/Monitronics; earlier finance roles at DigitalGlobe, Level 3 and Comcast.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0001325964/000107997326000955/ex99x1.htm"
+  },
+  {
+   "name": "Dr. Aref Chowdhury",
+   "role": "Chief Technology Officer & Head of Strategy",
+   "since": "2026",
+   "bio": "Former VP Strategy and CTO of Network Infrastructure at Nokia and earlier Bell Labs researcher; Optica and Bell Labs Fellow.",
+   "source": "https://www.newswire.com/news/lightwave-logic-inc-announces-appointment-of-dr-aref-chowdhury-as-chief"
+  },
+  {
+   "name": "Dr. Robert Blum",
+   "role": "Senior Vice President of Sales and Marketing",
+   "since": "2025",
+   "bio": "Previously led photonics platform product lines at Applied Materials and silicon photonics strategy at Intel.",
+   "source": "https://www.newswire.com/news/lightwave-logic-appoints-robert-blum-as-senior-vice-president-of-sales-1655273"
+  },
+  {
+   "name": "Dr. Lance Thompson",
+   "role": "Vice President of Engineering",
+   "since": "2025",
+   "bio": "Came from Coherent where he directed datacom transceivers including early 200G-per-lane modules; earlier at Lumentum, Kaiam and Sumitomo.",
+   "source": "https://www.newswire.com/news/lightwave-logic-inc-appoints-dr-lance-thompson-as-vice-president-of-engineering"
+  },
+  {
+   "name": "Snizhana 'Ana' Quan",
+   "role": "Vice President of Finance and Corporate Controller",
+   "since": "2023",
+   "bio": "Controller since Oct 2023 and principal financial/accounting officer from Jan 2026 until Graffam's hire; formerly at Stolle Machinery, Frontier Airlines and KPMG.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0001325964/000107997326000955/ex99x1.htm"
+  },
+  {
+   "name": "Atikem Haile",
+   "role": "Vice President of Marketing",
+   "since": null,
+   "bio": "Named as VP of Marketing presenting at CIOE 2025; start date not confirmed in sources reviewed.",
+   "source": "https://www.newswire.com/news/lightwave-logic-inc-expands-sales-presence-in-asia-via-partnership-with"
+  },
+  {
+   "name": "Ronald A. Bucchi",
+   "role": "Chairman of the Board (independent); Audit Committee chair",
+   "since": "2012",
+   "bio": "Director since 2012 and non-executive chair since Dec 2024; CFO of Callahan Investments with CFO/CEO consulting background.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000155335026000061/lwlg_def14a.htm"
+  },
+  {
+   "name": "Siraj Nour El-Ahmadi",
+   "role": "Director (non-independent)",
+   "since": "2013",
+   "bio": "Former CEO of Menara Networks with 30+ years in optical communications; served as acting VP Engineering Dec 2024-Dec 2025; now COO at Atlas Data Storage.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000155335026000061/lwlg_def14a.htm"
+  },
+  {
+   "name": "Craig Ciesla",
+   "role": "Independent Director",
+   "since": "2022",
+   "bio": "VP of hardware engineering at 10X Genomics with prior fiber-optics leadership and Illumina experience.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000155335026000061/lwlg_def14a.htm"
+  },
+  {
+   "name": "Laila S. Partridge",
+   "role": "Independent Director; Compensation Committee chair",
+   "since": "2023",
+   "bio": "Founder/CEO of The HardTech Project and former STANLEY+Techstars accelerator MD; re-elected May 2026 for a term to 2029.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0001325964/000107997326000741/lwlg_8k.htm"
+  },
+  {
+   "name": "Thomas M. Connelly, Jr.",
+   "role": "Independent Director; Nominating & Governance chair",
+   "since": "2024",
+   "bio": "Former CEO of the American Chemical Society and Chief Innovation Officer of DuPont; re-elected May 2026.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000155335026000061/lwlg_def14a.htm"
+  },
+  {
+   "name": "Edward H. Kennedy",
+   "role": "Director",
+   "since": "2026",
+   "bio": "Telecom/networking executive (ex-CEO of CENX and Tollgrade, Tellabs exec) and Extreme Networks director; appointed Sept 23, 2026.",
+   "source": "https://www.newswire.com/news/lightwave-logic-inc-appoints-edward-h-kennedy-to-its-board-of-directors"
+  }
+ ],
+ "stage_pipeline": {
+  "as_of": "2026-08-11 (Q2 2026 call); definitions from FY2025 10-K",
+  "summary": "Management describes an 18-24 month Design Win Cycle. Stage 1 (Technology Selection, ~3-6 months) is customer evaluation of the polymer; Stage 2 (Product Design, ~3-6 months) is integrating the material into the customer's device and foundry flow; Stage 3 (Prototype to Final Product, ~12-18 months) is fabricating and refining prototype devices; Stage 4 is the production ramp to high volume. Counts have grown: 3 programs in Stage 3 plus ~15 engagements in Stages 1-2 as of Jan 2026 (10-K); 4 in Stage 3 by Feb 24, 2026; 5 Fortune Global 500 programs in Stage 3 and a pipeline of ~20 companies at the Aug 2026 Q2 call. No customer has been disclosed in Stage 4; management targets volume production in H2 2027 and is negotiating a supply/license agreement with its most advanced customer.",
+  "stages": [
+   {
+    "stage": 1,
+    "name": "Technology Selection",
+    "definition": "Customer evaluates whether the electro-optic polymer suits its application (~3-6 months).",
+    "count": "~15 combined with Stage 2 (Jan 2026, per 10-K); later split not disclosed"
+   },
+   {
+    "stage": 2,
+    "name": "Product Design",
+    "definition": "Lightwave supports integrating the material into the customer's device architecture and foundry process flow (~3-6 months).",
+    "count": "~15 combined with Stage 1 (Jan 2026); total pipeline ~20 companies incl. Stage 3 as of Aug 2026"
+   },
+   {
+    "stage": 3,
+    "name": "Prototype to Final Product",
+    "definition": "Customer fabricates and refines prototype devices using the material; includes later yield validation and volume capacity/cost set-up (~12-18 months).",
+    "count": "5 (Fortune Global 500) as of Q2 2026 call, Aug 2026"
+   },
+   {
+    "stage": 4,
+    "name": "Production Ramp to High Volume",
+    "definition": "Program moves into production ramp toward high volume; no duration given.",
+    "count": "0 disclosed"
+   }
+  ],
+  "source": "https://www.sec.gov/Archives/edgar/data/1325964/000107997326000348/lwlg_10k-123125.htm"
+ },
+ "notes": "Stage definitions come from the FY2025 10-K; the Q2 2026 Stage 3 count (5) and ~20-company pipeline come from third-party call summaries (quartr.com, finsee.ai), not a company press release. The '$100M shelf' was filed July 26, 2024 (S-3 No. 333-281059), not December 2025; December 2025 was the $35M underwritten offering drawn from it. Management said on the Q1 2026 call that the 2024 shelf was used up, and the Q2 10-Q shows the ATM program nearly exhausted ($3,385 left); no new shelf filing was found. Predecessor history: SEC filings confirm PSI-TEC (founded 1991, acquired 2004, merged 2006), Nevada incorporation 1997 and the 2008 renaming; a third-party article mentions 'Third-order Nanotechnologies' and other sources an Idaho shell, but these could not be confirmed in SEC text, so they were left out. The OTC ticker/market for the pre-2021 years was not confirmed. PDK 1.0: the March 28, 2025 'controlled availability' PDK is presumed to be the predecessor of v1.1, but no release labeled 'PDK 1.0' was found. The high-volume foundry receiving the v1.1 transfer is unnamed. Polariton was acquired by Marvell (announced ~Apr 27, 2026 per eeNews Europe); on the Q1 2026 call management declined to say whether joint projects continue. Q3 2026 results are scheduled for Nov 10, 2026, after today's date, so they are not included. Accessnewswire's per-release pages could not be fetched, so some URLs point to the listing's accessnewswire link; headlines for those were taken from the accessnewswire listing. Atikem Haile's start date is unknown. The Hon Hai release describes a demonstration and joint development, not a supply contract. lightwavelogic.com itself was mostly unreachable (only one press-release page loaded)."
+}

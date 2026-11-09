@@ -1,0 +1,620 @@
+{
+ "generated": "2026-11-09",
+ "company": "Lightwave Logic, Inc. (NASDAQ: LWLG, CIK 1325964)",
+ "quarterly": [
+  {
+   "period": "Q1 2022",
+   "period_end": "2022-03-31",
+   "cash_and_securities_usd": 24337502,
+   "shares_outstanding": 111604896,
+   "shares_as_of": "2022-05-10",
+   "operating_cash_used_quarter_usd": 2545689,
+   "operating_cash_derived": false,
+   "net_loss_usd": 3555761,
+   "net_loss_derived": false,
+   "revenue_usd": 0,
+   "revenue_derived": false,
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000155335022000418/lwlg_10q.htm",
+   "notes": "Cash only (no securities). Runway stated: 'through January 2024'; ~$1.16M/month expected spend. shares_outstanding is the cover-page count of the filing (as of shares_as_of), not the period-end balance."
+  },
+  {
+   "period": "Q2 2022",
+   "period_end": "2022-06-30",
+   "cash_and_securities_usd": 24829749,
+   "shares_outstanding": 112086109,
+   "shares_as_of": "2022-08-09",
+   "operating_cash_used_quarter_usd": 2699586,
+   "operating_cash_derived": true,
+   "net_loss_usd": 3802598,
+   "net_loss_derived": false,
+   "revenue_usd": 0,
+   "revenue_derived": false,
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000155335022000654/lwlg_10q.htm",
+   "notes": "Op cash derived = 6M YTD $5,245,275 - Q1 $2,545,689 (as originally reported). 2023 10-Q comparative later shows 6M 2022 as $5,298,715 (=> $2,753,026). Runway: 'through February 2024'; ~$1.30M/month. shares_outstanding is the cover-page count of the filing (as of shares_as_of), not the period-end balance."
+  },
+  {
+   "period": "Q3 2022",
+   "period_end": "2022-09-30",
+   "cash_and_securities_usd": 25021642,
+   "shares_outstanding": 112577460,
+   "shares_as_of": "2022-11-09",
+   "operating_cash_used_quarter_usd": 2455057,
+   "operating_cash_derived": true,
+   "net_loss_usd": 4803383,
+   "net_loss_derived": false,
+   "revenue_usd": 0,
+   "revenue_derived": false,
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000155335022000876/lwlg_10q.htm",
+   "notes": "Op cash derived = 9M $7,700,332 - 6M $5,245,275 (original). Later comparative 9M 2022 = $7,765,337 (=> $2,466,622 on that basis). Runway: 'through March 2024'; ~$1.38M/month. shares_outstanding is the cover-page count of the filing (as of shares_as_of), not the period-end balance."
+  },
+  {
+   "period": "Q4 2022",
+   "period_end": "2022-12-31",
+   "cash_and_securities_usd": 24102151,
+   "shares_outstanding": 113220954,
+   "shares_as_of": "2023-02-28",
+   "operating_cash_used_quarter_usd": 2766364,
+   "operating_cash_derived": true,
+   "net_loss_usd": 5068738,
+   "net_loss_derived": true,
+   "revenue_usd": 0,
+   "revenue_derived": false,
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000107997324000315/lwlg_10k-123123.htm ; https://www.sec.gov/Archives/edgar/data/1325964/000155335023000151/lwlg_10k.htm",
+   "notes": "Cash, FY2022 op cash ($10,531,701) and FY2022 net loss ($17,230,480) from FY2023 10-K comparatives; cover shares from FY2022 10-K. Q4 op cash derived = FY $10,531,701 - 9M comparative $7,765,337 (Q3 2023 10-Q). FY2023 10-K MD&A gives a different FY2022 op-cash figure ($10,465,880). Net loss derived = FY - (Q1+Q2+Q3). Period-end shares 112,882,793. FY2022 10-K: 21 FTEs, runway 'through April 2024'."
+  },
+  {
+   "period": "Q1 2023",
+   "period_end": "2023-03-31",
+   "cash_and_securities_usd": 26168214,
+   "shares_outstanding": 114410947,
+   "shares_as_of": "2023-05-10",
+   "operating_cash_used_quarter_usd": 3748656,
+   "operating_cash_derived": false,
+   "net_loss_usd": 5476018,
+   "net_loss_derived": false,
+   "revenue_usd": 0,
+   "revenue_derived": false,
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000107997323000650/lwlg_10q-033123.htm",
+   "notes": "Runway: 'through July 2024'; ~$1.675M/month. shares_outstanding is the cover-page count of the filing (as of shares_as_of), not the period-end balance."
+  },
+  {
+   "period": "Q2 2023",
+   "period_end": "2023-06-30",
+   "cash_and_securities_usd": 32635787,
+   "shares_outstanding": 116461639,
+   "shares_as_of": "2023-08-09",
+   "operating_cash_used_quarter_usd": 3255352,
+   "operating_cash_derived": true,
+   "net_loss_usd": 5457747,
+   "net_loss_derived": false,
+   "revenue_usd": 0,
+   "revenue_derived": false,
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000107997323001101/lwlg_10q-063023.htm",
+   "notes": "Op cash derived = 6M $7,004,008 - Q1 $3,748,656. First license (May 2023): $50,000 upfront fee deferred; no revenue recognized yet. Runway: 'through February 2025'; ~$1.64M/month. shares_outstanding is the cover-page count of the filing (as of shares_as_of), not the period-end balance."
+  },
+  {
+   "period": "Q3 2023",
+   "period_end": "2023-09-30",
+   "cash_and_securities_usd": 30876646,
+   "shares_outstanding": 116886949,
+   "shares_as_of": "2023-11-09",
+   "operating_cash_used_quarter_usd": 2909790,
+   "operating_cash_derived": true,
+   "net_loss_usd": 5164591,
+   "net_loss_derived": false,
+   "revenue_usd": 0,
+   "revenue_derived": false,
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000107997323001541/lwlg_10q-093023.htm",
+   "notes": "Op cash derived = 9M $9,913,798 - 6M $7,004,008. Runway: 'through April 2025'; ~$1.75M/month. shares_outstanding is the cover-page count of the filing (as of shares_as_of), not the period-end balance."
+  },
+  {
+   "period": "Q4 2023",
+   "period_end": "2023-12-31",
+   "cash_and_securities_usd": 31432087,
+   "shares_outstanding": 119184778,
+   "shares_as_of": "2024-02-29",
+   "operating_cash_used_quarter_usd": 2322226,
+   "operating_cash_derived": true,
+   "net_loss_usd": 4939676,
+   "net_loss_derived": true,
+   "revenue_usd": 40502,
+   "revenue_derived": true,
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000107997324000315/lwlg_10k-123123.htm",
+   "notes": "Derived Q4 = FY2023 (op cash $12,236,024; net loss $21,038,032; revenue $40,502) minus 9M (op cash $9,913,798; net loss $16,098,356; revenue $0, from Q3 2024/Q3 2023 10-Qs). Period-end shares 118,137,309. Runway: 'through July 2025'; ~$1.83M/month. Some aggregators show FY2023 as +$21.0M net income (sign error) - the 10-K says loss."
+  },
+  {
+   "period": "Q1 2024",
+   "period_end": "2024-03-31",
+   "cash_and_securities_usd": 31509058,
+   "shares_outstanding": 120094245,
+   "shares_as_of": "2024-05-09",
+   "operating_cash_used_quarter_usd": 4772208,
+   "operating_cash_derived": false,
+   "net_loss_usd": 5679911,
+   "net_loss_derived": false,
+   "revenue_usd": 30417,
+   "revenue_derived": false,
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000155335024000021/lwlg_10q-033124.htm",
+   "notes": "Runway: 'through August 2025'; ~$1.84M/month. shares_outstanding is the cover-page count of the filing (as of shares_as_of), not the period-end balance."
+  },
+  {
+   "period": "Q2 2024",
+   "period_end": "2024-06-30",
+   "cash_and_securities_usd": 29195815,
+   "shares_outstanding": 120716365,
+   "shares_as_of": "2024-08-09",
+   "operating_cash_used_quarter_usd": 4051580,
+   "operating_cash_derived": true,
+   "net_loss_usd": 6019684,
+   "net_loss_derived": false,
+   "revenue_usd": 19355,
+   "revenue_derived": false,
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000107997324001191/lwlg_10q-06302024.htm",
+   "notes": "Op cash derived = 6M $8,823,788 - Q1 $4,772,208. Runway: 'through October 2025'; ~$1.84M/month. shares_outstanding is the cover-page count of the filing (as of shares_as_of), not the period-end balance."
+  },
+  {
+   "period": "Q3 2024",
+   "period_end": "2024-09-30",
+   "cash_and_securities_usd": 26882467,
+   "shares_outstanding": 122372981,
+   "shares_as_of": "2024-11-12",
+   "operating_cash_used_quarter_usd": 3590434,
+   "operating_cash_derived": true,
+   "net_loss_usd": 5300913,
+   "net_loss_derived": false,
+   "revenue_usd": 22916,
+   "revenue_derived": false,
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000107997324001503/lwlg_10q-093024.htm",
+   "notes": "Op cash derived = 9M $12,414,222 - 6M $8,823,788. Runway: 'through February 2026'; ~$1.687M/month. shares_outstanding is the cover-page count of the filing (as of shares_as_of), not the period-end balance."
+  },
+  {
+   "period": "Q4 2024",
+   "period_end": "2024-12-31",
+   "cash_and_securities_usd": 27667964,
+   "shares_outstanding": 124799620,
+   "shares_as_of": "2025-03-18",
+   "operating_cash_used_quarter_usd": 3136293,
+   "operating_cash_derived": true,
+   "net_loss_usd": 5534533,
+   "net_loss_derived": true,
+   "revenue_usd": 22917,
+   "revenue_derived": true,
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000107997326000348/lwlg_10k-123125.htm ; https://www.sec.gov/Archives/edgar/data/1325964/000107997325000420/lwlg_10k-123124.htm",
+   "notes": "Cash, FY2024 op cash ($15,550,515), FY2024 revenue ($95,605) and period-end shares (123,301,653) from FY2025 10-K comparatives; cover shares and FY2024 net loss ($22,535,041) from FY2024 10-K. Q4 derived = FY minus 9M (9M op cash $12,414,222; 9M net loss $17,000,508; 9M revenue $72,688). FY2024 10-K: 31 FTEs; runway 'through April 2026'."
+  },
+  {
+   "period": "Q1 2025",
+   "period_end": "2025-03-31",
+   "cash_and_securities_usd": 25045329,
+   "shares_outstanding": 125041157,
+   "shares_as_of": "2025-05-13",
+   "operating_cash_used_quarter_usd": 3490131,
+   "operating_cash_derived": false,
+   "net_loss_usd": 4697024,
+   "net_loss_derived": false,
+   "revenue_usd": 22917,
+   "revenue_derived": false,
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000107997325000793/lwlg_033125-10q.htm",
+   "notes": "Runway: 'through May 2026'; ~$1.796M/month. shares_outstanding is the cover-page count of the filing (as of shares_as_of), not the period-end balance."
+  },
+  {
+   "period": "Q2 2025",
+   "period_end": "2025-06-30",
+   "cash_and_securities_usd": 22106946,
+   "shares_outstanding": 129439986,
+   "shares_as_of": "2025-08-14",
+   "operating_cash_used_quarter_usd": 3770091,
+   "operating_cash_derived": true,
+   "net_loss_usd": 4966633,
+   "net_loss_derived": false,
+   "revenue_usd": 25605,
+   "revenue_derived": false,
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000107997325001293/lwlg_10q-063025.htm ; https://www.stocktitan.net/sec-filings/LWLG/10-q-a-lightwave-logic-inc-amended-quarterly-earnings-report-aff31853c7ea.html",
+   "notes": "Net loss is the RESTATED figure (10-Q/A filed Jan 2026; also used as comparative in Q2 2026 10-Q). Originally reported $5,672,132; restatement corrected overstated non-cash option-exercise expense; cash and op cash unchanged. Op cash derived = 6M $7,260,222 - Q1 $3,490,131. Runway: 'through October 2026'; ~$1.786M/month. shares_outstanding is the cover-page count of the filing (as of shares_as_of), not the period-end balance."
+  },
+  {
+   "period": "Q3 2025",
+   "period_end": "2025-09-30",
+   "cash_and_securities_usd": 34942070,
+   "shares_outstanding": 133633927,
+   "shares_as_of": "2025-11-14",
+   "operating_cash_used_quarter_usd": 3176204,
+   "operating_cash_derived": true,
+   "net_loss_usd": 5100559,
+   "net_loss_derived": false,
+   "revenue_usd": 29166,
+   "revenue_derived": false,
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000107997325001745/lwlg_10q-093025.htm",
+   "notes": "Op cash derived = 9M $10,436,426 - 6M $7,260,222. Runway: 'through March 2027'; ~$2.2M/month. shares_outstanding is the cover-page count of the filing (as of shares_as_of), not the period-end balance."
+  },
+  {
+   "period": "Q4 2025",
+   "period_end": "2025-12-31",
+   "cash_and_securities_usd": 69017354,
+   "shares_outstanding": 148831122,
+   "shares_as_of": "2026-03-20",
+   "operating_cash_used_quarter_usd": 3312760,
+   "operating_cash_derived": true,
+   "net_loss_usd": 5549581,
+   "net_loss_derived": true,
+   "revenue_usd": 159167,
+   "revenue_derived": true,
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000107997326000348/lwlg_10k-123125.htm",
+   "notes": "Derived Q4 = FY2025 (op cash $13,749,186; net loss $20,313,797; revenue $236,855 = $106,855 license + $130,000 JDA Phase 1) minus 9M (op cash $10,436,426; net loss $14,764,216 using restated Q2; revenue $77,688). Period-end shares 146,050,506 (~$35M gross raise in Dec 2025 per secondary source). Runway: 'through at least December 2027'. 34 FTEs at 12/31/2025."
+  },
+  {
+   "period": "Q1 2026",
+   "period_end": "2026-03-31",
+   "cash_and_securities_usd": 75102750,
+   "shares_outstanding": 154079632,
+   "shares_as_of": "2026-05-15",
+   "operating_cash_used_quarter_usd": 4061179,
+   "operating_cash_derived": false,
+   "net_loss_usd": 6300540,
+   "net_loss_derived": false,
+   "revenue_usd": 29167,
+   "revenue_derived": false,
+   "source": "https://www.sec.gov/Archives/edgar/data/0001325964/000155335026000087/lwlg_10q-033126.htm",
+   "notes": "No marketable securities line. Runway: 'through at least December 2027'. Q1 2026 call said cash ~ $100M as of May 11, 2026. shares_outstanding is the cover-page count of the filing (as of shares_as_of), not the period-end balance."
+  },
+  {
+   "period": "Q2 2026",
+   "period_end": "2026-06-30",
+   "cash_and_securities_usd": 95910962,
+   "shares_outstanding": 154167255,
+   "shares_as_of": "2026-08-14",
+   "operating_cash_used_quarter_usd": 5821358,
+   "operating_cash_derived": true,
+   "net_loss_usd": 6613797,
+   "net_loss_derived": false,
+   "revenue_usd": 32751,
+   "revenue_derived": false,
+   "source": "https://www.sec.gov/Archives/edgar/data/0001325964/000107997326001097/lwlg_10q-063026.htm",
+   "notes": "Cash $47,209,148 + marketable securities $48,701,814 (sum computed). Op cash derived = 6M $9,882,537 - Q1 $4,061,179. Runway: 'through at least December 2027'. $100,000 JDA Phase 2 installment received, held as contract liability. shares_outstanding is the cover-page count of the filing (as of shares_as_of), not the period-end balance."
+  }
+ ],
+ "stage3_history": [
+  {
+   "date": "2025-07",
+   "count": 0,
+   "what": "On a July 31, 2025 update call the CEO reaffirmed a goal of 3-5 customers in Stage 3 by end of 2025 and said some engagements should get there 'over the next few quarters', which implies none were in Stage 3 yet (inferred).",
+   "source": "https://stockanalysis.com/stocks/lwlg/transcripts/367219-status-update/",
+   "derived": true
+  },
+  {
+   "date": "2025-11",
+   "count": 1,
+   "what": "Nov 4, 2025: unnamed Fortune Global 500 company moved to Stage 3 (prototype to final product). 2026 plan was to build and test silicon photonics PICs with EO polymer for a hyperscale/AI data-center product.",
+   "source": "https://www.newswire.com/news/lightwave-logic-inc-provides-update-on-commercial-pipeline"
+  },
+  {
+   "date": "2025-11",
+   "count": 2,
+   "what": "Nov 25, 2025: second Fortune Global 500 company, a co-packaged optics (400G CPO) program. The company said its Stage 3 entry was 'provisional' until technical milestones are met.",
+   "source": "https://www.newswire.com/news/lightwave-logic-inc-provides-update-on-commercial-8165341"
+  },
+  {
+   "date": "2026-01",
+   "count": 3,
+   "what": "FY2025 10-K: as of January 2026, three customer programs were in Stage 3 (one needed a customized material), plus about 15 engagements in Stages 1-2.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1325964/000107997326000348/lwlg_10k-123125.htm"
+  },
+  {
+   "date": "2026-02",
+   "count": 4,
+   "what": "Feb 24, 2026: a fourth company (Fortune Global 500, adding EO polymer to its in-house silicon photonics platform, 200G/400G target) entered Stage 3.",
+   "source": "https://www.newswire.com/news/lightwave-logic-inc-provides-update-on-commercial-pipeline-and-announces-timing"
+  },
+  {
+   "date": "2026-05",
+   "count": 4,
+   "what": "Q1 2026 call (May 13, 2026): four Fortune 500/Global 500 customers in Stage 3. Management expected 1-2 more before end of 2026 and said foundry wafer demand was slowing progress toward Stage 4.",
+   "source": "https://www.fool.com/earnings/call-transcripts/2026/05/13/lightwave-logic-lwlg-q1-2026-earnings-transcript/"
+  },
+  {
+   "date": "2026-08",
+   "count": 5,
+   "what": "Q2 2026 call (Aug 11, 2026): a new customer brought the total to five Stage 3 programs. None in Stage 4 yet. Pipeline of about 20 companies.",
+   "source": "https://irp.cdn-website.com/a5f8ef96/files/uploaded/Lightwave+Logic+q2+Call+transcript.pdf"
+  }
+ ],
+ "promises": [
+  {
+   "said_on": "2022-05-26",
+   "who": "Michael Lebby (CEO)",
+   "promise": "Working modulators coming back from foundries in the second half of 2022.",
+   "target": "2H 2022",
+   "status": "delivered",
+   "outcome": "The Q1 2023 10-Q (May 2023) says the company keeps receiving working modulator chips for prototyping. Exact arrival date not disclosed.",
+   "source_said": "https://stockanalysis.com/stocks/lwlg/transcripts/205944-asm-2022/",
+   "source_outcome": "https://www.sec.gov/Archives/edgar/data/1325964/000107997323000650/lwlg_10q-033123.htm"
+  },
+  {
+   "said_on": "2022-05-26",
+   "who": "Michael Lebby (CEO)",
+   "promise": "Would likely be able to name commercial partners within about 12 months.",
+   "target": "by ~May 2023",
+   "status": "missed",
+   "outcome": "The first license (May 2023) went to an unnamed licensee, and the 10-Qs still do not name it. The first named foundry partner (AMF) was announced May 21, 2024, about a year late.",
+   "source_said": "https://stockanalysis.com/stocks/lwlg/transcripts/205944-asm-2022/",
+   "source_outcome": "https://www.finanzen.net/nachricht/aktien/lightwave-logic-and-advanced-micro-foundry-amf-partner-to-accelerate-development-of-silicon-photonics-modulators-using-electro-optic-polymers-13536238"
+  },
+  {
+   "said_on": "2022-05-26",
+   "who": "Michael Lebby (CEO)",
+   "promise": "Add roughly 5-10 people over the next 12 months.",
+   "target": "by ~May 2023",
+   "status": "delivered",
+   "outcome": "At the May 25, 2023 ASM, Lebby cited '11 recent hires'.",
+   "source_said": "https://stockanalysis.com/stocks/lwlg/transcripts/205944-asm-2022/",
+   "source_outcome": "https://stockanalysis.com/stocks/lwlg/transcripts/205942-asm-2023/"
+  },
+  {
+   "said_on": "2023-03",
+   "who": "Lightwave Logic (FY2022 10-K)",
+   "promise": "21 FTEs at the time, with plans to add 9 more in 2023.",
+   "target": "end of 2023",
+   "status": "delivered",
+   "outcome": "The FY2024 10-K (Mar 2025) reports 31 FTEs. A year-end 2023 headcount was not found, so 2023 timing is not confirmed.",
+   "source_said": "https://www.sec.gov/Archives/edgar/data/1325964/000155335023000151/lwlg_10k.htm",
+   "source_outcome": "https://www.sec.gov/Archives/edgar/data/1325964/000107997325000420/lwlg_10k-123124.htm"
+  },
+  {
+   "said_on": "2023-03-02",
+   "who": "Michael Lebby (CEO)",
+   "promise": "Secure the first licensing agreements 'in the near-term'.",
+   "target": "near-term (2023)",
+   "status": "delivered",
+   "outcome": "May 2023: four-year, non-exclusive material supply and license agreement for Perkinamine, with a $50,000 upfront fee and a minimum annual royalty. Licensee not named.",
+   "source_said": "https://prnewswire.com/news-releases/lightwave-logic-provides-fourth-quarter-and-fiscal-year-2022-corporate-update-301760680.html",
+   "source_outcome": "https://www.sec.gov/Archives/edgar/data/1325964/000107997323001101/lwlg_10q-063023.htm"
+  },
+  {
+   "said_on": "2023-05-25",
+   "who": "Michael Lebby (CEO)",
+   "promise": "Expected more Perkinamine material licensing 'both this year and next year'.",
+   "target": "2023-2024",
+   "status": "missed",
+   "outcome": "No second license or supply agreement was disclosed in 2023 or 2024. The FY2024 10-K only says the company is 'in discussions' on future licenses. 2024 revenue was $95,605: the first license plus $13,750 of device processing.",
+   "source_said": "https://stockanalysis.com/stocks/lwlg/transcripts/205942-asm-2023/",
+   "source_outcome": "https://www.sec.gov/Archives/edgar/data/1325964/000107997325000420/lwlg_10k-123124.htm"
+  },
+  {
+   "said_on": "2023-12-04",
+   "who": "Michael Lebby (CEO)",
+   "promise": "Working hard to close more commercial agreements by year end (no guarantee).",
+   "target": "2023-12-31",
+   "status": "missed",
+   "outcome": "No new commercial agreement was announced by year end. FY2023 revenue was only $40,502, all from the May 2023 license.",
+   "source_said": "https://www.finanzen.net/nachricht/aktien/lightwave-logic-issues-shareholder-letter-and-provides-corporate-update-13088905",
+   "source_outcome": "https://www.sec.gov/Archives/edgar/data/1325964/000107997324000315/lwlg_10k-123123.htm"
+  },
+  {
+   "said_on": "2023-05-25",
+   "who": "Michael Lebby (CEO)",
+   "promise": "Take about 10,000 sq ft of extra space next door and move in around July-August 2023.",
+   "target": "Jul-Aug 2023",
+   "status": "partly delivered",
+   "outcome": "The Mar 1, 2024 corporate update mentions a 2023 lab expansion. Exact completion date and size were not verified.",
+   "source_said": "https://stockanalysis.com/stocks/lwlg/transcripts/205942-asm-2023/",
+   "source_outcome": "https://prnewswire.com/news-releases/lightwave-logic-provides-fourth-quarter-and-fiscal-year-2023-corporate-update-302076993.html"
+  },
+  {
+   "said_on": "2024-06-03",
+   "who": "Michael Lebby (CEO)",
+   "promise": "Pursue Tier 1 material supply license agreements in 2024, with the 'cadence to grow in 2025 and beyond'.",
+   "target": "2024-2025",
+   "status": "missed",
+   "outcome": "No new Tier 1 license was signed in 2024. Lebby retired Dec 10, 2024. Through mid-2026 the only license is still the May 2023 agreement, plus one joint development agreement (Phase 1, $130k, recognized in 2025). Q2 2026 call: a second agreement is being negotiated.",
+   "source_said": "https://ycharts.com/news/story/PRN-CL29173-20240603",
+   "source_outcome": "https://www.sec.gov/Archives/edgar/data/0001325964/000107997326001097/lwlg_10q-063026.htm"
+  },
+  {
+   "said_on": "2024-05-22",
+   "who": "Michael Lebby (CEO)",
+   "promise": "When asked if the 4x200G PIC was still on target for 2024, said 'it's in progress' and that the 4-channel device is coming.",
+   "target": "2024",
+   "status": "changed",
+   "outcome": "In December 2024 new management refocused on EO polymer materials development and manufacturing. No 4-channel PIC product was announced, and the model shifted to supplying materials and licensing to customers' PICs.",
+   "source_said": "https://stockanalysis.com/stocks/lwlg/transcripts/205928-asm-2024/",
+   "source_outcome": "https://www.sec.gov/Archives/edgar/data/1325964/000107997325000420/lwlg_10k-123124.htm"
+  },
+  {
+   "said_on": "2024-08-12",
+   "who": "Michael Lebby (CEO)",
+   "promise": "Ramp volume of polymer materials in Colorado and on 200mm wafers with AMF (no date).",
+   "target": "unspecified",
+   "status": "pending",
+   "outcome": "As of the Q2 2026 call (Aug 2026), Denver Perkinamine expansion is 'progressing well' with new equipment being commissioned. No volume production yet; target is 2H 2027.",
+   "source_said": "https://www.gurufocus.com/news/2500221/lightwave-logic-provides-second-quarter-2024-corporate-update",
+   "source_outcome": "https://irp.cdn-website.com/a5f8ef96/files/uploaded/Lightwave+Logic+q2+Call+transcript.pdf"
+  },
+  {
+   "said_on": "2025-03-13",
+   "who": "Yves LeMaitre (CEO)",
+   "promise": "Get selected by customers for new PIC designs in 2025-2026, with a volume ramp in 2027-2028.",
+   "target": "design-ins 2025-26, volume 2027-28",
+   "status": "pending",
+   "outcome": "Design-in part largely delivered: five Stage 3 programs by Aug 2026. Volume ramp now targeted for 2H 2027 for the most advanced program. Not yet testable.",
+   "source_said": "https://stockanalysis.com/stocks/lwlg/transcripts/324754-status-update/",
+   "source_outcome": "https://irp.cdn-website.com/a5f8ef96/files/uploaded/Lightwave+Logic+q2+Call+transcript.pdf"
+  },
+  {
+   "said_on": "2025-03",
+   "who": "Lightwave Logic",
+   "promise": "Release a BEOL process design kit (PDK) so foundries can integrate the polymer.",
+   "target": "early 2025",
+   "status": "delivered",
+   "outcome": "Controlled-availability PDK was announced around March 2025. CEO confirmed in July 2025 that the PDK was released in March 2025. PDK 1.1 followed May 7, 2026.",
+   "source_said": "https://www.tipranks.com/news/the-fly/lightwave-logic-announces-controlled-availability-of-silicon-photonic-pdk",
+   "source_outcome": "https://stockanalysis.com/stocks/lwlg/transcripts/367219-status-update/"
+  },
+  {
+   "said_on": "2025-03-10",
+   "who": "Lightwave Logic (FY2024 10-K)",
+   "promise": "Joint development with Polariton Technologies on plasmonic+polymer products, including qualification/reliability work.",
+   "target": "unspecified",
+   "status": "changed",
+   "outcome": "Marvell's acquisition of Polariton had just closed by the May 13, 2026 call. LWLG supports prototyping and packaging reliability work, but no commercial terms are disclosed.",
+   "source_said": "https://www.sec.gov/Archives/edgar/data/1325964/000107997325000420/lwlg_10k-123124.htm",
+   "source_outcome": "https://www.fool.com/earnings/call-transcripts/2026/05/13/lightwave-logic-lwlg-q1-2026-earnings-transcript/"
+  },
+  {
+   "said_on": "2025-07-31",
+   "who": "Yves LeMaitre (CEO)",
+   "promise": "Reaffirmed goal of three to five customers in Stage 3 by end of 2025.",
+   "target": "2025-12-31",
+   "status": "delivered",
+   "outcome": "Three by January 2026 per the FY2025 10-K, the low end of the range. One of the three (Nov 25, 2025 CPO program) was labelled 'provisional'.",
+   "source_said": "https://stockanalysis.com/stocks/lwlg/transcripts/367219-status-update/",
+   "source_outcome": "https://www.sec.gov/Archives/edgar/data/1325964/000107997326000348/lwlg_10k-123125.htm"
+  },
+  {
+   "said_on": "2025-07-31",
+   "who": "Yves LeMaitre (CEO)",
+   "promise": "Device-level Telcordia GR-468 reliability testing would happen with customers once they reach Stage 3. Material-level 85/85 thin-film test was passed Jul 15, 2025.",
+   "target": "after Stage 3 entry",
+   "status": "pending",
+   "outcome": "Device-level qualification results not reported as of Aug 2026. Q2 2026 call said Q4 2026 'should give us a much clearer technical picture'.",
+   "source_said": "https://stockanalysis.com/stocks/lwlg/transcripts/367219-status-update/",
+   "source_outcome": "https://irp.cdn-website.com/a5f8ef96/files/uploaded/Lightwave+Logic+q2+Call+transcript.pdf"
+  },
+  {
+   "said_on": "2025-11-25",
+   "who": "Yves LeMaitre (CEO)",
+   "promise": "Develop a custom Perkinamine variant for a Fortune Global 500 co-packaged optics customer during 1H 2026.",
+   "target": "1H 2026",
+   "status": "pending",
+   "outcome": "Not addressed on the Aug 11, 2026 Q2 call. No public confirmation of completion found.",
+   "source_said": "https://www.newswire.com/news/lightwave-logic-inc-provides-update-on-commercial-8165341",
+   "source_outcome": "https://irp.cdn-website.com/a5f8ef96/files/uploaded/Lightwave+Logic+q2+Call+transcript.pdf"
+  },
+  {
+   "said_on": "2025-11-25",
+   "who": "Yves LeMaitre (CEO)",
+   "promise": "First production revenues in 2027. Any 2026 revenue would come from prototypes or engineering programs.",
+   "target": "2027",
+   "status": "pending",
+   "outcome": "Unchanged in all 2026 statements (10-K, Q1/Q2 2026 10-Qs: no significant volume revenue until 2027 'at the earliest'). 1H 2026 revenue was $61,918.",
+   "source_said": "https://stockanalysis.com/stocks/lwlg/transcripts/418724-status-update/",
+   "source_outcome": "https://www.sec.gov/Archives/edgar/data/0001325964/000107997326001097/lwlg_10q-063026.htm"
+  },
+  {
+   "said_on": "2026-03-05",
+   "who": "Yves LeMaitre (CEO), Q4 2025 call",
+   "promise": "Customer 1.6T transceiver chips expected in Q2 2026. SilTerra/Luceda tape-out device characterization expected by mid-2026.",
+   "target": "Q2 2026 / mid-2026",
+   "status": "pending",
+   "outcome": "Neither was reported on the Aug 11, 2026 call. Instead, two foundries were due to ship wafers in August, a third in Q4 2026, and a fourth tape-out later in 2026. Looks slipped, but not confirmed.",
+   "source_said": "https://www.marketbeat.com/instant-alerts/lightwave-logic-q4-earnings-call-highlights-2026-03-05/ ; https://www.theglobeandmail.com/investing/markets/stocks/LWLG/pressreleases/726219/lightwave-logic-earnings-call-progress-but-revenue-waits/",
+   "source_outcome": "https://irp.cdn-website.com/a5f8ef96/files/uploaded/Lightwave+Logic+q2+Call+transcript.pdf"
+  },
+  {
+   "said_on": "2026-03-05",
+   "who": "Yves LeMaitre (CEO), Q4 2025 call",
+   "promise": "Bring in one or two external back-end (BEOL) partners for high-volume processing in 2026.",
+   "target": "2026",
+   "status": "pending",
+   "outcome": "As of Aug 2026, management is 'engaged with external partners'. None named yet.",
+   "source_said": "https://www.marketbeat.com/instant-alerts/lightwave-logic-q4-earnings-call-highlights-2026-03-05/",
+   "source_outcome": "https://irp.cdn-website.com/a5f8ef96/files/uploaded/Lightwave+Logic+q2+Call+transcript.pdf"
+  },
+  {
+   "said_on": "2026-05-07",
+   "who": "Lightwave Logic",
+   "promise": "Transfer PDK 1.1 to a high-volume foundry, with most integration work done in 2H 2026.",
+   "target": "2H 2026",
+   "status": "pending",
+   "outcome": "No completion reported yet.",
+   "source_said": "https://rallies.ai/news/lightwave-logic-launches-pdk-11-with-wafer-level-testing-and-h2-2026-foundry-transfer",
+   "source_outcome": null
+  },
+  {
+   "said_on": "2026-05-13",
+   "who": "Yves LeMaitre (CEO)",
+   "promise": "One or two more Tier 1 customers to reach Stage 3 before end of 2026.",
+   "target": "2026-12-31",
+   "status": "partly delivered",
+   "outcome": "A fifth Stage 3 customer was announced on the Aug 11, 2026 call (one of the one-to-two). Window still open.",
+   "source_said": "https://www.fool.com/earnings/call-transcripts/2026/05/13/lightwave-logic-lwlg-q1-2026-earnings-transcript/",
+   "source_outcome": "https://irp.cdn-website.com/a5f8ef96/files/uploaded/Lightwave+Logic+q2+Call+transcript.pdf"
+  },
+  {
+   "said_on": "2026-05-13",
+   "who": "Yves LeMaitre (CEO)",
+   "promise": "Material supply and license agreement with a lead customer under negotiation.",
+   "target": "unspecified",
+   "status": "pending",
+   "outcome": "Aug 11, 2026: 'actively negotiating a new agreement with another customer'. Not signed as of that call.",
+   "source_said": "https://www.fool.com/earnings/call-transcripts/2026/05/13/lightwave-logic-lwlg-q1-2026-earnings-transcript/",
+   "source_outcome": "https://irp.cdn-website.com/a5f8ef96/files/uploaded/Lightwave+Logic+q2+Call+transcript.pdf"
+  },
+  {
+   "said_on": "2026-08-11",
+   "who": "Yves LeMaitre (CEO)",
+   "promise": "Start volume production in 2H 2027 for the most advanced customer program.",
+   "target": "2H 2027",
+   "status": "pending",
+   "outcome": "Future target. Q3 2026 results due 2026-11-10.",
+   "source_said": "https://irp.cdn-website.com/a5f8ef96/files/uploaded/Lightwave+Logic+q2+Call+transcript.pdf",
+   "source_outcome": null
+  },
+  {
+   "said_on": "2025-05-13",
+   "who": "Lightwave Logic (Q1 2025 10-Q)",
+   "promise": "Cash funds operations 'through May 2026' (similar runway statements every quarter since 2022).",
+   "target": "May 2026",
+   "status": "changed",
+   "outcome": "The runway kept moving out by selling stock rather than by revenue. It became Oct 2026 (Aug 2025), Mar 2027 (Nov 2025), and 'at least December 2027' (2026 filings). Shares rose from 125.0M (May 2025) to 154.2M (Aug 2026).",
+   "source_said": "https://www.sec.gov/Archives/edgar/data/1325964/000107997325000793/lwlg_033125-10q.htm",
+   "source_outcome": "https://www.sec.gov/Archives/edgar/data/0001325964/000107997326001097/lwlg_10q-063026.htm"
+  }
+ ],
+ "business_model": {
+  "summary": "Lightwave Logic now calls itself a specialty materials and licensing company. It makes Perkinamine electro-optic polymers and helps foundries add them to silicon photonics processes through process design kits (PDKs). Customers (transceiver/module makers, chip companies and foundries) then build polymer modulators into their own photonic chips. LWLG does not plan to make transceivers, photonic devices or optical modules. It expects to earn from (1) selling the material, (2) IP licenses with upfront and milestone fees, (3) royalties or production-based fees once customer products ship, and (4) NRE/joint-development fees beforehand. Until volume production (targeted no earlier than 2027), revenue is minimal and comes from one 2023 license plus NRE.",
+  "revenue_streams": [
+   {
+    "name": "Material supply (Perkinamine sales)",
+    "how": "Sells EO polymer to foundries and customers. Supply is non-exclusive. A Denver/Englewood production line is being expanded.",
+    "source": "https://www.sec.gov/Archives/edgar/data/0001325964/000107997326001097/lwlg_10q-063026.htm"
+   },
+   {
+    "name": "IP licensing (upfront, milestone, field-of-use)",
+    "how": "Non-exclusive, royalty-bearing technology licenses. The first (May 2023, four-year term) included a $50,000 upfront fee and a minimum annual royalty.",
+    "source": "https://www.sec.gov/Archives/edgar/data/1325964/000107997323001101/lwlg_10q-063023.htm"
+   },
+   {
+    "name": "Royalties / production-based fees",
+    "how": "Running royalties above the annual minimum, recognized when earned. Material only once customers reach volume production; the 10-K says there is 'no assurance' any program becomes royalty-bearing.",
+    "source": "https://www.sec.gov/Archives/edgar/data/1325964/000107997326000348/lwlg_10k-123125.htm"
+   },
+   {
+    "name": "NRE / joint development",
+    "how": "Phased, milestone-based development fees: Phase 1 $130,000 (recognized 2025), Phase 2 $200,000 in installments ($100k received 1H 2026), Phase 3 not yet set. Includes multi-project wafer runs at an agreed foundry.",
+    "source": "https://www.sec.gov/Archives/edgar/data/0001325964/000155335026000087/lwlg_10q-033126.htm"
+   },
+   {
+    "name": "PDK enablement / device processing",
+    "how": "Supplies PDK elements and runs back-end steps (polymer deposition, poling, encapsulation) in Colorado for customer prototypes. FY2024 had $13,750 of device processing revenue. These steps are to move to foundry or back-end partners at volume.",
+    "source": "https://www.sec.gov/Archives/edgar/data/1325964/000107997326000348/lwlg_10k-123125.htm"
+   }
+  ],
+  "value_chain": [
+   "LWLG designs and synthesizes Perkinamine EO polymer chromophores in Colorado (Englewood/Denver), with production capacity being expanded",
+   "LWLG publishes BEOL process design kits (PDK, Mar 2025; PDK 1.1, May 2026) so foundries can add polymer slot modulators to standard silicon photonics flows",
+   "Foundry partners (AMF; Tower Semiconductor PH18; GlobalFoundries; SilTerra with Luceda; plus one unnamed) fabricate silicon photonics wafers designed by customers",
+   "Back-end steps (polymer deposition, poling, encapsulation/ALD barrier) are done by LWLG in Colorado today and are planned to move to foundries or external back-end partners for volume",
+   "Customers (transceiver/module makers and chip companies, e.g. Hon Hai/Foxconn's silicon-organic hybrid optical engine demo, Oct 2026) package modulators into 200G/400G-per-lane transceivers or co-packaged optics",
+   "Customers qualify the devices (Telcordia GR-468 style reliability) and move from Stage 3 (prototype) to Stage 4 (volume production)",
+   "Hyperscale / AI data-center operators deploy the transceivers. LWLG earns material sales and license/royalty or production-based fees on volume"
+  ],
+  "value_chain_sources": [
+   "https://www.sec.gov/Archives/edgar/data/1325964/000107997326000348/lwlg_10k-123125.htm",
+   "https://rallies.ai/news/lightwave-logic-launches-pdk-11-with-wafer-level-testing-and-h2-2026-foundry-transfer",
+   "https://irp.cdn-website.com/a5f8ef96/files/uploaded/Lightwave+Logic+q2+Call+transcript.pdf",
+   "https://www.newswire.com/news/lightwave-logic-inc-electro-optic-polymer-technology-integrated-into-hon-hai",
+   "https://stockanalysis.com/stocks/lwlg/transcripts/418724-status-update/"
+  ]
+ },
+ "notes": "All quarterly figures were read from SEC 10-Q/10-K HTML documents on sec.gov via WebFetch. data.sec.gov (XBRL API) and EDGAR browse pages were blocked by the network policy, so values were not cross-checked against XBRL. Q4 values for net loss, operating cash used and revenue are derived as annual minus 9-month YTD. Q2/Q3 operating cash is derived from YTD differences; see each row's *_derived flags. shares_outstanding uses cover-page counts, which are dated after the period end; Q4 notes also give period-end balance counts. Q2 2025 net loss is the restated value (10-Q/A, Jan 2026); the original was $5,672,132. A 2021 equity error was corrected at the same time. 2022 operating-cash YTD figures were later reclassified slightly in 2023 comparatives (noted per row). FY2022 op cash differs between the FY2023 10-K cash-flow statement ($10,531,701) and its MD&A ($10,465,880). Q4 2022 cash and Dec-2024 cash/share balances come from the next year's 10-K comparatives. Stage 3 counts come from company releases and call transcripts. The 2025-07 'zero' entry is inferred. The Nov 25, 2025 entry was labelled provisional by the company. Promises: 25 entries. Transcript content (stockanalysis.com, fool.com, company-hosted PDF, MarketBeat/TipRanks summaries) was read through a summarizing fetch tool, so short quotes are as returned by that tool and should be spot-checked before publishing. Not verified or gaps: the exact date the 2023 lab expansion finished; a year-end 2023 headcount; whether the 1.6T chips (Q2 2026) and the SilTerra characterization (mid-2026) were delivered (not mentioned on the Aug 2026 call); the PDK controlled-availability release date (TipRanks page timestamp 2025-03-28; CEO said March 2025); CFO Fred Graffam's appointment (~Jul 20, 2026, seen only in a search snippet, so not used); Tower (Mar 12, 2026) and GlobalFoundries/GDSFactory (Mar 2026) dates come from secondary articles. Q3 2026 (results due 2026-11-10) intentionally excluded. Some aggregators (portfoliosavvy) mislabel the form type and show the FY2023 net loss with the wrong sign; those were not used as primary sources."
+}

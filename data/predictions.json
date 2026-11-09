@@ -1,0 +1,9 @@
+{
+ "note": "Fill in each answer once it is known; the leaderboard then ranks guesses by how close they were.",
+ "questions": [
+  {"id": "stage3_nov", "q": "How many programs will be in Stage 3 after the Q3 2026 call (Nov 10)?", "type": "number", "unit": "programs", "closes": "2026-11-10T16:30:00-05:00", "answer": null},
+  {"id": "cash_q3", "q": "Cash + marketable securities at Sep 30, 2026 (in $ millions)?", "type": "number", "unit": "$M", "closes": "2026-11-10T16:30:00-05:00", "answer": null},
+  {"id": "stage4_date", "q": "When will the first program move to Stage 4?", "type": "date", "unit": "", "closes": "2027-12-31T23:59:00-05:00", "answer": null},
+  {"id": "price_dec31", "q": "LWLG closing price on Dec 31, 2026?", "type": "number", "unit": "$", "closes": "2026-12-31T09:30:00-05:00", "answer": null}
+ ]
+}

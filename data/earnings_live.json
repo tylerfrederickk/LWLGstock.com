@@ -1,0 +1,20 @@
+{
+ "note": "Earnings-day mode. status: 'auto' follows the clock (countdown on the day, LIVE once the call starts). Set 'out' once results are posted and fill in results + scorecard; set 'auto' again before the next call.",
+ "status": "auto",
+ "quarter": "Q3 2026",
+ "webcast": "https://www.lightwavelogic.com/investors/",
+ "press_release": "",
+ "key_points": [],
+ "results": { "cash": null, "cash_prev": "$95.9M", "stage3": null, "stage3_prev": 5, "stage4": null, "revenue": null, "revenue_prev": "$33K" },
+ "scorecard": [
+  { "q": "Supply & licence deal signed?", "a": null },
+  { "q": "2027 volume target reaffirmed?", "a": null },
+  { "q": "New foundry or partner named?", "a": null }
+ ],
+ "watch": [
+  { "t": "Stage 4", "d": "Any program move beyond Stage 3?" },
+  { "t": "Supply deal", "d": "Material licence with a lead customer" },
+  { "t": "Cash", "d": "Last: $95.9M (Jun 30)" },
+  { "t": "2027 volume", "d": "Still on track?" }
+ ]
+}

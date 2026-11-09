@@ -1,0 +1,18 @@
+{
+  "updated": "2026-11-09",
+  "note": "Update after each quarterly report. Next refresh: Q3 2026 results on Nov 10, 2026.",
+  "facts": [
+    {"label": "Ticker", "value": "NASDAQ: LWLG", "as_of": "", "source": ""},
+    {"label": "What it makes", "value": "Electro-optic polymers (Perkinamine®)", "as_of": "", "source": "https://www.sec.gov/Archives/edgar/data/1325964/000107997326000348/lwlg_10k-123125.htm"},
+    {"label": "Headquarters", "value": "Englewood, Colorado", "as_of": "", "source": "https://www.sec.gov/Archives/edgar/data/1325964/000107997326000348/lwlg_10k-123125.htm"},
+    {"label": "CEO", "value": "Yves LeMaitre (since Dec 2024)", "as_of": "", "source": "timeline.html"},
+    {"label": "Cash + securities", "value": "$95.9M", "as_of": "Jun 30, 2026", "source": "https://www.sec.gov/Archives/edgar/data/0001325964/000107997326001097/lwlg_10q-063026.htm"},
+    {"label": "Cash runway (company)", "value": "Through Dec 2027", "as_of": "Aug 2026", "source": "https://www.sec.gov/Archives/edgar/data/0001325964/000107997326001097/lwlg_10q-063026.htm"},
+    {"label": "Shares outstanding", "value": "154.2M", "as_of": "Aug 14, 2026", "source": "https://www.sec.gov/Archives/edgar/data/0001325964/000107997326001097/lwlg_10q-063026.htm"},
+    {"label": "Programs in Stage 3", "value": "5", "as_of": "Aug 2026", "source": "calls.html"},
+    {"label": "Programs in Stage 4", "value": "0", "as_of": "Aug 2026", "source": "catalysts.html"},
+    {"label": "Patents", "value": "67 granted · 80+ pending", "as_of": "Dec 31, 2025", "source": "patents.html"},
+    {"label": "Volume production target", "value": "2H 2027", "as_of": "Aug 2026", "source": "promises.html"}
+  ],
+  "next_event": {"label": "Q3 2026 results & business update call", "date": "2026-11-10T16:30:00-05:00", "display": "Tue Nov 10 · 4:30 PM ET", "link": "earnings.html"}
+}

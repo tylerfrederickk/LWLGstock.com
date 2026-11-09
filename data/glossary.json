@@ -1,0 +1,282 @@
+[
+ {
+  "term": "PAM4",
+  "keys": [
+   "PAM4"
+  ],
+  "definition": "A signaling format that sends 2 bits per symbol using four signal levels instead of two, doubling data rate without doubling speed."
+ },
+ {
+  "term": "CPO (co-packaged optics)",
+  "keys": [
+   "CPO",
+   "co-packaged optics"
+  ],
+  "definition": "Putting the optical engines right next to the switch or processor chip in the same package instead of in plug-in modules, cutting electrical path length and power."
+ },
+ {
+  "term": "LPO (linear pluggable optics)",
+  "keys": [
+   "LPO",
+   "linear pluggable optics"
+  ],
+  "definition": "A pluggable module that drops the power-hungry DSP chip and relies on the host chip to clean up the signal, saving power for short links."
+ },
+ {
+  "term": "PDK (process design kit)",
+  "keys": [
+   "PDK",
+   "process design kit"
+  ],
+  "definition": "A foundry's library of proven building blocks and rules that chip designers use; being in a PDK makes a component easy for customers to adopt."
+ },
+ {
+  "term": "Chromophore",
+  "keys": [
+   "Chromophore"
+  ],
+  "definition": "The light-active molecule inside an EO polymer; when aligned, its electrons respond to voltage and change how light travels through the material."
+ },
+ {
+  "term": "EO polymer (electro-optic polymer)",
+  "keys": [
+   "EO polymer",
+   "electro-optic polymer"
+  ],
+  "definition": "A plastic-like material containing aligned chromophores whose refractive index changes very quickly and strongly with applied voltage."
+ },
+ {
+  "term": "Modulator",
+  "keys": [
+   "Modulator"
+  ],
+  "definition": "The component that encodes electrical data onto a beam of light by changing its intensity or phase; the 'on/off switch' of an optical link."
+ },
+ {
+  "term": "Mach-Zehnder modulator (MZM)",
+  "keys": [
+   "Mach-Zehnder modulator",
+   "MZM"
+  ],
+  "definition": "A modulator that splits light into two arms, shifts the phase in one or both, then recombines them so they add or cancel to make ones and zeros."
+ },
+ {
+  "term": "Vpi (V-pi)",
+  "keys": [
+   "Vpi",
+   "V-pi"
+  ],
+  "definition": "The voltage needed to shift light's phase by half a wave (fully switch a Mach-Zehnder); lower Vpi means less drive power."
+ },
+ {
+  "term": "VpiL",
+  "keys": [
+   "VpiL"
+  ],
+  "definition": "Vpi multiplied by device length; a size-independent efficiency score where smaller is better."
+ },
+ {
+  "term": "Bandwidth (GHz)",
+  "keys": [
+   "Bandwidth",
+   "GHz"
+  ],
+  "definition": "How fast a device can respond to a changing signal; higher GHz bandwidth supports higher symbol rates."
+ },
+ {
+  "term": "Gbps / Gb/s",
+  "keys": [
+   "Gbps",
+   "Gb/s"
+  ],
+  "definition": "Billions of bits per second of data throughput; e.g., 200G per lane."
+ },
+ {
+  "term": "Lane",
+  "keys": [
+   "Lane"
+  ],
+  "definition": "One independent optical or electrical data channel; a 1.6T module might use 8 lanes of 200G or 4 lanes of 400G."
+ },
+ {
+  "term": "Transceiver",
+  "keys": [
+   "Transceiver"
+  ],
+  "definition": "A module that both transmits and receives data over fiber, converting between electrical and optical signals."
+ },
+ {
+  "term": "800G / 1.6T / 3.2T",
+  "keys": [
+   "800G",
+   "1.6T",
+   "3.2T"
+  ],
+  "definition": "Total module speeds of 800 gigabits, 1.6 terabits, and 3.2 terabits per second, the successive generations used in AI data centers."
+ },
+ {
+  "term": "Hyperscaler",
+  "keys": [
+   "Hyperscaler"
+  ],
+  "definition": "The largest cloud operators (e.g., Google, Microsoft, Amazon, Meta, Oracle) that build massive data centers."
+ },
+ {
+  "term": "Silicon photonics",
+  "keys": [
+   "Silicon photonics"
+  ],
+  "definition": "Building optical components on silicon wafers using chip-industry fabs, enabling cheap high-volume photonic chips."
+ },
+ {
+  "term": "Photonic integrated circuit (PIC)",
+  "keys": [
+   "Photonic integrated circuit",
+   "PIC"
+  ],
+  "definition": "A chip that combines many optical functions (waveguides, modulators, detectors) on one piece of material, like an electronic IC but for light."
+ },
+ {
+  "term": "Waveguide",
+  "keys": [
+   "Waveguide"
+  ],
+  "definition": "A tiny channel on a chip that confines and guides light, the optical equivalent of a wire."
+ },
+ {
+  "term": "TFLN (thin-film lithium niobate)",
+  "keys": [
+   "TFLN",
+   "thin-film lithium niobate"
+  ],
+  "definition": "A competing modulator material: a thin layer of lithium niobate crystal on a chip, fast and low-loss but harder to make in standard fabs."
+ },
+ {
+  "term": "BTO (barium titanate)",
+  "keys": [
+   "BTO",
+   "barium titanate"
+  ],
+  "definition": "A crystal with a very strong electro-optic effect that can be bonded onto silicon; promising but early in manufacturing."
+ },
+ {
+  "term": "InP (indium phosphide)",
+  "keys": [
+   "InP",
+   "indium phosphide"
+  ],
+  "definition": "A semiconductor used to make lasers and modulators; mature and reliable but made in specialized, costlier fabs."
+ },
+ {
+  "term": "EML (electro-absorption modulated laser)",
+  "keys": [
+   "EML",
+   "electro-absorption modulated laser"
+  ],
+  "definition": "A laser with a built-in section that absorbs light on command, the incumbent transmitter in many 800G/1.6T modules."
+ },
+ {
+  "term": "Plasmonic modulator",
+  "keys": [
+   "Plasmonic modulator"
+  ],
+  "definition": "A modulator that squeezes light into a metal surface wave, making devices tiny and extremely fast, at the cost of higher optical loss."
+ },
+ {
+  "term": "SOH (silicon-organic hybrid)",
+  "keys": [
+   "SOH",
+   "silicon-organic hybrid"
+  ],
+  "definition": "A silicon waveguide coated or filled with EO polymer, combining silicon manufacturing with the polymer's strong effect."
+ },
+ {
+  "term": "Poling",
+  "keys": [
+   "Poling"
+  ],
+  "definition": "Heating the EO polymer and applying a strong electric field to line up chromophores, then cooling to lock them in place."
+ },
+ {
+  "term": "Glass transition temperature (Tg)",
+  "keys": [
+   "Glass transition temperature",
+   "Tg"
+  ],
+  "definition": "The temperature at which a polymer softens; above it, aligned chromophores can relax and performance fades, so high Tg is crucial."
+ },
+ {
+  "term": "Telcordia GR-468",
+  "keys": [
+   "Telcordia GR-468"
+  ],
+  "definition": "The industry-standard reliability test regime for optoelectronic parts used in telecom/datacom; passing it is usually required before volume purchase."
+ },
+ {
+  "term": "85/85 test",
+  "keys": [
+   "85/85 test"
+  ],
+  "definition": "A stress test holding parts at 85 C and 85% relative humidity for long periods to check moisture and heat durability."
+ },
+ {
+  "term": "BEOL (back end of line)",
+  "keys": [
+   "BEOL",
+   "back end of line"
+  ],
+  "definition": "The later steps of chip fabrication (metal wiring and top layers); EO polymer is typically added at or after this stage."
+ },
+ {
+  "term": "Foundry",
+  "keys": [
+   "Foundry"
+  ],
+  "definition": "A contract manufacturer that fabricates chips for other companies, e.g., Tower Semiconductor or GlobalFoundries."
+ },
+ {
+  "term": "Tape-out",
+  "keys": [
+   "Tape-out"
+  ],
+  "definition": "Sending a finished chip design to a foundry for fabrication; a key milestone in the design cycle."
+ },
+ {
+  "term": "Design win",
+  "keys": [
+   "Design win"
+  ],
+  "definition": "When a customer formally selects a component for a product it will build; precedes volume revenue, often by 1-2 years."
+ },
+ {
+  "term": "NRE (non-recurring engineering)",
+  "keys": [
+   "NRE",
+   "non-recurring engineering"
+  ],
+  "definition": "One-time fees a customer pays for development or customization work, separate from per-unit sales."
+ },
+ {
+  "term": "Licensing / royalty",
+  "keys": [
+   "licensing model",
+   "royalty"
+  ],
+  "definition": "Getting paid for the right to use your technology, either upfront or per unit shipped, instead of making the product yourself."
+ },
+ {
+  "term": "DSP (digital signal processor)",
+  "keys": [
+   "DSP",
+   "digital signal processor"
+  ],
+  "definition": "The chip in a transceiver that cleans up and corrects signals; a large share of module power."
+ },
+ {
+  "term": "Pockels effect",
+  "keys": [
+   "Pockels effect"
+  ],
+  "definition": "A physical effect where an electric field changes a material's refractive index in direct proportion, enabling very fast modulation."
+ }
+]

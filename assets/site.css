@@ -833,3 +833,5 @@ a.ed-bar:hover{color:#fff}
 
 .ed-sec .center{text-align:center}.ed-sec .ed-p{margin-left:auto;margin-right:auto}.ed-sec .ed-live .ed-p{margin-left:0}
 .ed-sec{display:block;width:100%}.ed-sec>.wrap{width:100%;box-sizing:border-box}
+
+.cx-scroll.cx-v{overflow:visible;margin:0;padding:0}.cx-v .cx-stage{min-width:0;max-width:460px;margin:0 auto}

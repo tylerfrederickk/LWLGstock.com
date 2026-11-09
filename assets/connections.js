@@ -4,14 +4,18 @@
   const LINKS = svg.dataset.sources !== 'off';
   const d = await LW.getJSON('data/connections.json');
   const N = d.nodes, idx = Object.fromEntries(N.map((n, i) => [n.id, i]));
-  const W = 1240, H = 720, base = 470, x0 = 40, x1 = W - 40;
+  // phones get a vertical version (names down the left, arcs bulging right) so nothing is cut off
+  const V = (svg.closest('.cx-scroll') || svg).clientWidth < 700;
+  const W = V ? 440 : 1240, H = V ? 40 + N.length * 32 : 720, base = V ? 214 : 470, x0 = V ? 26 : 40, x1 = V ? H - 26 : W - 150;
+  if (V) svg.closest('.cx-scroll')?.classList.add('cx-v');
   const X = i => x0 + (x1 - x0) * (i / (N.length - 1));
+  const maxR = (x1 - x0) / 2, bulge = V ? (W - base - 22) / maxR : 1;
   const deg = {}; d.links.forEach(l => { deg[l.a] = (deg[l.a] || 0) + 1; deg[l.b] = (deg[l.b] || 0) + 1; });
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
   const ns = 'http://www.w3.org/2000/svg', el = (t, a) => { const e = document.createElementNS(ns, t); for (const k in a) e.setAttribute(k, a[k]); return e; };
   const span = l => Math.abs(idx[l.a] - idx[l.b]) / (N.length - 1);
   const hue = s => 130 + s * 190;                                 // green (short) -> violet (long), like the Bible chart
-  const arc = (xa, xb, lift) => { const r = Math.abs(xb - xa) / 2; return `M${xa},${base} A${r},${r * lift} 0 0 1 ${xb},${base}`; };
+  const arc = (xa, xb, lift) => { const r = Math.abs(xb - xa) / 2; return V ? `M${base + 10},${xa} A${r * lift * bulge},${r} 0 0 1 ${base + 10},${xb}` : `M${xa},${base} A${r},${r * lift} 0 0 1 ${xb},${base}`; };
   // seeded jitter for the "bundle" look
   let sd = 7; const rnd = () => (sd = sd * 16807 % 2147483647) / 2147483647;
   const gAll = el('g', {}); svg.appendChild(gAll);
@@ -33,12 +37,20 @@
   });
   // baseline: bars (height = how often a name comes up) + labels
   const gb = el('g', {}); svg.appendChild(gb);
-  gb.appendChild(el('rect', { x: x0 - 12, y: base, width: x1 - x0 + 24, height: 10, fill: '#2C2C2E', rx: 2 }));
+  gb.appendChild(el('rect', V ? { x: base, y: x0 - 12, width: 10, height: x1 - x0 + 24, fill: '#2C2C2E', rx: 2 } : { x: x0 - 12, y: base, width: x1 - x0 + 24, height: 10, fill: '#2C2C2E', rx: 2 }));
   const gcol = { core: '#BF5AF2', foundry: '#64D2FF', chip: '#30D158', cloud: '#FFD60A', market: '#FF9F0A', dream: '#FF375F' };
   N.forEach((n, i) => {
     const x = X(i), g = el('g', { class: 'cx-n', 'data-n': n.id, tabindex: 0, role: 'button', 'aria-label': n.label });
-    g.appendChild(el('rect', { x: x - 4, y: base + 12, width: 8, height: 6 + Math.min((deg[n.id] || 0) * 5, 50), fill: gcol[n.group], rx: 1.5, opacity: .85 }));
-    const ty = base + 30 + Math.min((deg[n.id] || 0) * 5, 50); const t = el('text', { x: x + 4, y: ty, transform: `rotate(62 ${x + 4} ${ty})`, fill: gcol[n.group], 'font-size': 15, 'font-weight': 600, 'font-family': 'Inter, system-ui, sans-serif' }); t.textContent = n.label;
+    const len = 6 + Math.min((deg[n.id] || 0) * 5, 50); let t;
+    if (V) {
+      g.appendChild(el('rect', { x: base - 2 - len, y: x - 4, width: len, height: 8, fill: gcol[n.group], rx: 1.5, opacity: .85 }));
+      t = el('text', { x: base - 66, y: x + 5, 'text-anchor': 'end', fill: gcol[n.group], 'font-size': 14, 'font-weight': 600, 'font-family': 'Inter, system-ui, sans-serif' });
+      g.appendChild(el('rect', { x: 0, y: x - 15, width: base, height: 30, fill: 'transparent' }));  // bigger tap target
+    } else {
+      g.appendChild(el('rect', { x: x - 4, y: base + 12, width: 8, height: len, fill: gcol[n.group], rx: 1.5, opacity: .85 }));
+      const ty = base + 24 + len; t = el('text', { x: x + 4, y: ty, transform: `rotate(62 ${x + 4} ${ty})`, fill: gcol[n.group], 'font-size': 15, 'font-weight': 600, 'font-family': 'Inter, system-ui, sans-serif' });
+    }
+    t.textContent = n.label;
     g.appendChild(t); gb.appendChild(g);
   });
   // interaction

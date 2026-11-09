@@ -1,0 +1,27 @@
+<!--{"title":"LWLG FAQ — plain answers","nav":"faq","desc":"Frequently asked questions about Lightwave Logic (LWLG): what it does, how it makes money, customers, Stage 3 vs Stage 4, cash runway, dilution, short interest and earnings dates."}-->
+<section class="page-hero"><div class="wrap">
+  <div class="kicker">Research · FAQ</div>
+  <h1>Questions, <span class="grad">answered plainly.</span></h1>
+  <p class="lede">The questions new LWLG investors ask most, in plain English. Each answer links to the page with the detail and sources.</p>
+  <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:end;margin-top:24px">
+    <label class="field" style="flex:1;min-width:260px;max-width:460px">Search the FAQ<input id="q" type="search" placeholder="e.g. revenue, customers, dilution"></label>
+    <div class="pills" role="group" aria-label="Category" id="cats"></div>
+  </div>
+</div></section>
+<section style="padding-bottom:80px"><div class="wrap" style="max-width:980px" id="faq"></div>
+<div class="wrap" style="max-width:980px"><p class="note" style="margin-top:28px">Not finding it? <a href="community.html#ask">Ask a question →</a></p></div></section>
+<!--SCRIPTS-->
+<script>
+(async function(){
+  const F=await LW.getJSON('data/faq.json'), E=LW.esc, $=id=>document.getElementById(id);
+  const cats=['All',...new Set(F.map(f=>f.cat))]; let cat='All', q='';
+  $('cats').innerHTML=cats.map(c=>`<button class="pill" type="button" data-c="${E(c)}" aria-pressed="${c==='All'}">${E(c)}</button>`).join('');
+  $('cats').onclick=e=>{const b=e.target.closest('[data-c]');if(!b)return;cat=b.dataset.c;[...$('cats').children].forEach(x=>x.setAttribute('aria-pressed',x===b));draw()};
+  function draw(){
+    const L=F.filter(f=>(cat==='All'||f.cat===cat)&&(!q||(f.q+' '+f.a).toLowerCase().includes(q)));
+    const groups=[...new Set(L.map(f=>f.cat))];
+    $('faq').innerHTML=groups.map(g=>`<h2 style="font-size:28px;margin:40px 0 12px">${E(g)}</h2>`+L.filter(f=>f.cat===g).map(f=>`<details class="card" style="margin-bottom:10px;padding:0"><summary style="cursor:pointer;list-style:none;padding:20px 24px;font-family:var(--display);font-size:19px;font-weight:600;color:var(--fg);min-height:44px;display:flex;justify-content:space-between;gap:16px">${E(f.q)}<span aria-hidden="true" style="color:var(--violet)">+</span></summary><div style="padding:0 24px 20px"><p style="margin:0;font-size:17px">${E(f.a)}</p><a class="link-arrow" href="${E(f.link)}">More detail →</a></div></details>`).join('')).join('')||'<p class="empty">No questions match.</p>';
+  }
+  $('q').addEventListener('input',e=>{q=e.target.value.toLowerCase();draw()}); draw();
+})();
+</script>

@@ -1,0 +1,155 @@
+<!--{"title":"Start here: LWLG in 5 minutes","nav":"start","desc":"New to Lightwave Logic (LWLG)? What the company makes, why AI needs it, how it plans to make money, where it stands today, the key risks and what to watch next — in five minutes."}-->
+<style>
+.toc{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
+.toc a{text-decoration:none;font-size:14px;color:var(--muted);border:1px solid var(--line2);border-radius:999px;padding:9px 14px}
+.toc a:hover{color:var(--fg);border-color:var(--violet)}
+.chap{display:grid;grid-template-columns:120px minmax(0,1fr);gap:32px;padding:56px 0;border-top:1px solid var(--line)}
+.chap .no{font-family:var(--display);font-size:64px;font-weight:700;line-height:.9;letter-spacing:-.05em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.chap h2{margin-top:0}
+.chap .lede{max-width:820px}
+.oneline{font-family:var(--display);font-size:clamp(24px,2.6vw,36px);line-height:1.25;letter-spacing:-.02em;color:var(--fg);max-width:980px;border-left:4px solid var(--violet);padding-left:22px;margin-top:32px}
+.mini-stages{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:20px}
+.mini-stages div{border-radius:12px;padding:14px;background:var(--card);border:1px solid var(--line)}
+.mini-stages div.on{background:rgba(139,108,255,.18);border-color:rgba(139,108,255,.6)}
+.mini-stages b{display:block;font-family:var(--display);font-size:28px;color:var(--fg)}
+.mini-stages span{font-size:13px;color:var(--muted)}
+@media (max-width:800px){.chap{grid-template-columns:1fr;gap:8px}.chap .no{font-size:44px}}
+</style>
+<section class="page-hero"><div class="wrap">
+  <div class="kicker">Start here · 5-minute read</div>
+  <h1>LWLG, <span class="grad">explained.</span></h1>
+  <p class="oneline">Lightwave Logic invents special plastics that switch light on and off very fast with very little power, and wants to license them to the chipmakers building AI data center networks.</p>
+  <nav class="toc" aria-label="Chapters"><a href="#c1">1 · What it makes</a><a href="#c2">2 · Why AI needs it</a><a href="#c3">3 · How it makes money</a><a href="#c4">4 · Where it stands</a><a href="#c5">5 · The risks</a><a href="#c6">6 · What to watch</a><a href="#c7">7 · Go deeper</a></nav>
+</div></section>
+<section class="xpl-sec"><div class="wrap">
+  <div class="xpl" id="xpl" role="img" aria-label="A 60-second animated explainer in six scenes: AI servers must talk; data travels as electrical pulses; a modulator turns them into light; silicon needs a lot of voltage; Lightwave Logic's polymer needs very little; the result is faster, cooler links. Captions describe each scene.">
+    <svg viewBox="0 0 960 420" aria-hidden="true" font-family="Inter,system-ui,sans-serif">
+      <defs>
+        <linearGradient id="xg" x1="0" x2="1"><stop offset="0" stop-color="#2997FF"/><stop offset=".55" stop-color="#BF5AF2"/><stop offset="1" stop-color="#FF375F"/></linearGradient>
+        <filter id="xglow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+      <!-- 1: servers -->
+      <g class="xs" data-cap="1 · AI runs on thousands of chips that must constantly talk to each other.">
+        <g class="srv"><rect x="90" y="120" width="190" height="190" rx="22" fill="#1D1D1F" stroke="#3A3A3C"/><rect x="120" y="150" width="130" height="130" rx="12" fill="#2C2C2E"/><text x="185" y="222" text-anchor="middle" fill="#F5F5F7" font-size="22" font-weight="700">GPU</text></g>
+        <g class="srv"><rect x="680" y="120" width="190" height="190" rx="22" fill="#1D1D1F" stroke="#3A3A3C"/><rect x="710" y="150" width="130" height="130" rx="12" fill="#2C2C2E"/><text x="775" y="222" text-anchor="middle" fill="#F5F5F7" font-size="22" font-weight="700">GPU</text></g>
+        <path class="talk" d="M290 215 C 420 120, 540 120, 670 215" fill="none" stroke="url(#xg)" stroke-width="4" stroke-dasharray="10 14"/>
+        <path class="talk r" d="M670 235 C 540 330, 420 330, 290 235" fill="none" stroke="url(#xg)" stroke-width="4" stroke-dasharray="10 14"/>
+      </g>
+      <!-- 2: copper pulses -->
+      <g class="xs" data-cap="2 · Inside the box, data moves as electrical pulses on copper. It's slow over distance and burns power.">
+        <rect x="80" y="200" width="800" height="20" rx="10" fill="#B87333" opacity=".85"/>
+        <g class="epulse"><path d="M0 0 h20 v-40 h30 v40 h20" fill="none" stroke="#FFD60A" stroke-width="5" filter="url(#xglow)"/></g>
+        <g class="heat"><circle cx="300" cy="170" r="10" fill="#FF453A" opacity=".5"/><circle cx="520" cy="160" r="14" fill="#FF453A" opacity=".4"/><circle cx="700" cy="172" r="9" fill="#FF453A" opacity=".5"/></g>
+        <text x="480" y="300" text-anchor="middle" fill="#A1A1A6" font-size="20">Copper: limited reach, lots of heat</text>
+      </g>
+      <!-- 3: modulator converts to light -->
+      <g class="xs" data-cap="3 · A modulator flips a laser on and off billions of times a second, turning those pulses into light.">
+        <rect x="380" y="150" width="200" height="120" rx="18" fill="#1D1D1F" stroke="url(#xg)" stroke-width="3"/><text x="480" y="217" text-anchor="middle" fill="#F5F5F7" font-size="20" font-weight="700">Modulator</text>
+        <g class="ein"><path d="M90 210 h40 v-30 h30 v30 h40 v-30 h30 v30 h40" fill="none" stroke="#FFD60A" stroke-width="5"/></g>
+        <line x1="580" y1="210" x2="900" y2="210" stroke="#2997FF" stroke-width="3" opacity=".3"/>
+        <g class="lout"><rect x="600" y="203" width="40" height="14" rx="7" fill="#64D2FF" filter="url(#xglow)"/><rect x="690" y="203" width="40" height="14" rx="7" fill="#64D2FF" filter="url(#xglow)"/><rect x="780" y="203" width="40" height="14" rx="7" fill="#64D2FF" filter="url(#xglow)"/></g>
+        <text x="200" y="300" text-anchor="middle" fill="#A1A1A6" font-size="18">electricity in</text><text x="760" y="300" text-anchor="middle" fill="#A1A1A6" font-size="18">light out</text>
+      </g>
+      <!-- 4: silicon voltage -->
+      <g class="xs" data-cap="4 · Today's silicon modulators need a lot of voltage to switch, and that wastes energy as heat.">
+        <rect x="160" y="120" width="250" height="190" rx="22" fill="#1D1D1F" stroke="#3A3A3C"/><text x="285" y="190" text-anchor="middle" fill="#F5F5F7" font-size="24" font-weight="700">Silicon</text>
+        <rect x="200" y="215" width="170" height="54" rx="10" fill="#2C2C2E"/><rect class="vbar big" x="205" y="220" width="160" height="44" rx="7" fill="#FF453A"/>
+        <text x="285" y="340" text-anchor="middle" fill="#FF6961" font-size="20">High drive voltage</text>
+        <g class="flame"><path d="M600 290 c-40-40 0-80 0-120 c40 40 70 70 40 120z" fill="#FF9F0A" opacity=".85"/><path d="M640 290 c-25-25 0-55 0-80 c25 25 45 45 25 80z" fill="#FF453A" opacity=".8"/></g>
+        <text x="620" y="340" text-anchor="middle" fill="#A1A1A6" font-size="20">Heat</text>
+      </g>
+      <!-- 5: polymer -->
+      <g class="xs" data-cap="5 · Lightwave Logic's Perkinamine polymer switches light with a tiny voltage, so it runs faster and cooler.">
+        <rect x="160" y="120" width="250" height="190" rx="22" fill="#1D1D1F" stroke="url(#xg)" stroke-width="3"/><text x="285" y="190" text-anchor="middle" fill="url(#xg)" font-size="24" font-weight="700">Perkinamine</text>
+        <rect x="200" y="215" width="170" height="54" rx="10" fill="#2C2C2E"/><rect class="vbar small" x="205" y="220" width="30" height="44" rx="7" fill="#30D158"/>
+        <text x="285" y="340" text-anchor="middle" fill="#30D158" font-size="20">Under 0.5 V shown (2024)</text>
+        <g class="speed"><line x1="520" y1="180" x2="880" y2="180" stroke="#64D2FF" stroke-width="4" filter="url(#xglow)"/><line x1="560" y1="215" x2="880" y2="215" stroke="#BF5AF2" stroke-width="4" filter="url(#xglow)"/><line x1="600" y1="250" x2="880" y2="250" stroke="#FF375F" stroke-width="4" filter="url(#xglow)"/></g>
+        <text x="700" y="320" text-anchor="middle" fill="#A1A1A6" font-size="20">200G per lane demonstrated</text>
+      </g>
+      <!-- 6: the business -->
+      <g class="xs" data-cap="6 · Lightwave Logic sells the material and licenses the know-how. Every chip made with it can earn a royalty.">
+        <g class="flow"><rect x="60" y="160" width="170" height="90" rx="16" fill="#1D1D1F" stroke="#BF5AF2"/><text x="145" y="212" text-anchor="middle" fill="#F5F5F7" font-size="18" font-weight="700">LWLG</text>
+        <rect x="290" y="160" width="170" height="90" rx="16" fill="#1D1D1F" stroke="#3A3A3C"/><text x="375" y="212" text-anchor="middle" fill="#F5F5F7" font-size="18" font-weight="700">Foundry</text>
+        <rect x="520" y="160" width="170" height="90" rx="16" fill="#1D1D1F" stroke="#3A3A3C"/><text x="605" y="212" text-anchor="middle" fill="#F5F5F7" font-size="18" font-weight="700">Chipmaker</text>
+        <rect x="750" y="160" width="170" height="90" rx="16" fill="#1D1D1F" stroke="#3A3A3C"/><text x="835" y="212" text-anchor="middle" fill="#F5F5F7" font-size="18" font-weight="700">AI data center</text></g>
+        <path class="prod" d="M230 205 H290 M460 205 H520 M690 205 H750" stroke="#64D2FF" stroke-width="4" stroke-dasharray="8 10"/>
+        <path class="money" d="M835 260 C 835 340, 145 340, 145 260" fill="none" stroke="#FFD60A" stroke-width="3" stroke-dasharray="6 10"/>
+        <text x="490" y="372" text-anchor="middle" fill="#FFD60A" font-size="18">material sales · licences · royalties</text>
+      </g>
+    </svg>
+    <div class="xpl-cap" aria-live="off"></div>
+    <div class="xpl-foot"><div class="xpl-bar"><i></i></div><div class="xpl-dots" aria-hidden="true"></div><span class="xpl-time mono">60 sec</span></div>
+  </div>
+</div></section>
+
+
+<section><div class="wrap">
+  <div class="chap" id="c1" data-reveal><div class="no">01</div><div>
+    <div class="kicker">What it makes</div>
+    <h2>A polymer that turns electricity into light signals.</h2>
+    <p class="lede">Data in AI data centers travels as pulses of light through fiber. A part called a <b>modulator</b> turns the electrical signal from a chip into those light pulses. Lightwave Logic designs <b>electro-optic polymers</b> (sold as Perkinamine®) that do this job inside a modulator. Their molecules react to voltage almost instantly, so they can switch light faster and with less voltage than the crystals and silicon used today.</p>
+    <p><a href="learn.html">See how a modulator works (3-min visual) →</a></p>
+  </div></div>
+
+  <div class="chap" id="c2" data-reveal><div class="no">02</div><div>
+    <div class="kicker">Why AI needs it</div>
+    <h2>AI is limited by how fast data moves, and how much power that takes.</h2>
+    <p class="lede">Training large AI models means thousands of GPUs constantly swapping data. Network links are going from 800G to 1.6T to 3.2T, and optics already use a meaningful share of an AI system's power. A modulator material that is faster and needs less voltage could help on both fronts. That's the opening LWLG is aiming at.</p>
+    <p><a href="market.html">Market size &amp; competing technologies →</a></p>
+  </div></div>
+
+  <div class="chap" id="c3" data-reveal><div class="no">03</div><div>
+    <div class="kicker">How it makes money</div>
+    <h2>Materials and licensing, not factories.</h2>
+    <p class="lede">LWLG doesn't plan to build chips or transceivers. It sells its polymer, licenses its technology to foundries and chip designers, and expects royalties once customer products ship in volume. Before then, small development fees come in. Revenue so far is tiny, typically under $40K a quarter.</p>
+    <p><a href="business.html">See the business model diagram →</a></p>
+  </div></div>
+
+  <div class="chap" id="c4" data-reveal><div class="no">04</div><div>
+    <div class="kicker">Where it stands today</div>
+    <h2>Five big customers testing it. None in production yet.</h2>
+    <p class="lede">Customer programs move through four stages. Five Fortune Global 500 companies have reached Stage 3 (building prototypes), and none has reached Stage 4 (production) yet. Management is targeting volume production in the second half of 2027.</p>
+    <div class="mini-stages" aria-label="Customer stages"><div><b>~15</b><span>Stages 1–2 · evaluating &amp; designing</span></div><div class="on"><b>5</b><span>Stage 3 · prototype</span></div><div><b>0</b><span>Stage 4 · production</span></div></div>
+    <div data-factcard style="margin-top:28px"></div>
+  </div></div>
+
+  <div class="chap" id="c5" data-reveal><div class="no">05</div><div>
+    <div class="kicker">The risks</div>
+    <h2>Be clear-eyed about these.</h2>
+    <div class="grid g2" style="margin-top:18px">
+      <div class="card"><h3>Almost no revenue yet</h3><p>After decades of development, sales are still in the tens of thousands of dollars a quarter.</p></div>
+      <div class="card"><h3>Dilution</h3><p>The share count grew from about 112M (2022) to 154M (2026) as the company sold stock to fund itself.</p></div>
+      <div class="card"><h3>Timelines have slipped before</h3><p>Several past targets were missed or changed. <a href="promises.html">See the promise tracker →</a></p></div>
+      <div class="card"><h3>Competing materials</h3><p>Thin-film lithium niobate, barium titanate and others are chasing the same opportunity.</p></div>
+    </div>
+    <p style="margin-top:18px"><a href="thesis.html#bear">Every bear argument, answered →</a></p>
+  </div></div>
+
+  <div class="chap" id="c6" data-reveal><div class="no">06</div><div>
+    <div class="kicker">What to watch</div>
+    <h2>The next things that could move the stock.</h2>
+    <ul class="lede" style="padding-left:20px;margin-top:10px">
+      <li><b>Q3 2026 results, Tuesday, Nov 10 at 4:30 PM ET.</b> Watch for Stage 3/4 updates, cash and share count.</li>
+      <li><b>A signed supply/license agreement</b> with the most advanced customer, which management says is under negotiation.</li>
+      <li><b>The first Stage 4 move</b>, a customer committing to production.</li>
+      <li><b>Foundry progress:</b> the design-kit transfer to a high-volume foundry, planned for the second half of 2026.</li>
+    </ul>
+    <p><a href="earnings.html" class="btn" style="margin-top:8px">Open the earnings hub</a></p>
+  </div></div>
+
+  <div class="chap" id="c7" data-reveal><div class="no">07</div><div>
+    <div class="kicker">Go deeper</div>
+    <h2>Pick your next stop.</h2>
+    <div class="grid g3" style="margin-top:18px">
+      <a class="card glowcard" style="text-decoration:none" href="timeline.html"><h3>Timeline</h3><p>39 milestones since 1991.</p></a>
+      <a class="card glowcard" style="text-decoration:none" href="trends.html"><h3>Key numbers over time</h3><p>Cash, shares, spending, Stage 3.</p></a>
+      <a class="card glowcard" style="text-decoration:none" href="faq.html"><h3>FAQ</h3><p>Plain answers to common questions.</p></a>
+      <a class="card glowcard" style="text-decoration:none" href="patents.html"><h3>Patents</h3><p>The IP portfolio, explained.</p></a>
+      <a class="card glowcard" style="text-decoration:none" href="news.html"><h3>What's new</h3><p>Every release, filing and call.</p></a>
+      <a class="card glowcard" style="text-decoration:none" href="index.html"><h3>Fly into the wafer</h3><p>The 3D story on the home page.</p></a>
+    </div>
+  </div></div>
+</div></section>
+
+<!--SCRIPTS-->
+<script src="assets/explainer.js"></script>

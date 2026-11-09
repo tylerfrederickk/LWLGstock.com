@@ -1,0 +1,92 @@
+<!--{"title":"Market size & competitors","nav":"market","desc":"How big is the opportunity for LWLG's EO polymer modulators? An adjustable market calculator plus a polymer vs. silicon vs. lithium niobate vs. barium titanate comparison."}-->
+<section class="page-hero"><div class="wrap">
+  <div class="kicker">03 — Market</div>
+  <h1>How big can <span class="red">this get?</span></h1>
+  <p class="lede">Set your own assumptions and see what they imply. Then compare EO polymers with the materials they're up against.</p>
+</div></section>
+
+<section class="section" id="tam" style="padding-top:40px"><div class="wrap">
+  <div class="grid g2" style="gap:56px">
+    <div>
+      <div class="kicker">What the company says</div>
+      <h2>$47B market. <span class="red">$2–4B</span> for polymers.</h2>
+      <p class="lede" id="tam-quote"></p>
+      <h3 style="margin-top:36px">Third-party data points</h3>
+      <div class="tablebox" style="margin-top:10px"><table id="third"><thead><tr><th scope="col">What</th><th scope="col">Value</th><th scope="col">Year</th><th scope="col">Source</th></tr></thead><tbody></tbody></table></div>
+    </div>
+    <div class="box" style="border-color:rgba(139,108,255,.5)">
+      <div class="kicker">Calculator</div>
+      <h3 style="font-size:28px;margin-top:6px">Your revenue scenario for LWLG</h3>
+      <p class="note">Two ways to size it. Every default below is a placeholder, not a forecast. Change them.</p>
+      <div style="display:flex;gap:8px;margin:16px 0" class="pills" role="group" aria-label="Method">
+        <button class="pill" type="button" aria-pressed="true" data-m="units">Bottom-up (units)</button>
+        <button class="pill" type="button" aria-pressed="false" data-m="sam">Top-down (SAM)</button>
+      </div>
+      <div id="m-units">
+        <label class="field">High-speed transceivers per year (millions): <b id="o-units"></b><input id="units" type="range" min="10" max="200" step="5" value="60"></label>
+        <label class="field" style="margin-top:14px">Modulators per transceiver: <b id="o-mods"></b><input id="mods" type="range" min="1" max="16" step="1" value="8"></label>
+        <label class="field" style="margin-top:14px">LWLG revenue per modulator, material + license ($): <b id="o-ppu"></b><input id="ppu" type="range" min="0.25" max="20" step="0.25" value="2"></label>
+        <label class="field" style="margin-top:14px">Share of modulators using LWLG polymer (%): <b id="o-share"></b><input id="share" type="range" min="1" max="60" step="1" value="5"></label>
+      </div>
+      <div id="m-sam" hidden>
+        <label class="field">Polymer modulator SAM ($B): <b id="o-sam"></b><input id="sam" type="range" min="0.5" max="10" step="0.25" value="3"></label>
+        <label class="field" style="margin-top:14px">LWLG's capture as license/material revenue (%): <b id="o-cap"></b><input id="cap" type="range" min="1" max="50" step="1" value="10"></label>
+      </div>
+      <label class="field" style="margin-top:14px">Price-to-sales multiple you'd apply: <b id="o-ps"></b><input id="ps" type="range" min="2" max="40" step="1" value="10"></label>
+      <label class="field" style="margin-top:14px">Shares outstanding (millions)<input id="shares" type="number" min="1" step="0.1" value="154"></label>
+      <div class="grid g2" style="margin-top:22px;border-top:1px solid var(--line2);padding-top:14px">
+        <div class="stat"><div class="n red" id="rev"></div><div class="l">Implied annual revenue</div></div>
+        <div class="stat"><div class="n" id="px"></div><div class="l">Implied value per share</div></div>
+      </div>
+      <p class="note" style="margin-top:12px">Simple math: revenue × multiple ÷ shares. Ignores costs, dilution, timing and risk. Not a price target.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="section" id="compare"><div class="wrap">
+  <div class="kicker">Competitor technologies</div>
+  <h2>Polymer vs. <span class="red">everything else.</span></h2>
+  <p class="lede">Six ways to put data onto light. Numbers come from reviews, conference papers and company statements, so they're not perfectly like-for-like. Lower V·cm means less voltage is needed.</p>
+  <div class="pills" style="margin-top:24px" role="group" aria-label="Show row" id="cmp-pills"></div>
+  <div class="tablebox" style="margin-top:20px"><table id="cmp"></table></div>
+</div></section>
+
+<section class="section" id="whynow"><div class="wrap">
+  <div class="kicker">Why now — industry data</div>
+  <h2>The demand side.</h2>
+  <div class="grid g3" id="why" style="margin-top:28px"></div>
+</div></section>
+<!--SCRIPTS-->
+<script>
+(async function(){
+  const d=await LW.getJSON('data/industry.json'), E=LW.esc;
+  const st=d.market_size.lwlg_stated_tam; const srcm=st.match(/https?:\/\/\S+/);
+  document.getElementById('tam-quote').innerHTML=E(st.replace(/Source:.*$/,'').trim())+' '+LW.srcLink(srcm&&srcm[0],'Q1 2026 call ↗');
+  document.querySelector('#third tbody').innerHTML=d.market_size.third_party.map(t=>`<tr><td>${E(t.what)}</td><td><b>${E(t.value)}</b></td><td>${E(t.year)}</td><td>${LW.srcLink(t.source)}</td></tr>`).join('');
+  // calculator
+  const $=id=>document.getElementById(id); let mode='units';
+  const money=v=>v>=1e9?'$'+(v/1e9).toFixed(2)+'B':v>=1e6?'$'+(v/1e6).toFixed(1)+'M':'$'+Math.round(v).toLocaleString();
+  function calc(){
+    $('o-units').textContent=$('units').value+'M'; $('o-mods').textContent=$('mods').value; $('o-ppu').textContent='$'+(+$('ppu').value).toFixed(2); $('o-share').textContent=$('share').value+'%';
+    $('o-sam').textContent='$'+$('sam').value+'B'; $('o-cap').textContent=$('cap').value+'%'; $('o-ps').textContent=$('ps').value+'×';
+    const rev=mode==='units'? $('units').value*1e6*$('mods').value*$('ppu').value*$('share').value/100 : $('sam').value*1e9*$('cap').value/100;
+    $('rev').textContent=money(rev); $('px').textContent='$'+(rev*$('ps').value/($('shares').value*1e6)).toFixed(2);
+  }
+  document.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>{mode=b.dataset.m;document.querySelectorAll('[data-m]').forEach(x=>x.setAttribute('aria-pressed',x===b));$('m-units').hidden=mode!=='units';$('m-sam').hidden=mode!=='sam';calc()});
+  document.querySelectorAll('#tam input').forEach(i=>i.addEventListener('input',calc)); calc();
+  // comparison
+  const rows=[['how_it_works','How it works'],['typical_bandwidth','Bandwidth'],['drive_voltage_or_VpiL','Drive voltage / VπL'],['power','Power'],['cmos_foundry_compat','Foundry compatibility'],['maturity','Maturity'],['key_players','Key players'],['pros','Pros'],['cons','Cons']];
+  const techs=d.competitor_tech; let shown=new Set(['EO polymer','Silicon photonics (carrier depletion)','Thin-film lithium niobate (TFLN)','Barium titanate (BTO)']);
+  const cell=v=>Array.isArray(v)?'<ul style="margin:0;padding-left:18px">'+v.map(x=>`<li>${E(x)}</li>`).join('')+'</ul>':E(v);
+  function draw(){
+    const cols=techs.filter(t=>shown.has(t.tech));
+    $('cmp').innerHTML=`<thead><tr><th scope="col" style="min-width:140px"></th>${cols.map(t=>`<th scope="col" style="min-width:240px;${t.tech==='EO polymer'?'color:var(--red)':''}">${E(t.tech)}</th>`).join('')}</tr></thead><tbody>`+
+      rows.map(([k,l])=>`<tr><th scope="row" style="font-family:var(--mono);font-size:11px">${l}</th>${cols.map(t=>`<td style="${t.tech==='EO polymer'?'background:rgba(139,108,255,.1)':''}">${cell(t[k])}</td>`).join('')}</tr>`).join('')+
+      `<tr><th scope="row" style="font-family:var(--mono);font-size:11px">Sources</th>${cols.map(t=>`<td>${(t.sources||[]).map((s,i)=>LW.srcLink(s,'['+(i+1)+']')).join(' ')}</td>`).join('')}</tr></tbody>`;
+  }
+  $('cmp-pills').innerHTML=techs.map(t=>`<button class="pill" type="button" aria-pressed="${shown.has(t.tech)}" data-t="${E(t.tech)}">${E(t.tech.replace(/\s*\(.*\)/,''))}</button>`).join('');
+  $('cmp-pills').onclick=e=>{const b=e.target.closest('[data-t]');if(!b)return;const t=b.dataset.t;if(shown.has(t)&&shown.size>1)shown.delete(t);else shown.add(t);b.setAttribute('aria-pressed',shown.has(t));draw()};
+  draw();
+  $('why').innerHTML=d.why_now.map(w=>`<div class="card" data-reveal><h3>${E(w.stat)}</h3><p class="muted" style="font-size:15px">${E(w.detail)}</p><div>${LW.srcLink(w.source,(w.date||'')+' source ↗')}</div></div>`).join('');
+})();
+</script>

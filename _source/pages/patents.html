@@ -1,0 +1,74 @@
+<!--{"title":"Patent portfolio","nav":"patents","desc":"Lightwave Logic's patent portfolio, searchable: chemistry, device design, fabrication and packaging patents explained in plain English.","head":"<script type=\"importmap\">{\"imports\":{\"three\":\"./assets/vendor/three.module.min.js\",\"three/addons/\":\"./assets/vendor/\"}}</script>"}-->
+<style>
+.dies{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;background:#05070E;padding:8px;border-radius:18px}
+.die-t{background:linear-gradient(160deg,#18213A,#111829);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:12px;min-height:150px;display:flex;flex-direction:column;justify-content:space-between;text-align:left;font:12px var(--sans);color:var(--fg);cursor:pointer;position:relative}
+.die-t:hover,.die-t[aria-pressed="true"]{background:linear-gradient(160deg,#8B6CFF,#FF3D9A);color:#fff}
+.die-t .num{font-family:var(--mono);font-size:11px}
+.die-t .ttl{font-weight:700;font-size:13px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.die-t .cat{font-family:var(--mono);font-size:10px;text-transform:uppercase;opacity:.75}
+.die-t.pending{background:transparent;outline:1px dashed #56628A;outline-offset:-6px}
+@keyframes scanp{from{transform:translateX(-10px)}to{transform:translateX(100vw)}}
+.scanline{position:absolute;top:0;bottom:0;left:0;width:3px;background:var(--red);box-shadow:0 0 18px var(--red);animation:scanp 6s linear infinite;pointer-events:none}
+.detail{position:sticky;top:120px}
+</style>
+<section class="page-hero"><div class="wrap">
+  <div class="kicker">03 — IP portfolio</div>
+  <h1>Every die, a <span class="red">patent.</span></h1>
+  <p class="lede" id="count"></p>
+  <div class="grid g4" id="pstats" style="margin-top:28px"></div>
+</div></section>
+<section class="psky-sec">
+  <div class="wrap">
+    <div class="sec-head"><div class="kicker">The constellation</div><h2 class="h-sm">Every patent, as a star.</h2><p class="lede" style="margin-left:0">Each star is one granted patent, grouped by topic and linked to its nearest neighbours. Newer patents shine bigger. Drag to orbit, hover to read, click to open its card.</p></div>
+    <div class="psky" id="psky"><canvas aria-label="3D star map of Lightwave Logic's granted patents, grouped by topic. The full searchable list follows below." role="img"></canvas><div class="psky-labels" aria-hidden="true"></div><div class="psky-tip" hidden></div><div class="psky-hint mono" aria-hidden="true">Drag to orbit · scroll to zoom</div></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:36px"><div class="wrap">
+  <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:end">
+    <label class="field" style="flex:1;min-width:240px">Search patents<input id="q" type="search" placeholder="e.g. cladding, poling, diamondoid, hermetic"></label>
+    <div class="pills" role="group" aria-label="Category" id="cats"></div>
+    <label style="display:flex;gap:8px;align-items:center;min-height:44px;font-size:14px"><input type="checkbox" id="pend" style="width:auto;min-height:0"> Include pending applications</label>
+  </div>
+  <div class="grid" style="grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:32px;margin-top:24px" id="pv">
+    <div style="position:relative;overflow:hidden"><div class="scanline" aria-hidden="true"></div><div class="dies" id="dies"></div></div>
+    <aside class="detail box" id="detail" aria-live="polite"><p class="muted">Select a patent to read what it covers and why it matters.</p></aside>
+  </div>
+  <p class="note" style="margin-top:20px" id="pnotes"></p>
+</div></section>
+<!--SCRIPTS-->
+<script type="module" src="assets/patentsky.js"></script>
+<script>
+(async function(){
+  const d=await LW.getJSON('data/patents.json'), E=LW.esc, $=id=>document.getElementById(id);
+  $('count').innerHTML=E(d.count_statement.text)+' '+LW.srcLink(d.count_statement.source,'Investor presentation ↗')+' '+LW.srcLink(d.count_statement.secondary_source,'10-K ↗');
+  const P=d.patents.map(p=>({...p,pending:false})), A=(d.pending_applications||[]).map(p=>({...p,pending:true}));
+  const cnt=c=>P.filter(p=>p.category===c).length;
+  const stat=(n,l)=>`<div class="stat card"><div class="n">${n}</div><div class="l">${l}</div></div>`;
+  $('pstats').innerHTML=stat('67','Granted worldwide (company, Dec 2025)')+stat('80+','Pending applications (company)')+stat(P.length,'US patents listed here')+stat(A.length,'Published US applications listed');
+  const cats=['all','chemistry','device design','fabrication','packaging','other'];
+  let cat='all',q='',pend=false;
+  $('cats').innerHTML=cats.map(c=>`<button class="pill" type="button" data-c="${c}" aria-pressed="${c==='all'}">${c==='all'?'All':c[0].toUpperCase()+c.slice(1)}${c!=='all'?' ('+cnt(c)+')':''}</button>`).join('');
+  const gp=n=>'https://patents.google.com/patent/'+String(n).replace(/[\s,\/]/g,'');
+  function list(){return (pend?P.concat(A):P).filter(p=>(cat==='all'||p.category===cat)&&(!q||(p.number+' '+p.title+' '+(p.plain_english||'')).toLowerCase().includes(q))).sort((a,b)=>String(b.granted||b.published||'').localeCompare(String(a.granted||a.published||'')))}
+  function draw(){
+    const L=list();
+    $('dies').innerHTML=L.map((p,i)=>`<button type="button" class="die-t${p.pending?' pending':''}" data-i="${i}" aria-pressed="false"><span class="num">${E(p.number)}</span><span class="ttl">${E(p.title)}</span><span class="cat">${E(p.category)} · ${E(String(p.granted||p.published||'').slice(0,4)||'—')}${p.pending?' · pending':''}</span></button>`).join('')||'<p class="empty" style="background:var(--card);margin:0">No patents match.</p>';
+    $('dies').onclick=e=>{const b=e.target.closest('[data-i]');if(!b)return;[...$('dies').children].forEach(x=>x.setAttribute('aria-pressed',x===b));show(L[+b.dataset.i])};
+  }
+  function show(p){
+    $('detail').innerHTML=`<div class="kicker">${E(p.pending?'Published application':'Granted patent')} · ${E(p.category)}</div>
+      <h3 style="font-size:26px;margin-top:8px">${E(p.title)}</h3>
+      <p class="mono" style="font-size:13px">${E(p.number)}${p.granted?' · granted '+E(LW.fmtDate(p.granted)):''}${p.published?' · published '+E(LW.fmtDate(p.published)):''}${p.filed?' · filed '+E(LW.fmtDate(p.filed)):''}</p>
+      <p><b>In plain English:</b> ${E(p.plain_english||'')}</p>
+      <p style="border-left:3px solid var(--red);padding-left:12px"><b class="red">Why it matters:</b> ${E(p.why_it_matters||'')}</p>
+      ${p.note?`<p class="note">${E(p.note)}</p>`:''}
+      <p style="display:flex;gap:16px;flex-wrap:wrap">${p.pending?'':`<a href="${gp(p.number)}" target="_blank" rel="noopener">Google Patents ↗</a>`}${LW.srcLink(p.url,'Source ↗')}</p>`;
+  }
+  $('cats').onclick=e=>{const b=e.target.closest('[data-c]');if(!b)return;cat=b.dataset.c;[...$('cats').children].forEach(x=>x.setAttribute('aria-pressed',x===b));draw()};
+  $('q').addEventListener('input',e=>{q=e.target.value.toLowerCase();draw()});
+  $('pend').addEventListener('change',e=>{pend=e.target.checked;draw()});
+  $('pnotes').textContent='Why 52 here vs. 45 US in the company count: this list also includes older patents acquired from BrPhotonics (2018) and Chromosol (2022), some now expired, plus four granted in 2026 after the company’s count date. Compiled from Justia, USPTO, Google Patents and other patent databases; a few grants may be missing.';
+  draw(); const first=list()[0]; if(first){show(first);$('dies').firstElementChild.setAttribute('aria-pressed','true')}
+})();
+</script>

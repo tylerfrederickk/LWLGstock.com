@@ -1,0 +1,43 @@
+<!--{"title":"What's new with LWLG","nav":"news","desc":"One feed for everything Lightwave Logic: press releases, SEC filings, earnings calls and milestones, newest first, with what's new since your last visit."}-->
+<style>
+.feed-item{display:grid;grid-template-columns:120px 130px minmax(0,1fr);gap:20px;align-items:center;padding:18px 0;border-top:1px solid var(--line);text-decoration:none;color:var(--fg)}
+.feed-item:hover b{color:var(--cyan)}
+.feed-item b{font-weight:600;font-size:17px}
+.feed-item .d{font-family:var(--mono);font-size:12.5px;color:var(--dim)}
+.newdot{display:inline-block;font:700 10px var(--mono);letter-spacing:.06em;color:#05060C;background:var(--grad);padding:3px 7px;border-radius:999px;margin-left:8px;vertical-align:middle}
+@media (max-width:800px){.feed-item{grid-template-columns:1fr;gap:4px}}
+</style>
+<section class="page-hero"><div class="wrap">
+  <div class="kicker">Tools · Feed</div>
+  <h1>What's <span class="grad">new.</span></h1>
+  <p class="lede" id="since">Press releases, SEC filings, earnings calls and milestones in one feed, newest first.</p>
+  <div class="pills" role="group" aria-label="Filter" id="types" style="margin-top:22px"></div>
+</div></section>
+<section style="padding-bottom:80px"><div class="wrap" id="feed"></div>
+<div class="wrap"><p class="note" id="feed-note" style="margin-top:20px"></p></div></section>
+<!--SCRIPTS-->
+<script>
+(async function(){
+  const E=LW.esc, $=id=>document.getElementById(id);
+  const [tl,inv,fil]=await Promise.all([LW.getJSON('data/timeline.json'),LW.getJSON('data/investor.json'),LW.liveOrSnapshot('/api/filings','data/filings.json')]);
+  const items=[];
+  tl.press_releases.forEach(p=>items.push({t:'Press release',d:p.date,title:p.title,url:p.url,ext:true}));
+  fil.data.filings.forEach(f=>items.push({t:'SEC filing',d:f.date,title:`${f.form} · ${f.name}`,url:f.url,ext:true}));
+  inv.earnings_calls.forEach(c=>items.push({t:'Earnings call',d:c.date,title:`${c.period}${new Date(c.date)>new Date()?' (upcoming)':''}`,url:'calls.html'}));
+  tl.milestones.filter(m=>String(m.date)>='2025').forEach(m=>items.push({t:'Milestone',d:String(m.date),title:m.title,url:'timeline.html'}));
+  // de-duplicate press releases that are also milestones on the same day
+  const seen=new Set(); const all=items.filter(i=>{const k=i.d.slice(0,10)+i.title.slice(0,24).toLowerCase();if(seen.has(k))return false;seen.add(k);return true}).sort((a,b)=>b.d.localeCompare(a.d));
+  let last=null; try{last=localStorage.getItem('lwlg-last-visit');localStorage.setItem('lwlg-last-visit',new Date().toISOString().slice(0,10))}catch(e){}
+  const isNew=i=>last&&i.d.slice(0,10)>last;
+  const nNew=all.filter(isNew).length;
+  $('since').textContent=last?(nNew?`${nNew} new item${nNew>1?'s':''} since your last visit on ${LW.fmtDate(last)}.`:`Nothing new since your last visit on ${LW.fmtDate(last)}.`):'Press releases, SEC filings, earnings calls and milestones in one feed, newest first. Come back anytime and new items are flagged.';
+  const types=['All','Press release','SEC filing','Earnings call','Milestone']; let ty='All';
+  $('types').innerHTML=types.map(t=>`<button class="pill" type="button" data-t="${t}" aria-pressed="${t==='All'}">${t}</button>`).join('');
+  $('types').onclick=e=>{const b=e.target.closest('[data-t]');if(!b)return;ty=b.dataset.t;[...$('types').children].forEach(x=>x.setAttribute('aria-pressed',x===b));draw()};
+  function draw(){
+    $('feed').innerHTML=all.filter(i=>ty==='All'||i.t===ty).map(i=>`<a class="feed-item" href="${E(i.url)}"${i.ext?' target="_blank" rel="noopener"':''}><span class="d">${E(LW.fmtDate(i.d))}</span><span><span class="tag ${i.t==='SEC filing'?'fill':i.t==='Earnings call'?'red':''}">${E(i.t)}</span></span><b>${E(i.title)}${isNew(i)?'<span class="newdot">NEW</span>':''}</b></a>`).join('');
+  }
+  draw();
+  $('feed-note').textContent=fil.live?'Filings are live from SEC EDGAR.':'Filings shown are a snapshot. On the live site they update automatically from SEC EDGAR.';
+})();
+</script>

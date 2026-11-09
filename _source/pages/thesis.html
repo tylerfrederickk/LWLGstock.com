@@ -1,0 +1,49 @@
+<!--{"title":"The bull thesis — and every bear argument answered","nav":"thesis","desc":"The bull case for Lightwave Logic (LWLG) in five pillars, plus the strongest bear arguments answered point by point with sources."}-->
+<style>
+.pillar{display:grid;grid-template-columns:120px minmax(0,1fr) minmax(0,1fr);gap:32px;padding:40px 0;border-top:1px solid var(--line2)}
+.pillar .no{font-family:var(--display);font-size:96px;font-weight:700;letter-spacing:-.06em;line-height:.8;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+@media (max-width:900px){.pillar{grid-template-columns:1fr;gap:12px}.pillar .no{font-size:64px}}
+.bb{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-top:1px solid var(--line2)}
+.bb > div{padding:24px 24px 24px 0}
+.bb > div + div{padding-left:24px;border-left:1px solid var(--line)}
+.bb summary{list-style:none;cursor:pointer}
+@media (max-width:800px){.bb{grid-template-columns:1fr}.bb > div + div{padding-left:0;border-left:none;border-top:1px dashed var(--line)}}
+</style>
+<section class="page-hero"><div class="wrap">
+  <div class="kicker">01 — Thesis</div>
+  <h1>The bull case. <span class="red">Stress-tested.</span></h1>
+  <p class="lede">This site is openly bullish. A thesis is only worth holding if it survives the best arguments against it, so here's the case in five pillars, then every major bear argument answered, with sources.</p>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px"><a class="btn red" href="onepager.pdf" download>Download the one-page summary (PDF)</a><a class="btn ghost" href="#bear">Jump to bull vs. bear</a></div>
+</div></section>
+
+<section style="padding-bottom:40px"><div class="wrap" id="pillars"></div></section>
+
+<section class="section" id="bear"><div class="wrap">
+  <div class="kicker">Bull vs. bear</div>
+  <h2>Every bear argument, <span class="red">answered.</span></h2>
+  <p class="lede">The left column is the strongest version of each bear argument. The right column is the bull response. Some answers are strong and some are "watch this". You can judge.</p>
+  <div id="bb" style="margin-top:32px"></div>
+</div></section>
+
+<section class="section"><div class="wrap grid g3">
+  <div class="card"><h3>What would prove the thesis</h3><p class="muted">A Stage 4 design win, a signed supply/license agreement with a Stage 3 customer, and first production orders on the 2H 2027 timeline.</p></div>
+  <div class="card"><h3>What would break it</h3><p class="muted">Stage 3 programs stalling or dropping out, the 2027 volume target slipping without explanation, or a competing material winning the same sockets on cost.</p></div>
+  <div class="card"><h3>Watch next</h3><p class="muted">Q3 2026 results on Nov 10, 2026. <a href="catalysts.html">Catalyst calendar →</a></p></div>
+</div></section>
+<!--SCRIPTS-->
+<script>
+(async function(){
+  const [ind,tl,pat]=await Promise.all([LW.getJSON('data/industry.json'),LW.getJSON('data/timeline.json'),LW.getJSON('data/patents.json')]); const E=LW.esc,$=id=>document.getElementById(id);
+  const src=t=>{const m=tl.milestones.find(x=>x.title.includes(t));return m?LW.srcLink(m.source,LW.fmtDate(m.date)+' ↗'):''};
+  const why=ind.why_now;
+  const P=[
+    ['The AI bandwidth wall','Data centers need far more bandwidth, at less power.',`Optical transceiver sales are booming as AI clusters scale. LightCounting expects Ethernet transceiver sales to grow sharply in 2026, and the industry is moving from 800G to 1.6T and 3.2T. Networking already takes a meaningful share of AI system power, so every watt saved per link matters.`,why.slice(0,3).map(w=>LW.srcLink(w.source,w.stat.slice(0,40)+'… ↗')).join('<br>')],
+    ['Speed at very low voltage','The polymer reacts strongly and fast.',`LWLG polymers have been shown in 200 Gbps silicon-polymer modulators and 400 Gbps+ plasmonic links. Packaged devices with Polariton showed over 110 GHz bandwidth, and drive levels below 0.5 V have been reported. Low voltage means simpler drivers and lower power.`,[src('200 Gbps'),src('400 Gbps')].join('<br>')],
+    ['The reliability question, answered','Polymers used to be called unstable. Not anymore.',`In July 2025 the latest Perkinamine® polymer passed the Telcordia GR-468 85/85 damp-heat test (85°C, 85% humidity), the stress test the industry uses. In October 2025 the company also stressed that its materials are rare-earth-free and made in the USA.`,[src('Telcordia'),src('Rare-earth')].join('<br>')],
+    ['Built for foundries','Drop-in for standard silicon photonics lines.',`The polymer goes on at the back end of standard silicon processing. In 2026 LWLG's modulator platform moved into foundry design kits: Tower Semiconductor (PH18), GlobalFoundries via GDSFactory, and SilTerra via Luceda. It also released Polymer Photonics PDK v1.1. In October 2026 its polymer was shown in a Hon Hai (Foxconn) transceiver demo.`,[src('Tower'),src('GlobalFoundries'),src('PDK v1.1'),src('Foxconn')].join('<br>')],
+    ['Owns the chemistry','Materials + IP licensing, protected by patents.',`The company reports 67 granted patents and 80+ pending applications worldwide. Five Fortune Global 500 programs were in Stage 3 (prototype) as of the Q2 2026 call, management is targeting volume production in 2H 2027, and it estimates a $2–4B addressable market for polymer modulators.`,LW.srcLink(pat.count_statement.source,'Patent count ↗')+'<br>'+src('Q2 2026')]
+  ];
+  $('pillars').innerHTML=P.map((p,i)=>`<div class="pillar" data-reveal><div class="no">0${i+1}</div><div><h2 style="margin:0">${p[0]}</h2><p class="lede" style="margin-top:12px">${p[1]}</p></div><div><p style="font-size:17px;margin-top:0">${p[2]}</p><div style="margin-top:10px">${p[3]}</div></div></div>`).join('');
+  $('bb').innerHTML=`<div class="bb" style="border-top:none"><div class="kicker" style="color:#FF8CC4">The bear says</div><div class="kicker">The bull says</div></div>`+ind.bear_case.map((b,i)=>`<div class="bb"><div><div class="mono note">BEAR ${String(i+1).padStart(2,'0')}</div><h3 style="font-size:24px;margin-top:6px">${E(b.argument)}</h3><p class="note" style="margin-top:10px"><b>Evidence:</b> ${E(b.evidence)}</p></div><div><p style="margin-top:0;font-size:17px">${E(b.response)}</p><div>${b.sources.map((s,j)=>LW.srcLink(s,'['+(j+1)+']')).join(' ')}</div></div></div>`).join('');
+})();
+</script>

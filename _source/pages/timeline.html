@@ -1,0 +1,66 @@
+<!--{"title":"Interactive timeline","nav":"timeline","desc":"Every major Lightwave Logic milestone from 1991 to today, interactive and sourced, with the press release archive linked to each event."}-->
+<style>
+.tl{position:relative;padding-left:120px}
+.tl:before{content:"";position:absolute;left:52px;top:0;bottom:0;width:8px;border-radius:4px;background:#1D2742}
+.tl-fill{position:absolute;left:52px;top:0;width:8px;border-radius:4px;background:linear-gradient(180deg,#3EE0FF,#8B6CFF,#FF3D9A);box-shadow:0 0 22px rgba(139,108,255,.8);height:0}
+.tl-pulse{position:absolute;left:44px;width:24px;height:24px;border-radius:50%;background:radial-gradient(circle,#fff 0 25%,var(--red) 26% 60%,rgba(225,6,0,0) 61%);top:0;transform:translateY(-50%)}
+.ms{position:relative;padding:28px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px}
+.ms:before{content:"";position:absolute;left:-76px;top:40px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid #56628A}
+.ms.lit:before{background:#3EE0FF;border-color:#3EE0FF;box-shadow:0 0 14px #3EE0FF}
+.ms .yr{font-size:34px;font-weight:900;letter-spacing:-.04em;line-height:1}
+.ms h3{font-size:24px}
+.ms .why{border-left:3px solid #8B6CFF;padding-left:12px;margin-top:10px;font-size:15px}
+.ms .prs{margin-top:10px;font-size:14px}
+.ms[hidden]{display:none}
+@media (max-width:700px){.tl{padding-left:44px}.tl:before,.tl-fill{left:10px;width:6px}.tl-pulse{left:1px}.ms{grid-template-columns:1fr;gap:6px}.ms:before{left:-41px}}
+</style>
+<section class="page-hero"><div class="wrap">
+  <div class="kicker">02 — Timeline</div>
+  <h1>Follow the <span class="red">light.</span></h1>
+  <p class="lede">From a Colorado chemistry startup in 1991 to a Foxconn transceiver demo in 2026. Scroll and the pulse travels with you. Filter by type, or jump to a year.</p>
+  <div class="pills" style="margin-top:24px" role="group" aria-label="Filter milestones" id="cats"></div>
+  <div class="pills" style="margin-top:10px" id="years" aria-label="Jump to year"></div>
+</div></section>
+<section style="border-top:1px solid var(--line2);padding:40px 0 80px"><div class="wrap">
+  <div class="tl" id="tl"><div class="tl-fill" id="fill"></div><div class="tl-pulse" id="pulse"></div></div>
+</div></section>
+<section class="section" id="press"><div class="wrap">
+  <div class="kicker">Press release archive</div>
+  <h2>Every headline.</h2>
+  <label class="field" style="max-width:420px;margin-top:20px">Search headlines<input id="pq" type="search" placeholder="e.g. Stage 3, Foxconn, PDK"></label>
+  <div class="tablebox" style="margin-top:20px"><table><thead><tr><th scope="col">Date</th><th scope="col">Headline</th><th scope="col">On timeline</th></tr></thead><tbody id="pr"></tbody></table></div>
+  <p class="note" style="margin-top:12px">Headlines link to the original release on the wire service. The most recent ~30 releases are listed.</p>
+</div></section>
+<!--SCRIPTS-->
+<script>
+(async function(){
+  const d=await LW.getJSON('data/timeline.json'), E=LW.esc, $=id=>document.getElementById(id);
+  const ms=d.milestones.slice().sort((a,b)=>String(a.date).localeCompare(String(b.date)));
+  const pr=d.press_releases;
+  const near=(a,b)=>{if(String(a).length<10||String(b).length<10)return false;return Math.abs(new Date(a)-new Date(b))<=3*864e5};
+  const catNames={all:'All',tech:'Technology',commercial:'Commercial',corporate:'Corporate',financial:'Financial',ip:'IP'};
+  let cat='all';
+  $('tl').insertAdjacentHTML('beforeend',ms.map((m,i)=>{
+    const rel=pr.filter(p=>near(p.date,m.date));
+    return `<article class="ms" data-cat="${E(m.category)}" data-year="${String(m.date).slice(0,4)}" id="m${i}">
+      <div><div class="yr">${E(String(m.date).slice(0,4))}</div><div class="mono note">${E(LW.fmtDate(m.date))}</div><div style="margin-top:8px"><span class="tag ${m.category==='commercial'?'red':''}">${E(catNames[m.category]||m.category)}</span></div></div>
+      <div><h3>${E(m.title)}</h3><p class="muted" style="margin:8px 0 0">${E(m.detail)}</p>${m.why_bullish?`<div class="why"><b class="red">Why it matters:</b> ${E(m.why_bullish)}</div>`:''}
+      ${rel.length?`<div class="prs">${rel.map(p=>`<span class="mono note">PRESS RELEASE →</span> <a href="${E(p.url)}" target="_blank" rel="noopener">${E(p.title)}</a>`).join('<br>')}</div>`:''}
+      <div style="margin-top:8px">${LW.srcLink(m.source)}</div></div></article>`}).join(''));
+  $('cats').innerHTML=Object.entries(catNames).map(([k,v])=>`<button class="pill" type="button" data-c="${k}" aria-pressed="${k==='all'}">${v}</button>`).join('');
+  $('cats').onclick=e=>{const b=e.target.closest('[data-c]');if(!b)return;cat=b.dataset.c;[...$('cats').children].forEach(x=>x.setAttribute('aria-pressed',x===b));document.querySelectorAll('.ms').forEach(m=>m.hidden=!(cat==='all'||m.dataset.cat===cat));onScroll()};
+  const years=[...new Set(ms.map(m=>String(m.date).slice(0,4)))];
+  $('years').innerHTML=years.map(y=>`<a class="pill" style="display:inline-flex;align-items:center;text-decoration:none;font-family:var(--mono)" href="#${document.querySelector('.ms[data-year="'+y+'"]').id}">${y}</a>`).join('');
+  // press archive
+  const drawPR=q=>{q=(q||'').toLowerCase();$('pr').innerHTML=pr.filter(p=>!q||p.title.toLowerCase().includes(q)).map(p=>{const i=ms.findIndex(m=>near(p.date,m.date));return `<tr><td class="mono" style="white-space:nowrap">${E(p.date)}</td><td><a href="${E(p.url)}" target="_blank" rel="noopener">${E(p.title)}</a></td><td>${i>=0?`<a href="#m${i}">View →</a>`:''}</td></tr>`}).join('')||'<tr><td colspan="3" class="empty">No matches.</td></tr>'};
+  $('pq').addEventListener('input',e=>drawPR(e.target.value)); drawPR();
+  // scroll-driven fill + pulse
+  const tl=$('tl'), fill=$('fill'), pulse=$('pulse');
+  function onScroll(){
+    const r=tl.getBoundingClientRect(), y=Math.max(0,Math.min(r.height,innerHeight*0.55-r.top));
+    fill.style.height=y+'px'; pulse.style.top=y+'px';
+    document.querySelectorAll('.ms').forEach(m=>m.classList.toggle('lit',m.getBoundingClientRect().top<innerHeight*0.55));
+  }
+  addEventListener('scroll',()=>requestAnimationFrame(onScroll),{passive:true}); onScroll();
+})();
+</script>

@@ -1,0 +1,55 @@
+<!--{"title":"Ecosystem & leadership","nav":"ecosystem","desc":"Map of Lightwave Logic's foundry, device, research and customer partners — Tower, GlobalFoundries, SilTerra, Foxconn, Polariton, QPICs and more — plus the leadership team and board."}-->
+<style>
+.eco{position:relative;height:640px;border:1px solid var(--line2);border-radius:18px;overflow:hidden;background:radial-gradient(circle at 50% 50%,#1A1F45,#0C1120 70%)}
+.eco .node{position:absolute;transform:translate(-50%,-50%);background:var(--card);color:var(--fg);border:1px solid var(--line2);border-radius:12px;padding:10px 14px;font:600 14px var(--sans);cursor:pointer;min-height:44px;max-width:200px;text-align:center}
+.eco .node:hover,.eco .node[aria-pressed="true"]{background:#8B6CFF;border-color:#8B6CFF;color:#fff}
+.eco .hub{background:var(--grad);color:#05060C;border:none;font-size:26px;font-weight:900;padding:18px 22px;cursor:default}
+@keyframes ecof{from{stroke-dashoffset:0}to{stroke-dashoffset:-60}}
+.eco .lnk{stroke-dasharray:10 20;animation:ecof 1.2s linear infinite}
+@media (max-width:800px){.eco{display:none}}
+</style>
+<section class="page-hero"><div class="wrap">
+  <div class="kicker">Ecosystem</div>
+  <h1>Who's <span class="red">connected.</span></h1>
+  <p class="lede">Foundries, device makers, research partners and customers, all linked to LWLG. Click a node for what each relationship is and when it started. Red pulses show light flowing between them.</p>
+</div></section>
+<section style="border-top:1px solid var(--line2);padding:32px 0 60px"><div class="wrap">
+  <div class="pills" role="group" aria-label="Filter by type" id="types"></div>
+  <div class="grid" style="grid-template-columns:minmax(0,1.8fr) minmax(0,1fr);gap:24px;margin-top:20px">
+    <div class="eco" id="eco"><svg id="eco-lines" width="100%" height="100%" style="position:absolute;inset:0" aria-hidden="true"></svg></div>
+    <aside class="box" id="eco-detail" aria-live="polite"><p class="muted">Select a partner.</p></aside>
+  </div>
+  <div class="tablebox" style="margin-top:28px"><table><thead><tr><th scope="col">Partner</th><th scope="col">Type</th><th scope="col">Relationship</th><th scope="col">Since</th><th scope="col">Source</th></tr></thead><tbody id="eco-rows"></tbody></table></div>
+</div></section>
+<section class="section" id="leadership"><div class="wrap">
+  <div class="kicker">Leadership</div>
+  <h2>The team &amp; the board.</h2>
+  <div class="grid g3" id="lead" style="margin-top:28px"></div>
+</div></section>
+<!--SCRIPTS-->
+<script>
+(async function(){
+  const d=await LW.getJSON('data/timeline.json'), E=LW.esc, $=id=>document.getElementById(id);
+  const P=d.partners; let type='all';
+  const types=['all',...new Set(P.map(p=>p.type))];
+  $('types').innerHTML=types.map(t=>`<button class="pill" type="button" data-t="${E(t)}" aria-pressed="${t==='all'}">${t==='all'?'All':E(t[0].toUpperCase()+t.slice(1))}</button>`).join('');
+  const box=$('eco');
+  function layout(){
+    const L=P.filter(p=>type==='all'||p.type===type);
+    box.querySelectorAll('.node').forEach(n=>n.remove());
+    const W=box.clientWidth,H=box.clientHeight,cx=W/2,cy=H/2;
+    let lines='';
+    L.forEach((p,i)=>{const a=i/L.length*Math.PI*2-Math.PI/2,rx=W*0.38,ry=H*0.38,x=cx+Math.cos(a)*rx,y=cy+Math.sin(a)*ry;
+      lines+=`<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="rgba(255,255,255,.12)" stroke-width="2"/><line class="lnk" x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#3EE0FF" stroke-width="2" style="animation-delay:${(i*.15).toFixed(2)}s"/>`;
+      const b=document.createElement('button');b.type='button';b.className='node';b.style.left=x+'px';b.style.top=y+'px';b.textContent=p.name.replace(/\s*\(.*\)/,'');b.setAttribute('aria-pressed','false');
+      b.onclick=()=>{box.querySelectorAll('.node').forEach(n=>n.setAttribute('aria-pressed',n===b));show(p)};box.appendChild(b)});
+    $('eco-lines').innerHTML=lines;
+    const hub=document.createElement('div');hub.className='node hub';hub.style.left=cx+'px';hub.style.top=cy+'px';hub.textContent='LWLG';box.appendChild(hub);
+    $('eco-rows').innerHTML=L.map(p=>`<tr><td><b>${E(p.name)}</b></td><td><span class="tag">${E(p.type)}</span></td><td>${E(p.what)}</td><td class="mono">${E(p.since||'')}</td><td>${LW.srcLink(p.source)}</td></tr>`).join('');
+  }
+  function show(p){$('eco-detail').innerHTML=`<div class="kicker">${E(p.type)} · since ${E(p.since||'—')}</div><h3 style="font-size:28px;margin-top:6px">${E(p.name)}</h3><p>${E(p.what)}</p>${LW.srcLink(p.source)}`}
+  $('types').onclick=e=>{const b=e.target.closest('[data-t]');if(!b)return;type=b.dataset.t;[...$('types').children].forEach(x=>x.setAttribute('aria-pressed',x===b));layout()};
+  addEventListener('resize',layout); layout(); show(P[0]);
+  $('lead').innerHTML=d.leadership.map(l=>`<div class="card"><div class="mono note">${E(l.role)}${l.since?' · since '+E(l.since):''}</div><h3 style="font-size:26px;margin-top:6px">${E(l.name)}</h3><p class="muted" style="font-size:15px">${E(l.bio)}</p>${LW.srcLink(l.source)}</div>`).join('');
+})();
+</script>

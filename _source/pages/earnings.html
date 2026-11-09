@@ -1,0 +1,74 @@
+<!--{"title":"Earnings hub — Q3 2026 results (Nov 10)","nav":"earnings","desc":"Lightwave Logic (LWLG) earnings hub: Q3 2026 results on Nov 10, 2026 at 4:30 PM ET. What to watch, a scorecard versus last quarter, and every past quarter's numbers and call summaries."}-->
+<style>
+.watch{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.watch li{list-style:none;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+.watch li b{display:block;color:var(--fg);font-size:17px}
+.watch li span{display:block;color:var(--muted);font-size:15px;margin-top:4px}
+.score td:nth-child(3){color:var(--dim);font-style:italic}
+@media (max-width:800px){.watch{grid-template-columns:1fr}}
+</style>
+<section class="page-hero"><div class="wrap">
+  <div class="kicker">The stock · Earnings hub</div>
+  <h1>Q3 2026 <span class="grad">results.</span></h1>
+  <div class="grid" style="grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px;margin-top:28px;align-items:stretch">
+    <div class="card glowcard" style="padding:32px">
+      <div class="kicker">Before the call</div>
+      <h2 style="font-size:34px;margin-top:8px">Tuesday, November 10, 2026 · 4:30 PM ET</h2>
+      <p style="font-size:17px">Results plus a business update call. Starts in <b class="mono" data-countdown="2026-11-10T16:30:00-05:00" style="color:#FF8CC4"></b>.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px"><a class="btn" id="ics" download="lwlg-q3-2026.ics" href="#">Add to calendar</a><a class="btn ghost" href="https://www.newswire.com/news/lightwave-logic-inc-announces-timing-of-third-quarter-2026-financial-results" target="_blank" rel="noopener">Company announcement ↗</a></div>
+    </div>
+    <div class="card" style="padding:32px">
+      <div class="kicker">After the call</div>
+      <h2 style="font-size:28px;margin-top:8px">Results &amp; summary</h2>
+      <p>The numbers, an AI-assisted call summary, and what changed for the thesis will be posted here after the call. Subscribe to alerts to get it first.</p>
+      <a class="link-arrow" href="#alerts">Get alerts →</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="section" style="padding-top:40px"><div class="wrap">
+  <div class="kicker">What to watch</div>
+  <h2>Eight things that matter on this call.</h2>
+  <ul class="watch" style="padding:0;margin-top:24px">
+    <li><b>Stage 3 → Stage 4</b><span>Does any of the five Fortune Global 500 programs move to production? This is the single biggest catalyst.</span></li>
+    <li><b>Lead-customer agreement</b><span>Management said a material supply and license agreement is under negotiation. Is it signed?</span></li>
+    <li><b>New Stage 3 entries</b><span>The goal was one or two more Tier 1 customers in Stage 3 before the end of 2026.</span></li>
+    <li><b>Cash and runway</b><span>Cash was $95.9M on June 30, with runway guided through Dec 2027. Watch for new share sales.</span></li>
+    <li><b>Share count</b><span>154.2M in August. How much dilution happened in Q3?</span></li>
+    <li><b>Foundry transfer</b><span>PDK 1.1 was due to move to a high-volume foundry in 2H 2026, with 1–2 external back-end partners planned.</span></li>
+    <li><b>Customer 1.6T chips and SilTerra results</b><span>Expected around Q2/mid-2026 but not mentioned on the August call. An update would close a gap.</span></li>
+    <li><b>Foxconn demo follow-through</b><span>Any detail on the Oct 29 Hon Hai 200G/400G transceiver demo and what comes next.</span></li>
+  </ul>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <div class="kicker">Scorecard</div>
+  <h2>Q2 2026 vs. Q3 2026</h2>
+  <div class="tablebox score" style="margin-top:20px"><table>
+    <thead><tr><th scope="col">Metric</th><th scope="col">Q2 2026</th><th scope="col">Q3 2026</th></tr></thead>
+    <tbody id="score"></tbody>
+  </table></div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <div class="kicker">Past quarters</div>
+  <h2>Every quarter since 2022.</h2>
+  <div class="tablebox" style="margin-top:20px"><table>
+    <thead><tr><th scope="col">Quarter</th><th scope="col">Revenue</th><th scope="col">Net loss</th><th scope="col">Cash used</th><th scope="col">Cash + securities</th><th scope="col">Shares</th><th scope="col">Filing</th></tr></thead>
+    <tbody id="past"></tbody>
+  </table></div>
+  <p style="margin-top:16px"><a class="link-arrow" href="calls.html">Read every call summary →</a> &nbsp; <a class="link-arrow" href="trends.html">See these as charts →</a></p>
+</div></section>
+<!--SCRIPTS-->
+<script>
+(async function(){
+  const h=await LW.getJSON('data/history.json'), E=LW.esc, $=id=>document.getElementById(id);
+  const Q=h.quarterly, q2=Q[Q.length-1];
+  const M=v=>v==null?'—':'$'+(v/1e6).toFixed(2)+'M', K=v=>v==null?'—':'$'+Math.round(v).toLocaleString(), S=v=>v==null?'—':(v/1e6).toFixed(1)+'M';
+  const rows=[['Revenue',K(q2.revenue_usd)],['Net loss',M(q2.net_loss_usd)],['Operating cash used',M(q2.operating_cash_used_quarter_usd)],['Cash + securities',M(q2.cash_and_securities_usd)],['Shares outstanding',S(q2.shares_outstanding)],['Programs in Stage 3','5'],['Programs in Stage 4','0'],['Signed supply/license agreement with lead customer','Under negotiation']];
+  $('score').innerHTML=rows.map(r=>`<tr><td><b>${E(r[0])}</b></td><td>${E(r[1])}</td><td>Reported Nov 10</td></tr>`).join('');
+  $('past').innerHTML=[...Q].reverse().map(q=>`<tr><td><b>${E(q.period)}</b></td><td>${K(q.revenue_usd)}</td><td>${M(q.net_loss_usd)}</td><td>${M(q.operating_cash_used_quarter_usd)}</td><td>${M(q.cash_and_securities_usd)}</td><td>${S(q.shares_outstanding)}</td><td>${LW.srcLink(q.source,'10-Q/K ↗')}</td></tr>`).join('');
+  const ics='BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nDTSTART:20261110T213000Z\nDTEND:20261110T223000Z\nSUMMARY:LWLG Q3 2026 results call\nEND:VEVENT\nEND:VCALENDAR';
+  $('ics').href='data:text/calendar;charset=utf-8,'+encodeURIComponent(ics);
+})();
+</script>

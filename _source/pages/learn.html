@@ -1,0 +1,79 @@
+<!--{"title":"How a modulator works","nav":"learn","desc":"A plain-English, scroll-animated explainer of how an electro-optic polymer modulator turns electrical signals into light — and why polymers matter."}-->
+<style>
+.ex{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:56px}
+.ex-steps .step{min-height:80vh;display:flex;flex-direction:column;justify-content:center;opacity:.25;transition:opacity .4s}
+.ex-steps .step.on{opacity:1}
+.ex-steps .step:last-child{min-height:60vh}
+.ex-fig{position:sticky;top:120px;height:calc(100vh - 160px);display:flex;align-items:center}
+.ex-fig svg{width:100%;height:auto}
+@keyframes exflow{from{stroke-dashoffset:0}to{stroke-dashoffset:-60}}
+.exf{stroke-dasharray:18 12;animation:exflow .8s linear infinite}
+@media (max-width:900px){.ex{grid-template-columns:1fr}.ex-fig{top:60px;height:auto;background:#fff;z-index:2;padding:8px 0;border-bottom:1px solid var(--line)}.ex-steps .step{min-height:70vh}}
+</style>
+<section class="page-hero"><div class="wrap">
+  <div class="kicker">Explainer · 3 minutes</div>
+  <h1>How a modulator <span class="red">works.</span></h1>
+  <p class="lede">No physics degree needed. Scroll, and the diagram follows along one step at a time.</p>
+</div></section>
+<section style="border-top:1px solid var(--line2)"><div class="wrap ex">
+  <div class="ex-steps">
+    <div class="step" data-step="0"><div class="kicker">Step 1</div><h2>Start with steady light.</h2><p class="lede">A laser shines a constant beam into the chip. On its own, steady light carries no information. It's a blank page.</p></div>
+    <div class="step" data-step="1"><div class="kicker">Step 2</div><h2>Split it in two.</h2><p class="lede">Inside the chip, the light travels through a waveguide, a microscopic "wire" for light. The path splits into two arms. This layout is called a Mach-Zehnder modulator.</p></div>
+    <div class="step" data-step="2"><div class="kicker">Step 3</div><h2>Add voltage to one arm.</h2><p class="lede">One arm runs through electro-optic polymer with electrodes on either side. When voltage is applied, the polymer changes how fast light moves through it, slightly delaying that arm's light.</p></div>
+    <div class="step" data-step="3"><div class="kicker">Step 4</div><h2>Recombine: bright or dark.</h2><p class="lede">When the arms rejoin, light that's in step adds up (bright = 1). Light that's out of step cancels (dark = 0). Flip the voltage and you flip the bit.</p></div>
+    <div class="step" data-step="4"><div class="kicker">Step 5</div><h2>Now do it billions of times a second.</h2><p class="lede">Modern links use PAM4: four brightness levels instead of two, so every symbol carries two bits. Push the symbol rate high enough and one lane carries 200G or 400G.</p></div>
+    <div class="step" data-step="5"><div class="kicker">Step 6</div><h2>Why the material matters.</h2><p class="lede">The stronger a material reacts to voltage, the less voltage and length you need. LWLG's polymers react strongly and switch fast. That points to faster links, lower power and smaller chips than older materials. <a href="market.html#compare">Compare the materials →</a></p></div>
+  </div>
+  <div class="ex-fig" aria-live="polite">
+    <svg id="mzm" role="img" aria-label="Mach-Zehnder modulator diagram that changes with each step" viewBox="0 0 720 420">
+      <rect x="0" y="40" width="720" height="300" fill="#0F1628" stroke="#2A3658"/>
+      <rect x="20" y="175" width="60" height="30" fill="#3EE0FF"/><text x="22" y="230" font-family="IBM Plex Mono" font-size="12">LASER</text>
+      <g fill="none" stroke="#3A4A75" stroke-width="6">
+        <path id="in" d="M80 190 L200 190"/>
+        <path id="armA" d="M200 190 C 240 190, 240 120, 280 120 L460 120 C 500 120, 500 190, 540 190"/>
+        <path id="armB" d="M200 190 C 240 190, 240 260, 280 260 L460 260 C 500 260, 500 190, 540 190"/>
+        <path id="out" d="M540 190 L640 190"/>
+      </g>
+      <g id="lightIn"><path class="exf" d="M80 190 L200 190" stroke="#FF3D9A" stroke-width="4" fill="none"/></g>
+      <g id="lightArms" opacity="0"><path class="exf" d="M200 190 C 240 190, 240 120, 280 120 L460 120 C 500 120, 500 190, 540 190" stroke="#FF3D9A" stroke-width="4" fill="none"/><path class="exf" d="M200 190 C 240 190, 240 260, 280 260 L460 260 C 500 260, 500 190, 540 190" stroke="#FF3D9A" stroke-width="4" fill="none"/></g>
+      <g id="electrodes" opacity="0"><rect x="290" y="80" width="160" height="22" fill="#C9A227"/><rect x="290" y="138" width="160" height="22" fill="#C9A227"/><rect x="290" y="108" width="160" height="24" fill="#FF3D9A" opacity=".2"/><text x="300" y="72" font-family="IBM Plex Mono" font-size="12">VOLTAGE → POLYMER</text></g>
+      <g id="lightOut" opacity="0"><path class="exf" id="outPath" d="M540 190 L640 190" stroke="#FF3D9A" stroke-width="6" fill="none"/></g>
+      <rect x="650" y="160" width="50" height="60" fill="#2A3658"/><rect id="det" x="656" y="166" width="38" height="48" fill="#1A2440"/>
+      <text x="646" y="240" font-family="IBM Plex Mono" font-size="12">DETECTOR</text>
+      <g id="bits" font-family="IBM Plex Mono" font-size="18" opacity="0"><text x="40" y="390" id="bitsText">1 0 1 1 0 1 0 0 1 1 0 1</text></g>
+      <g id="pam" opacity="0"><text x="40" y="378" font-family="IBM Plex Mono" font-size="12">PAM4 LEVELS</text><rect x="160" y="380" width="40" height="8" fill="#FF3D9A" opacity=".25"/><rect x="210" y="372" width="40" height="16" fill="#FF3D9A" opacity=".5"/><rect x="260" y="364" width="40" height="24" fill="#FF3D9A" opacity=".75"/><rect x="310" y="356" width="40" height="32" fill="#FF3D9A"/><text x="370" y="388" font-family="IBM Plex Mono" font-size="12">00 · 01 · 10 · 11 → 2 bits per symbol</text></g>
+      <g id="compare" opacity="0" font-family="IBM Plex Mono" font-size="12">
+        <text x="40" y="20">LENGTH NEEDED FOR THE SAME EFFECT (ILLUSTRATIVE)</text>
+      </g>
+      <text id="state" x="40" y="368" font-family="Inter Tight" font-weight="900" font-size="28"></text>
+    </svg>
+  </div>
+</div></section>
+<section class="section"><div class="wrap">
+  <div class="grid g3">
+    <div class="card"><h3>Glossary</h3><p class="muted">PAM4, CPO, PDK, chromophore and 30 more terms in plain English. <a href="glossary.html">Open →</a></p></div>
+    <div class="card"><h3>Go deeper</h3><p class="muted">Scroll from wafer to molecule on the <a href="index.html">home page</a>.</p></div>
+    <div class="card"><h3>The competition</h3><p class="muted">Polymer vs. silicon vs. lithium niobate vs. barium titanate. <a href="market.html#compare">Compare →</a></p></div>
+  </div>
+</div></section>
+<!--SCRIPTS-->
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const set=(id,v)=>$(id).setAttribute('opacity',v);
+  let bitTimer=null,on=true;
+  function stage(n){
+    set('lightArms',n>=1?1:0); set('electrodes',n>=2?1:0); set('lightOut',n>=3?1:0);
+    set('bits',n===3||n===4?1:0); set('pam',n>=4?1:0);
+    $('armA').setAttribute('stroke',n>=2?'#C9A227':'#3A4A75');
+    clearInterval(bitTimer);
+    if(n>=3){
+      bitTimer=setInterval(()=>{on=!on;$('outPath').setAttribute('stroke-opacity',on?1:.08);$('det').setAttribute('fill',on?'#FF3D9A':'#1A2440');$('state').textContent=n===3?(on?'1 — bright':'0 — dark'):'';},n>=4?220:900);
+    } else {$('state').textContent='';$('det').setAttribute('fill','#1A2440');$('outPath').setAttribute('stroke-opacity',1)}
+  }
+  const steps=[...document.querySelectorAll('.step')];
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){steps.forEach(s=>s.classList.remove('on'));e.target.classList.add('on');stage(+e.target.dataset.step)}}),{rootMargin:'-45% 0px -45% 0px'});
+  steps.forEach(s=>io.observe(s));
+  steps[0].classList.add('on'); stage(0);
+})();
+</script>

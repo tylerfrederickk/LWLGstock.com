@@ -1,0 +1,105 @@
+<!--{"title":"Filings, insiders, ownership & short interest","nav":"filings","desc":"Live LWLG chart, an auto-updating SEC filings feed, insider buying and selling, institutional ownership from 13F filings, and short interest."}-->
+<section class="page-hero"><div class="wrap">
+  <div class="kicker">05 — Filings &amp; ownership</div>
+  <h1>Follow the <span class="red">paper.</span></h1>
+  <p class="lede">The live chart, every SEC filing as it lands, what insiders are doing, who the big holders are, and how many shares are sold short.</p>
+  <nav class="pills" style="margin-top:24px" aria-label="On this page"><a class="pill" href="#chart" style="display:inline-flex;align-items:center;text-decoration:none">Chart</a><a class="pill" href="#feed" style="display:inline-flex;align-items:center;text-decoration:none">SEC feed</a><a class="pill" href="#insiders" style="display:inline-flex;align-items:center;text-decoration:none">Insiders</a><a class="pill" href="#institutions" style="display:inline-flex;align-items:center;text-decoration:none">Institutions</a><a class="pill" href="#short" style="display:inline-flex;align-items:center;text-decoration:none">Short interest</a><a class="pill" href="#snapshot" style="display:inline-flex;align-items:center;text-decoration:none">Balance sheet</a></nav>
+</div></section>
+
+<section class="section" id="chart" style="padding-top:40px"><div class="wrap">
+  <div class="kicker">Live chart · NASDAQ: LWLG</div>
+  <div class="tv" style="height:560px;margin-top:16px" data-tv="chart"><div class="tv-fallback">The live TradingView chart loads here on LWLGstock.com.</div></div>
+</div></section>
+
+<section class="section" id="snapshot"><div class="wrap">
+  <div class="kicker">Balance sheet snapshot</div>
+  <h2>Cash, shares, burn.</h2>
+  <div class="grid g4" id="fin" style="margin-top:28px"></div>
+  <p class="src" id="fin-src" style="margin-top:14px"></p>
+</div></section>
+
+<section class="section" id="feed"><div class="wrap">
+  <div style="display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap">
+    <div><div class="kicker">SEC EDGAR feed</div><h2>Every filing.</h2></div>
+    <div class="pills" role="group" aria-label="Filter filings" id="ff">
+      <button class="pill" type="button" aria-pressed="true" data-f="all">All</button>
+      <button class="pill" type="button" aria-pressed="false" data-f="10-K,10-Q">10-K / 10-Q</button>
+      <button class="pill" type="button" aria-pressed="false" data-f="8-K">8-K</button>
+      <button class="pill" type="button" aria-pressed="false" data-f="4,3,5,144">Insider forms</button>
+      <button class="pill" type="button" aria-pressed="false" data-f="S-3,S-3ASR,424B5,S-8">Offerings</button>
+    </div>
+  </div>
+  <p class="note" id="feed-status" style="margin-top:14px"></p>
+  <div class="tablebox"><table><thead><tr><th scope="col">Filed</th><th scope="col">Form</th><th scope="col">What it is</th><th scope="col">Document</th></tr></thead><tbody id="feed-rows"></tbody></table></div>
+</div></section>
+
+<section class="section" id="insiders"><div class="wrap">
+  <div class="kicker">Insider tracker</div>
+  <h2>What insiders did.</h2>
+  <div class="grid g4" id="ins-stats" style="margin-top:24px"></div>
+  <div data-w="heartbeat" style="margin-top:24px"></div>
+  <p class="note" id="ins-status" style="margin-top:16px"></p>
+  <div class="tablebox"><table><thead><tr><th scope="col">Date</th><th scope="col">Insider</th><th scope="col">Role</th><th scope="col">Type</th><th scope="col">Shares</th><th scope="col">Price</th><th scope="col">Filing</th></tr></thead><tbody id="ins-rows"></tbody></table></div>
+</div></section>
+
+<section class="section" id="institutions"><div class="wrap">
+  <div class="kicker">Institutional ownership · 13F &amp; 13G</div>
+  <h2>The big holders.</h2>
+  <p class="lede" id="inst-sum"></p>
+  <div data-w="owners" style="margin-top:20px"></div>
+  <div class="tablebox" style="margin-top:20px"><table><thead><tr><th scope="col">Holder</th><th scope="col">Shares</th><th scope="col">Change</th><th scope="col">Source</th></tr></thead><tbody id="inst-rows"></tbody></table></div>
+</div></section>
+
+<section class="section" id="short"><div class="wrap">
+  <div class="kicker">Short interest · FINRA, twice monthly</div>
+  <h2>The short side.</h2>
+  <div class="grid g4" id="si-stats" style="margin-top:24px"></div>
+  <div class="w-grid w2" style="margin-top:24px"><div data-w="short"></div></div>
+  <svg id="si-chart" role="img" aria-label="Shares sold short over time" viewBox="0 0 1000 300" style="width:100%;margin-top:28px"></svg>
+  <p class="note" id="si-note"></p>
+</div></section>
+<!--SCRIPTS-->
+<script src="assets/widgets.js"></script>
+<script>
+(async function(){
+  const E=LW.esc, $=id=>document.getElementById(id);
+  const inv=await LW.getJSON('data/investor.json');
+  const stat=(n,l)=>`<div class="stat card"><div class="n" style="font-size:clamp(26px,3vw,40px)">${n}</div><div class="l">${l}</div></div>`;
+  // balance sheet
+  const fs=inv.financial_snapshot;
+  $('fin').innerHTML=stat('$95.9M','Cash + marketable securities (Jun 30, 2026)')+stat('~$4.9M','Average quarterly operating cash use, 1H 2026')+stat('154.2M','Shares outstanding (Aug 14, 2026)')+stat('Dec 2027','Company says cash lasts at least through');
+  $('fin-src').innerHTML='As of '+E(fs.as_of)+'. '+fs.source.map((s,i)=>LW.srcLink(s,'['+(i+1)+']')).join(' ')+' · Q3 2026 results are due Nov 10, 2026.';
+  // feed
+  let filings=[], filter='all';
+  const r=await LW.liveOrSnapshot('/api/filings','data/filings.json'); filings=r.data.filings;
+  $('feed-status').textContent=r.live?`Live from SEC EDGAR · updated ${new Date(r.data.updated).toLocaleString()}`:r.data.note;
+  function drawFeed(){
+    const set=filter==='all'?null:filter.split(',');
+    const rows=filings.filter(f=>!set||set.includes(f.form)).slice(0,60);
+    $('feed-rows').innerHTML=rows.map(f=>`<tr><td class="mono" style="white-space:nowrap">${E(f.date)}</td><td><span class="tag ${/^(8-K|10-K|10-Q)$/.test(f.form)?'fill':''}">${E(f.form)}</span></td><td>${E(f.name)}${f.items?` <span class="note">Items ${E(f.items)}</span>`:''}</td><td><a href="${E(f.url)}" target="_blank" rel="noopener">Open ↗</a></td></tr>`).join('')||'<tr><td colspan="4" class="empty">No filings of this type in the feed.</td></tr>';
+  }
+  $('ff').onclick=e=>{const b=e.target.closest('[data-f]');if(!b)return;filter=b.dataset.f;[...$('ff').children].forEach(x=>x.setAttribute('aria-pressed',x===b));drawFeed()};
+  drawFeed();
+  // insiders
+  const ir=await LW.liveOrSnapshot('/api/insiders','data/investor.json');
+  let trades;
+  if(ir.live){trades=ir.data.trades.map(t=>({date:t.date,insider:t.insider,role:t.role,type:t.type,shares:t.shares.toLocaleString(),price:t.price?('$'+t.price.toFixed(2)):'—',source:t.url,kind:t.code==='P'?'buy':t.code==='S'?'sell':'other'}));$('ins-status').textContent='Live from SEC Form 4 filings · '+new Date(ir.data.updated).toLocaleString();}
+  else{trades=inv.insider_trades.map(t=>({...t,kind:/^sell(?!.*tax)/i.test(t.type)?'sell':/^buy/i.test(t.type)?'buy':'other'}));$('ins-status').textContent=inv.insider_trades_note.split('.')[0]+'. Snapshot as of Nov 6, 2026; the live site reads Form 4s automatically.';}
+  const buys=trades.filter(t=>t.kind==='buy').length, sells=trades.filter(t=>t.kind==='sell').length;
+  $('ins-stats').innerHTML=stat(buys,'Open-market buys in this list')+stat(sells,'Open-market sells in this list')+stat('2.2%','Insider ownership (MarketBeat)')+stat(trades.length,'Transactions shown');
+  $('ins-rows').innerHTML=trades.map(t=>`<tr><td class="mono" style="white-space:nowrap">${E(t.date)}</td><td><b>${E(t.insider)}</b></td><td>${E(t.role)}</td><td><span class="tag ${t.kind==='sell'?'red':t.kind==='buy'?'fill':''}">${E(t.type)}</span></td><td class="mono">${E(t.shares)}</td><td class="mono">${E(t.price)}</td><td>${LW.srcLink(t.source,'Form ↗')}</td></tr>`).join('');
+  // institutions
+  const ins=inv.institutions;
+  $('inst-sum').innerHTML=`About <b>${E(ins.institutional_pct||'')}</b> of shares are held by institutions. Holdings are reported 45 days after each quarter ends, so this always lags. As of ${E(ins.as_of)}.`;
+  $('inst-rows').innerHTML=ins.holders.map(h=>`<tr><td><b>${E(h.name)}</b></td><td>${E(h.shares)}</td><td>${E(h.change)}</td><td>${LW.srcLink(h.source)}</td></tr>`).join('');
+  // short interest
+  const si=inv.short_interest;
+  $('si-stats').innerHTML=stat(E(si.shares_short),'Shares short ('+E(si.as_of)+')')+stat('~18.6%','Of float (derived)')+stat(E(si.days_to_cover),'Days to cover')+stat('—','Borrow fee: not verified');
+  const h=si.history.slice().reverse().map(x=>({d:x.date,v:+String(x.shares_short).replace(/,/g,'')}));
+  const W=1000,H=300,max=Math.max(...h.map(x=>x.v))*1.1,bw=(W-60)/h.length;
+  $('si-chart').innerHTML=`<line x1="50" y1="${H-30}" x2="${W}" y2="${H-30}" stroke="#56628A"/>`+h.map((x,i)=>{const bh=x.v/max*(H-60);return `<rect x="${50+i*bw+2}" y="${H-30-bh}" width="${bw-4}" height="${bh}" fill="${i===h.length-1?'#FF3D9A':'#8B6CFF'}"><title>${x.d}: ${x.v.toLocaleString()} shares</title></rect>`}).join('')+
+    h.filter((_,i)=>i%Math.ceil(h.length/8)===0||i===h.length-1).map(x=>{const i=h.indexOf(x);return `<text x="${50+i*bw+bw/2}" y="${H-10}" font-size="11" font-family="IBM Plex Mono" text-anchor="middle">${x.d.slice(0,7)}</text>`}).join('')+
+    [0,.5,1].map(f=>`<text x="44" y="${H-30-f*(H-60)/1.1+4}" font-size="11" font-family="IBM Plex Mono" text-anchor="end">${(max/1.1*f/1e6).toFixed(0)}M</text>`).join('');
+  $('si-note').innerHTML=`Short interest more than doubled from mid-2026 as the stock pulled back from its 52-week high. A high short interest also means more potential buyers if good news forces shorts to cover. ${LW.srcLink(si.source)}`;
+})();
+</script>

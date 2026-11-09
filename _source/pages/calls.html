@@ -1,0 +1,39 @@
+<!--{"title":"Earnings call library","nav":"calls","desc":"Searchable library of Lightwave Logic earnings and update calls with AI-assisted summaries, key points and short quotes."}-->
+<section class="page-hero"><div class="wrap">
+  <div class="kicker">Earnings call library</div>
+  <h1>Every call, <span class="red">in brief.</span></h1>
+  <p class="lede">AI-assisted summaries of each earnings call, update call and annual meeting, with key points, short quotes and the headline numbers. Search across all of them.</p>
+  <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:24px;align-items:end">
+    <label class="field" style="flex:1;min-width:260px;max-width:520px">Search calls<input id="q" type="search" placeholder="e.g. Stage 3, Tower, cash runway, Foxconn"></label>
+    <div class="pills" role="group" aria-label="Year" id="yrs"></div>
+  </div>
+</div></section>
+<section style="border-top:1px solid var(--line2);padding:20px 0 80px"><div class="wrap" id="calls"></div></section>
+<!--SCRIPTS-->
+<script>
+(async function(){
+  const d=await LW.getJSON('data/investor.json'), E=LW.esc, $=id=>document.getElementById(id);
+  const calls=d.earnings_calls; let q='',yr='all';
+  const years=['all',...new Set(calls.map(c=>c.date.slice(0,4)))];
+  $('yrs').innerHTML=years.map(y=>`<button class="pill" type="button" data-y="${y}" aria-pressed="${y==='all'}">${y==='all'?'All':y}</button>`).join('');
+  $('yrs').onclick=e=>{const b=e.target.closest('[data-y]');if(!b)return;yr=b.dataset.y;[...$('yrs').children].forEach(x=>x.setAttribute('aria-pressed',x===b));draw()};
+  const hl=(t)=>{t=E(t);if(!q)return t;return t.replace(new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig'),'<mark style="background:rgba(255,196,77,.35)">$1</mark>')};
+  function draw(){
+    const L=calls.filter(c=>(yr==='all'||c.date.startsWith(yr))&&(!q||JSON.stringify(c).toLowerCase().includes(q.toLowerCase())));
+    $('calls').innerHTML=L.map(c=>{
+      const upcoming=new Date(c.date)>new Date();
+      const m=c.metrics||{};
+      return `<article style="display:grid;grid-template-columns:220px minmax(0,1fr);gap:32px;padding:36px 0;border-bottom:1px solid var(--line)" class="call">
+        <div><div class="mono note">${E(LW.fmtDate(c.date))}</div><h3 style="font-size:30px;font-weight:900;letter-spacing:-.03em;margin-top:6px">${E(c.period)}</h3>${upcoming?'<span class="tag red" style="margin-top:8px">Upcoming</span>':''}
+          <div style="margin-top:14px;font-size:14px;line-height:1.8">${m.revenue?`<div><span class="note">Revenue</span><br><b>${E(m.revenue)}</b></div>`:''}${m.net_loss?`<div><span class="note">Net loss</span><br><b>${E(m.net_loss)}</b></div>`:''}${m.cash?`<div><span class="note">Cash</span><br><b>${E(m.cash)}</b></div>`:''}</div></div>
+        <div>${upcoming?`<p class="lede">Results and business update call. The summary will appear here after the call. <span data-countdown="${c.date}T16:30:00-05:00" class="mono red"></span></p>`:`
+          <div class="kicker" style="color:#555">AI-assisted summary</div><p style="font-size:18px;line-height:1.55;margin-top:8px">${hl(c.summary)}</p>
+          ${(c.key_points||[]).length?`<ul style="margin:12px 0 0;padding-left:20px">${c.key_points.map(k=>`<li style="margin:4px 0">${hl(k)}</li>`).join('')}</ul>`:''}
+          ${(c.short_quotes||[]).filter(Boolean).map(s=>`<blockquote style="margin:16px 0 0;border-left:4px solid #8B6CFF;padding-left:14px;font-size:20px;font-weight:700">${hl(s)}</blockquote>`).join('')}`}
+          <div style="margin-top:12px">${LW.srcLink(c.source,'Source / transcript ↗')}</div></div></article>`}).join('')||'<p class="empty" style="margin-top:24px">No calls match your search.</p>';
+    document.querySelectorAll('#calls [data-countdown]').forEach(LW.countdown);
+  }
+  $('q').addEventListener('input',e=>{q=e.target.value.trim();draw()}); draw();
+  const style=document.createElement('style');style.textContent='@media (max-width:800px){.call{grid-template-columns:1fr!important;gap:12px!important}}';document.head.appendChild(style);
+})();
+</script>

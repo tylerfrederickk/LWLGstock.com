@@ -1,0 +1,97 @@
+<!--{"title":"My LWLG position","nav":"portfolio","desc":"Track your own LWLG position: lots, cost basis, live value and what-if price scenarios. Stored only in your browser."}-->
+<section class="page-hero"><div class="wrap">
+  <div class="kicker">Portfolio tool</div>
+  <h1>My <span class="red">position.</span></h1>
+  <p class="lede">Enter your lots and see what they're worth at today's price, and at any price you can imagine. Everything stays in this browser. Nothing is sent anywhere.</p>
+</div></section>
+
+<section class="section" style="padding-top:40px"><div class="wrap">
+  <div class="grid" style="grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px" id="pf">
+    <div>
+      <h3>Your lots</h3>
+      <div class="tablebox" style="margin-top:12px"><table>
+        <thead><tr><th scope="col">Shares</th><th scope="col">Cost / share ($)</th><th scope="col">Date (optional)</th><th scope="col"><span class="sr">Remove</span></th></tr></thead>
+        <tbody id="lots"></tbody>
+      </table></div>
+      <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
+        <button class="btn ghost" type="button" id="add-lot">+ Add lot</button>
+        <button class="btn ghost" type="button" id="clear">Clear all</button>
+      </div>
+      <div class="grid g2" style="margin-top:28px">
+        <label class="field">Current price ($)<input id="price" type="number" step="0.01" min="0" inputmode="decimal"></label>
+        <div class="note" id="price-src" style="align-self:end;padding-bottom:12px">Fetching the latest price…</div>
+      </div>
+    </div>
+    <div>
+      <div class="grid g2" id="pf-stats"></div>
+      <div style="margin-top:32px">
+        <h3>What if LWLG trades at…</h3>
+        <label class="field" style="margin-top:12px"><span>Target price: <b id="tgt-out" class="red" style="font-size:20px"></b></span><input id="tgt" type="range" min="1" max="100" step="0.5" value="20"></label>
+        <div class="grid g2" style="margin-top:14px" id="tgt-stats"></div>
+        <svg id="pf-chart" role="img" aria-label="Position value across share prices" viewBox="0 0 600 260" style="width:100%;margin-top:20px;border-top:1px solid var(--line2)"></svg>
+      </div>
+    </div>
+  </div>
+  <p class="note" style="margin-top:28px">For your own tracking only. Figures exclude fees and taxes. Not financial advice.</p>
+</div></section>
+<!--SCRIPTS-->
+<script>
+(function(){
+  const KEY='lwlg-lots-v1';
+  const $=s=>document.querySelector(s);
+  let lots=[];
+  try{lots=JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){lots=[]}
+  if(!lots.length) lots=[{shares:'',cost:'',date:''}];
+  const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(lots))}catch(e){}};
+  const money=v=>(v<0?'-':'')+'$'+Math.abs(v).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+  function renderLots(){
+    $('#lots').innerHTML=lots.map((l,i)=>`<tr>
+      <td><label class="sr" for="s${i}">Shares, lot ${i+1}</label><input id="s${i}" data-i="${i}" data-k="shares" type="number" min="0" step="1" value="${l.shares}"></td>
+      <td><label class="sr" for="c${i}">Cost per share, lot ${i+1}</label><input id="c${i}" data-i="${i}" data-k="cost" type="number" min="0" step="0.01" value="${l.cost}"></td>
+      <td><label class="sr" for="d${i}">Date, lot ${i+1}</label><input id="d${i}" data-i="${i}" data-k="date" type="date" value="${l.date}"></td>
+      <td><button class="pill" type="button" data-rm="${i}" aria-label="Remove lot ${i+1}">✕</button></td></tr>`).join('');
+  }
+  function totals(){
+    const sh=lots.reduce((a,l)=>a+(+l.shares||0),0);
+    const cost=lots.reduce((a,l)=>a+(+l.shares||0)*(+l.cost||0),0);
+    return {sh,cost,avg:sh?cost/sh:0};
+  }
+  function stat(n,l,cls){return `<div class="stat card"><div class="n ${cls||''}" style="font-size:clamp(28px,3vw,40px)">${n}</div><div class="l">${l}</div></div>`}
+  function compute(){
+    const {sh,cost,avg}=totals(), p=+$('#price').value||0, t=+$('#tgt').value;
+    const val=sh*p, pl=val-cost;
+    $('#pf-stats').innerHTML=stat(sh.toLocaleString(),'Shares')+stat(money(avg),'Average cost')+stat(money(val),'Value now')+stat(money(pl)+(cost?` <span style="font-size:.5em">(${(pl/cost*100).toFixed(1)}%)</span>`:''),'Gain / loss',pl>=0?'':'red');
+    $('#tgt-out').textContent=money(t);
+    const tv=sh*t;
+    $('#tgt-stats').innerHTML=stat(money(tv),'Value at target','red')+stat(cost?((tv/cost).toFixed(2)+'×'):'—','Multiple of cost');
+    // chart
+    const W=600,H=260,max=+$('#tgt').max,xs=v=>40+v/max*(W-60),ymax=Math.max(sh*max,1),ys=v=>H-30-v/ymax*(H-50);
+    let g=`<line x1="40" y1="${H-30}" x2="${W-20}" y2="${H-30}" stroke="#56628A"/>`;
+    for(let v=0;v<=max;v+=20)g+=`<text x="${xs(v)}" y="${H-10}" font-size="11" font-family="IBM Plex Mono" text-anchor="middle">$${v}</text>`;
+    g+=`<line x1="${xs(0)}" y1="${ys(0)}" x2="${xs(max)}" y2="${ys(sh*max)}" stroke="#56628A" stroke-width="2"/>`;
+    if(cost)g+=`<line x1="40" y1="${ys(cost)}" x2="${W-20}" y2="${ys(cost)}" stroke="#8B6CFF" stroke-dasharray="4 4"/><text x="44" y="${ys(cost)-6}" font-size="11" font-family="IBM Plex Mono" fill="#AAB5CD">COST BASIS</text>`;
+    if(p)g+=`<circle cx="${xs(p)}" cy="${ys(sh*p)}" r="6" fill="#3EE0FF"/><text x="${xs(p)+8}" y="${ys(sh*p)+16}" font-size="11" font-family="IBM Plex Mono">NOW</text>`;
+    g+=`<circle cx="${xs(t)}" cy="${ys(tv)}" r="7" fill="#FF3D9A"/><text x="${xs(t)+10}" y="${ys(tv)-8}" font-size="12" font-family="IBM Plex Mono" fill="#FF3D9A">${money(tv)}</text>`;
+    $('#pf-chart').innerHTML=g;
+  }
+  document.addEventListener('input',e=>{
+    const i=e.target.dataset.i;
+    if(i!=null){lots[+i][e.target.dataset.k]=e.target.value;save()}
+    if(e.target.id==='price'){try{localStorage.setItem('lwlg-price',e.target.value)}catch(_){}}
+    compute();
+  });
+  document.addEventListener('click',e=>{
+    if(e.target.dataset.rm!=null){lots.splice(+e.target.dataset.rm,1);if(!lots.length)lots.push({shares:'',cost:'',date:''});save();renderLots();compute()}
+  });
+  $('#add-lot').onclick=()=>{lots.push({shares:'',cost:'',date:''});save();renderLots();compute()};
+  $('#clear').onclick=()=>{lots=[{shares:'',cost:'',date:''}];save();renderLots();compute()};
+  renderLots();
+  fetch('/api/quote').then(r=>{if(!r.ok)throw 0;return r.json()}).then(q=>{
+    $('#price').value=q.price; $('#price-src').textContent=`Last price ${q.time?('as of '+new Date(q.time*1000).toLocaleString()):''} (may be delayed).`; compute();
+  }).catch(()=>{
+    let saved=''; try{saved=localStorage.getItem('lwlg-price')||''}catch(_){}
+    $('#price').value=saved; $('#price-src').textContent='Live price unavailable here. Type in the current price.'; compute();
+  });
+  compute();
+})();
+</script>

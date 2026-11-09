@@ -1,0 +1,59 @@
+<!--{"title":"How Lightwave Logic makes money","nav":"business","desc":"The Lightwave Logic (LWLG) business model in one diagram: polymer material sales, technology licensing, royalties and development fees across the silicon-photonics supply chain."}-->
+<style>
+@keyframes flow{to{stroke-dashoffset:-40}}
+.bm .goods{stroke-dasharray:10 10;animation:flow 1.4s linear infinite}
+.bm .money{stroke-dasharray:4 8;animation:flow 1.8s linear infinite reverse}
+.bm-legend{display:flex;gap:22px;flex-wrap:wrap;font-size:14px;color:var(--muted);margin-top:14px}
+.bm-legend i{display:inline-block;width:28px;height:3px;vertical-align:middle;margin-right:8px;border-radius:2px}
+.steps{counter-reset:s;display:grid;gap:12px}
+.steps li{list-style:none;counter-increment:s;display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.steps li:before{content:counter(s);display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--grad);color:#05060C;font-weight:700}
+.steps li p{margin:6px 0 0;color:var(--muted)}
+</style>
+<section class="page-hero"><div class="wrap">
+  <div class="kicker">Company · Business model</div>
+  <h1>How LWLG <span class="grad">makes money.</span></h1>
+  <p class="lede" id="bm-sum"></p>
+</div></section>
+
+<section class="section" style="padding-top:24px"><div class="wrap">
+  <div class="card" style="padding:24px 18px">
+    <svg class="bm" viewBox="0 0 1200 470" role="img" aria-label="Diagram: LWLG supplies polymer and licenses to foundries and chipmakers, whose transceivers go into AI data centers; money flows back to LWLG as material sales, license fees, royalties and development fees." style="width:100%;height:auto;display:block">
+      <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3EE0FF"/></marker><marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FFC44D"/></marker></defs>
+      <g font-family="Inter, sans-serif">
+        <g><rect x="20" y="60" width="230" height="150" rx="18" fill="rgba(139,108,255,.18)" stroke="#8B6CFF" stroke-width="2"/><text x="135" y="98" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="24" fill="#fff">Lightwave Logic</text><text x="135" y="128" text-anchor="middle" font-size="14" fill="#C9D3E6">Designs &amp; makes Perkinamine®</text><text x="135" y="148" text-anchor="middle" font-size="14" fill="#C9D3E6">EO polymers (Colorado)</text><text x="135" y="178" text-anchor="middle" font-size="13" fill="#8DEBFF">Owns the patents</text></g>
+        <g><rect x="330" y="60" width="230" height="150" rx="18" fill="#111829" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/><text x="445" y="98" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="22" fill="#fff">Foundry</text><text x="445" y="128" text-anchor="middle" font-size="14" fill="#C9D3E6">Adds the polymer at the end</text><text x="445" y="148" text-anchor="middle" font-size="14" fill="#C9D3E6">of silicon processing (PDK)</text><text x="445" y="178" text-anchor="middle" font-size="13" fill="#AAB5CD">e.g. Tower, GlobalFoundries, SilTerra</text></g>
+        <g><rect x="640" y="60" width="230" height="150" rx="18" fill="#111829" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/><text x="755" y="98" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="22" fill="#fff">Chip &amp; module maker</text><text x="755" y="128" text-anchor="middle" font-size="14" fill="#C9D3E6">Designs the modulator chip,</text><text x="755" y="148" text-anchor="middle" font-size="14" fill="#C9D3E6">builds the transceiver</text><text x="755" y="178" text-anchor="middle" font-size="13" fill="#AAB5CD">5 Global 500 programs in Stage 3</text></g>
+        <g><rect x="950" y="60" width="230" height="150" rx="18" fill="#111829" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/><text x="1065" y="98" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="22" fill="#fff">AI data center</text><text x="1065" y="128" text-anchor="middle" font-size="14" fill="#C9D3E6">Hyperscalers buy millions</text><text x="1065" y="148" text-anchor="middle" font-size="14" fill="#C9D3E6">of optical transceivers</text><text x="1065" y="178" text-anchor="middle" font-size="13" fill="#AAB5CD">800G → 1.6T → 3.2T</text></g>
+        <g fill="none" stroke-width="3"><path class="goods" d="M252 120 H326" stroke="#3EE0FF" marker-end="url(#ah)"/><path class="goods" d="M562 120 H636" stroke="#3EE0FF" marker-end="url(#ah)"/><path class="goods" d="M872 120 H946" stroke="#3EE0FF" marker-end="url(#ah)"/></g>
+        <g font-size="12" fill="#8DEBFF" text-anchor="middle"><text x="289" y="108">polymer</text><text x="599" y="108">wafers</text><text x="909" y="108">modules</text></g>
+        <g fill="none" stroke-width="3"><path class="money" d="M445 214 V300 H160 V216" stroke="#FFC44D" marker-end="url(#am)"/><path class="money" d="M755 214 V350 H135 V216" stroke="#FFC44D" marker-end="url(#am)"/><path class="money" d="M1065 214 V400 H110 V216" stroke="#FFC44D" stroke-opacity=".55" marker-end="url(#am)"/></g>
+        <g font-size="14" fill="#FFD27A"><text x="300" y="292">Material sales · PDK / processing fees</text><text x="300" y="342">License fees (upfront + milestones) · development (NRE) fees · royalties per unit shipped</text><text x="300" y="392" fill="#C9B07A">End demand that drives royalty volume (paid via the chipmaker, not directly)</text></g>
+      </g>
+    </svg>
+    <div class="bm-legend"><span><i style="background:#3EE0FF"></i>Product flows</span><span><i style="background:#FFC44D"></i>Money flows back to LWLG</span></div>
+  </div>
+
+  <div class="grid" style="grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;margin-top:56px">
+    <div><div class="kicker">Revenue streams</div><h2 style="font-size:36px">Five ways to get paid.</h2><div id="streams" class="grid" style="margin-top:20px;gap:14px"></div></div>
+    <div><div class="kicker">The value chain, step by step</div><h2 style="font-size:36px">From molecule to market.</h2><ol class="steps" id="chain" style="padding:0;margin-top:20px"></ol></div>
+  </div>
+
+  <div class="card chart-card" style="margin-top:56px">
+    <div class="kicker">Reality check</div><h3 style="margin-top:6px">Quarterly revenue so far</h3>
+    <p style="margin-top:6px">Still tiny, as you'd expect before production. The jump in Q4 2025 was development-fee revenue. Real revenue depends on customers reaching Stage 4.</p>
+    <div id="rev" style="margin-top:12px"></div>
+    <p class="src">Source: company 10-Q and 10-K filings. Q4 values derived from annual minus nine-month figures.</p>
+  </div>
+</div></section>
+<!--SCRIPTS-->
+<script src="assets/charts.js"></script>
+<script>
+(async function(){
+  const h=await LW.getJSON('data/history.json'), E=LW.esc, bm=h.business_model;
+  document.getElementById('bm-sum').textContent=bm.summary;
+  document.getElementById('streams').innerHTML=bm.revenue_streams.map(r=>`<div class="card"><h3>${E(r.name)}</h3><p>${E(r.how)}</p>${LW.srcLink(r.source)}</div>`).join('');
+  document.getElementById('chain').innerHTML=bm.value_chain.map(s=>`<li><div style="color:var(--fg);font-size:16px;line-height:1.55">${E(s)}</div></li>`).join('');
+  LWChart(document.getElementById('rev'),h.quarterly.map(q=>({x:q.period.replace(' 20',' ’'),y:q.revenue_usd})),{kind:'bar',label:'Revenue (USD)',fmt:(v,a)=>a?('$'+(v>=1000?Math.round(v/1000)+'K':v)):('$'+Math.round(v).toLocaleString())});
+})();
+</script>

@@ -1,0 +1,54 @@
+<!--{"title":"Shareholder Q&A & community","nav":"community","desc":"Ask questions about Lightwave Logic stock, read answered shareholder questions, and find where LWLG investors talk."}-->
+<section class="page-hero"><div class="wrap">
+  <div class="kicker">Community</div>
+  <h1>Ask. <span class="red">Answered.</span></h1>
+  <p class="lede">Shareholder questions answered in plain English, with sources. Ask your own, and the best ones get answered here.</p>
+</div></section>
+<section class="section" style="padding-top:36px"><div class="wrap">
+  <div class="w-grid w2"><div class="c-card" data-c="poll"></div><div data-w="sentiment"></div></div>
+  <div class="c-card" data-c="predict" style="margin-top:16px"></div>
+  <div class="c-card" data-c="wall" style="margin-top:16px"></div>
+</div></section>
+
+<section class="section" style="padding-top:36px"><div class="wrap grid" style="grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:56px">
+  <div>
+    <div class="kicker">Answered questions</div>
+    <label class="field" style="margin-top:14px;max-width:440px">Search answers<input id="q" type="search" placeholder="e.g. revenue, Stage 3, cash"></label>
+    <div id="qa" style="margin-top:20px"></div>
+  </div>
+  <div>
+    <div class="box" id="ask" style="border-width:2px">
+      <div class="kicker">Ask a question</div>
+      <h3 style="font-size:26px;margin-top:6px">What do you want to know?</h3>
+      <form name="questions" method="POST" data-netlify="true" netlify-honeypot="company" data-alerts data-ok="Thanks! Your question is in. Good ones get answered on this page." style="margin-top:14px">
+        <input type="hidden" name="form-name" value="questions">
+        <p class="sr"><label>Leave blank <input name="company"></label></p>
+        <label class="field">Your question<textarea name="question" rows="4" required></textarea></label>
+        <label class="field" style="margin-top:10px">Name or handle (shown if published, optional)<input name="name"></label>
+        <label class="field" style="margin-top:10px">Email (optional, to hear when it's answered)<input type="email" name="email"></label>
+        <button class="btn red" type="submit" style="margin-top:14px">Submit question</button>
+        <p class="note" data-out aria-live="polite"></p>
+      </form>
+    </div>
+    <div style="margin-top:36px">
+      <div class="kicker">Where LWLG investors talk</div>
+      <div style="margin-top:12px;display:flex;flex-direction:column;gap:0">
+        <a class="card" style="text-decoration:none;padding:14px 0" href="https://stocktwits.com/symbol/LWLG" target="_blank" rel="noopener"><b>StockTwits — $LWLG stream ↗</b><div class="note">Real-time retail chatter</div></a>
+        <a class="card" style="text-decoration:none;padding:14px 0" href="https://www.reddit.com/search/?q=LWLG" target="_blank" rel="noopener"><b>Reddit — LWLG discussions ↗</b><div class="note">Longer-form threads and DD posts</div></a>
+        <a class="card" style="text-decoration:none;padding:14px 0" href="https://x.com/search?q=%24LWLG&amp;f=live" target="_blank" rel="noopener"><b>X — $LWLG cashtag ↗</b><div class="note">Live posts</div></a>
+        <a class="card" style="text-decoration:none;padding:14px 0" href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=1325964" target="_blank" rel="noopener"><b>SEC EDGAR — primary documents ↗</b><div class="note">Always check claims against the filings</div></a>
+      </div>
+      <p class="note" style="margin-top:12px">Third-party forums aren't moderated or verified by this site. Treat posts as opinions.</p>
+    </div>
+  </div>
+</div></section>
+<!--SCRIPTS-->
+<script src="assets/widgets.js"></script>
+<script src="assets/community.js"></script>
+<script>
+(async function(){
+  const qa=await LW.getJSON('data/qa.json'), E=LW.esc, el=document.getElementById('qa');
+  const draw=q=>{q=(q||'').toLowerCase();el.innerHTML=qa.filter(x=>!q||(x.q+x.a).toLowerCase().includes(q)).map((x,i)=>`<details class="card" style="padding:16px 0" ${i===0&&!q?'open':''}><summary style="cursor:pointer;font-size:20px;font-weight:700;min-height:44px">${E(x.q)}</summary><p style="margin:10px 0 6px">${E(x.a)}</p>${/^https?:/.test(x.source)?LW.srcLink(x.source):`<a class="src" href="${E(x.source)}">More →</a>`}</details>`).join('')||'<p class="empty">No answers match. Ask it →</p>'};
+  document.getElementById('q').addEventListener('input',e=>draw(e.target.value)); draw();
+})();
+</script>

@@ -1,0 +1,16 @@
+<!--{"title":"Glossary","nav":"learn","desc":"Plain-English definitions of photonics and investing terms used across the LWLG Investor Index: PAM4, CPO, PDK, chromophore, TFLN and more.","body":" data-no-glossary=\"1\""}-->
+<section class="page-hero"><div class="wrap">
+  <div class="kicker">Glossary</div>
+  <h1>Speak <span class="red">photonics.</span></h1>
+  <p class="lede">Every term on this site in plain English. Dotted red underlines anywhere on the site show these definitions when you hover or tap.</p>
+  <label class="field" style="max-width:420px;margin-top:24px">Search terms<input id="q" type="search" placeholder="e.g. PAM4"></label>
+</div></section>
+<section class="section" style="padding-top:32px"><div class="wrap"><div class="grid g3" id="gl"></div></div></section>
+<!--SCRIPTS-->
+<script>
+(async function(){
+  const g=await LW.getJSON('data/glossary.json'); const el=document.getElementById('gl');
+  const draw=q=>{q=(q||'').toLowerCase();el.innerHTML=g.filter(t=>!q||(t.term+' '+t.definition).toLowerCase().includes(q)).sort((a,b)=>a.term.localeCompare(b.term)).map(t=>`<div class="card" id="${LW.esc(t.keys[0].replace(/\W+/g,'-').toLowerCase())}"><h3>${LW.esc(t.term)}</h3><p class="muted" style="font-size:15px">${LW.esc(t.definition)}</p></div>`).join('')||'<p class="empty">No matching terms.</p>'};
+  document.getElementById('q').addEventListener('input',e=>draw(e.target.value)); draw();
+})();
+</script>
